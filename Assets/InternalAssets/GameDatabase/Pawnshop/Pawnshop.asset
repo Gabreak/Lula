@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3fcab48320f67f4f961d7553fa027b6, type: 3}
+  m_Name: Pawnshop
+  m_EditorClassIdentifier: 
+  Datas:
+  - Goods:
+      Icon: {fileID: 21300000, guid: 7593ee7afbba0f64ba988f4859329521, type: 3}
+      Type: 0
+      Id: 1
+      Price: 400
+      PawnPrice: 190
+      BuyBackPrice: 240
+      Key:
+        m_TableReference:
+          m_TableCollectionName: GUID:b0a21dd6b5167fa41b561c41cdc34bcc
+        m_TableEntryReference:
+          m_KeyId: 10853853016064
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      Product: {fileID: 3833133970692362418, guid: 38103e1fb4807a842a067833bd88828b, type: 3}
+    Type: {fileID: 11400000, guid: b18db03cfb99c0f4da1eb2b7373007c7, type: 2}
+  - Goods:
+      Icon: {fileID: 21300000, guid: 924a99c209adb15449ed895403f5c2bb, type: 3}
+      Type: 0
+      Id: 1
+      Price: 230
+      PawnPrice: 110
+      BuyBackPrice: 160
+      Key:
+        m_TableReference:
+          m_TableCollectionName: GUID:b0a21dd6b5167fa41b561c41cdc34bcc
+        m_TableEntryReference:
+          m_KeyId: 2206499347210240
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      Product: {fileID: 3833133970692362418, guid: 38103e1fb4807a842a067833bd88828b, type: 3}
+    Type: {fileID: 11400000, guid: 821c2fc5fa0fb5c488c43c050fd411c3, type: 2}
+  - Goods:
+      Icon: {fileID: 21300000, guid: a0e5fb297d7046d418a83da450ecfe03, type: 3}
+      Type: 0
+      Id: 1
+      Price: 150
+      PawnPrice: 70
+      BuyBackPrice: 120
+      Key:
+        m_TableReference:
+          m_TableCollectionName: GUID:b0a21dd6b5167fa41b561c41cdc34bcc
+        m_TableEntryReference:
+          m_KeyId: 1824451285590016
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      Product: {fileID: 3833133970692362418, guid: 38103e1fb4807a842a067833bd88828b, type: 3}
+    Type: {fileID: 11400000, guid: e9977bbabc78c7d439400e61fe222e0e, type: 2}
+  - Goods:
+      Icon: {fileID: 21300000, guid: bb51334c6930f864abac38001f7bdf6e, type: 3}
+      Type: 0
+      Id: 0
+      Price: 50
+      PawnPrice: 22
+      BuyBackPrice: 36
+      Key:
+        m_TableReference:
+          m_TableCollectionName: GUID:b0a21dd6b5167fa41b561c41cdc34bcc
+        m_TableEntryReference:
+          m_KeyId: 4036358725804032
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      Product: {fileID: 3833133970692362418, guid: 38103e1fb4807a842a067833bd88828b, type: 3}
+    Type: {fileID: 11400000, guid: 3eb12694983100e43ae8fc1798549c42, type: 2}
+  references:
+    version: 2
+    RefIds: []
