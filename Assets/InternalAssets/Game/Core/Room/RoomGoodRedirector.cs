@@ -8,7 +8,7 @@ public class RoomGoodRedirector : MonoBehaviour
 {
     public Toggle ToggleComponent;
     public Text Lable;
-    public GameGoods Good;
+    public GameGoods? Good;
 
     private RoomGood _parentRoom;
 
@@ -20,7 +20,10 @@ public class RoomGoodRedirector : MonoBehaviour
 
     private void AddToggle(bool isActive)
     {
+        _parentRoom.SelectGood = null;
         if (isActive)
-            _parentRoom.SelectedId = Good.Id;
+            _parentRoom.SelectGood = Good;
+        //else if (_parentRoom.Sensor.Good.Value == Good)
+        //    _parentRoom.SelectedId = -1;
     }
 }

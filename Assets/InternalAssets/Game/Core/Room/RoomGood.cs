@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -6,39 +7,99 @@ using UnityEngine.UI;
 
 public class RoomGood : MonoBehaviour
 {
-    [SerializeField] private GameObject _prefab;
-    [SerializeField] private TypeProducts _type;
-    public int SelectedId { get; set; } = -1;
+    [SerializeField] private RoomGoodRedirector _prefab;
+    public BaseSensor Sensor;
+    public GameGoods? SelectGood { get; set; }
 
     private ToggleGroup _toggleGroup;
 
     private void OnEnable()
     {
         _toggleGroup = GetComponent<ToggleGroup>();
-        for (int i = 0; i < _type.Acquired.Count; i++)
+        for (int i = 0; i < Sensor.Type.Acquired.Count; i++)
         {
-            RoomGoodRedirector room = Instantiate(_prefab, transform).GetComponent<RoomGoodRedirector>();
-            room.ToggleComponent.group = _toggleGroup;
-            room.Good = _type.Acquired[i];
-            //Debug.Log(_type.SelectId == room.Good.Id);
-            if (_type.SelectId == room.Good.Id)
+            RoomGoodRedirector redirector = Instantiate(_prefab, transform);
+            redirector.ToggleComponent.group = _toggleGroup;
+            redirector.Good = Sensor.Type.Acquired[i];
+
+            //string nameNormal = GameDataBase.Instance.UsbSebsor.Type.Acquired.Select(g => g.Level >= redirector.Good.Value.Level)
+            IEnumerable sizeNoraml = from g in GameDataBase.Instance.UsbSebsor.Type.Acquired
+                                     where g.Level >= redirector.Good.Value.Level
+                                     select g;
+            foreach (GameGoods good in sizeNoraml)
             {
-                SelectedId = _type.SelectId;
-                room.ToggleComponent.isOn = true;
+                //good
             }
-            room.Lable.text = _type.Acquired[i].Key.GetLocalizedString();
+
+            redirector.Lable.text = $"Usb Size: { redirector.Good.Value.Level} " + Sensor.Type.Acquired[i].Key.GetLocalizedString();
+            if (Sensor.Good != null)
+            {
+                if (Sensor.Good.Value.Id == redirector.Good.Value.Id)
+                {
+                    redirector.ToggleComponent.isOn = true;
+                }
+            }
         }
+
     }
     private void OnDisable()
     {
-        for (int i = _type.Acquired.Count - 1; i >= 0; i--)
+        for (int i = Sensor.Type.Acquired.Count - 1; i >= 0; i--)
         {
             Destroy(transform.GetChild(i).gameObject);
         }
     }
 
-    public void SetGoodId()
+    public void UpdateSensor()
     {
-        _type.SelectId = SelectedId;
+
+        //_sensor.SelectId = SelectedId;
+        RoomSensor roomSensor = transform.root.GetComponent<RoomSensor>();
+        BaseSensor typeUsb = GameDataBase.Instance.UsbSebsor;
+        foreach (var sensor in roomSensor.Sensors)
+        {
+            Sensor.Good = SelectGood;
+            if (sensor.Sensor.Type.Index == Sensor.Type.Index)
+            {
+                if (typeUsb.Type.Index != Sensor.Type.Index)
+                {
+
+                    if (typeUsb.Good != null)
+                    {
+
+                        if (typeUsb.Good.Value.Level < sensor.Sensor.Good.Value.Level)
+                        {
+                            UsbReset(typeUsb, roomSensor);
+                        }
+                    }
+                }
+                else
+                {
+                    int max = roomSensor.Sensors.Max(m =>
+                    (m.Sensor.Good != null &&
+                    m.Sensor.Type.Index != typeUsb.Type.Index) ?
+                    m.Sensor.Good.Value.Level :
+                    0);
+                    Debug.Log(typeUsb.Good.Value.Level);
+                    if (max > typeUsb.Good.Value.Level)
+                    {
+                        Sensor.Good = null;
+                    }
+
+                }
+
+                sensor.ImageComponent.sprite = (Sensor.Good != null) ? sensor.Sensor.OK : sensor.Sensor.Error;
+            }
+        }
+    }
+
+    private void UsbReset(BaseSensor usb, RoomSensor sensor)
+    {
+        usb.Good = null;
+
+        SensorRedirector sensorUsb = (from s in sensor.Sensors
+                                      where s.Sensor.Type.Index == usb.Type.Index
+                                      select s).First();
+        sensorUsb.ImageComponent.sprite = sensorUsb.Sensor.Error;
     }
 }

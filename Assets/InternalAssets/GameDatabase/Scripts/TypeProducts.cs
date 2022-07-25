@@ -9,7 +9,6 @@ public class TypeProducts : ScriptableObject
 {
     [SerializeField] private string _name = "Type";
     public int Index = 0;
-    public int SelectId = -1;
 
     public List<GameGoods> Acquired;
 }
