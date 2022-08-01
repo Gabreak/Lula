@@ -15,15 +15,26 @@ public class SaveManager : MonoBehaviour
             SaveProducts save = new SaveProducts();
             MyGoodsSave(ref save);
             PawnshopSave(ref save);
+            MyRoomSave(ref save);
+            SaveRecordVideo(ref save);
+
             json = JsonUtility.ToJson(save);
+
+            PlayerPrefs.SetString("Goods", json);
         }
         if (GUI.Button(new Rect(16, 32, 64, 16), "Load"))
         {
+            json = PlayerPrefs.GetString("Goods");
+
             SaveProducts load = JsonUtility.FromJson<SaveProducts>(json);
+
             MyGoodsLoad(load);
             PawnshopLoad(load);
+            MyRoomLoad(load);
+            loadRecordVideo(load);
         }
     }
+
     private void MyGoodsSave(ref SaveProducts save)
     {
 
@@ -50,14 +61,34 @@ public class SaveManager : MonoBehaviour
     {
         DataProduct[] data = GameDataBase.Instance.Pawnshop.Datas.ToArray();
 
-
         save.PawnshopData = new SaveGood[data.Length];
+
         for (int i = 0; i < data.Length; i++)
         {
             int type = data[i].Type.Index;
             save.PawnshopData[i].TypeIndex = type;
             save.PawnshopData[i].Id = data[i].Goods.Id;
         }
+    }
+
+    private void MyRoomSave(ref SaveProducts save)
+    {
+        BaseSensor[] data = GameDataBase.Instance.Sensor.ToArray();
+
+        save.SensorGood = new SaveGood[data.Length];
+
+        for (int i = 0; i < data.Length; i++)
+        {
+
+            int typeIndex = data[i].Type.Index;
+            save.SensorGood[i].TypeIndex = typeIndex;
+            save.SensorGood[i].Id = (data[i].Good != null) ? data[i].Good.Value.Id : -1;
+        }
+    }
+
+    private void SaveRecordVideo(ref SaveProducts save)
+    {
+        save.VideoData = GameDataBase.Instance.UsbRecord.Records.ToArray();
     }
 
     private void MyGoodsLoad(SaveProducts load)
@@ -85,6 +116,7 @@ public class SaveManager : MonoBehaviour
     {
         BaseProduct[] baseProducts = GameDataBase.Instance.BaseProducts;
         GameDataBase.Instance.Pawnshop.Datas.Clear();
+
         for (int i = 0; i < baseProducts.Length; i++)
         {
             IEnumerable goods = (from a in load.PawnshopData
@@ -103,6 +135,39 @@ public class SaveManager : MonoBehaviour
             }
         }
     }
+
+    private void MyRoomLoad(SaveProducts load)
+    {
+
+        //BaseProduct[] baseProducts = GameDataBase.Instance.BaseProducts;
+        BaseSensor[] sensor = GameDataBase.Instance.Sensor;
+
+        for (int i = 0; i < sensor.Length; i++)
+        {
+            sensor[i].Good = null;
+        }
+
+        for (int i = 0; i < sensor.Length; i++)
+        {
+
+            var goods = (from a in load.SensorGood
+                         where sensor[i].Type.Index == a.TypeIndex
+                         from e in sensor[i].Type.Acquired
+                         where a.Id == e.Id
+                         select e);
+
+            foreach (GameGoods good in goods)
+            {
+                sensor[i].Good = good;
+            }
+        }
+    }
+
+    private void loadRecordVideo(SaveProducts load)
+    {
+        BaseRecord record = GameDataBase.Instance.UsbRecord;
+        record.Records = load.VideoData.ToList();
+    }
 }
 
 [Serializable]
@@ -111,7 +176,8 @@ public class SaveProducts
     public int Money;
     public SaveGoods[] MyData;
     public SaveGood[] PawnshopData;
-
+    public SaveGood[] SensorGood;
+    public VideoRecord[] VideoData;
 }
 
 [Serializable]

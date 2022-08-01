@@ -16,6 +16,7 @@ public class BaseProduct : ScriptableObject
 public struct GameGoods
 {
     public Sprite Icon;
+    public string EditName;
     [HideInInspector] public int Type;
     public int Id;
     public int Price;

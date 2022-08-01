@@ -9,6 +9,13 @@ public class GameDataBase : MonoBehaviour
 
     public PawnShopBase Pawnshop;
 
+    [NonReorderable, Space(1)]
+    public BaseSensor[] Sensor;
+    [Space(20)]
+    public BaseRecord UsbRecord;
+    [Space(10)]
+    public BaseSensor UsbSensor;
+
     public static GameDataBase Instance;
 
     void Awake()
