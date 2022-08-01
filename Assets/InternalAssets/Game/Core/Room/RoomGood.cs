@@ -13,25 +13,41 @@ public class RoomGood : MonoBehaviour
 
     private ToggleGroup _toggleGroup;
 
+
     private void OnEnable()
     {
         _toggleGroup = GetComponent<ToggleGroup>();
         for (int i = 0; i < Sensor.Type.Acquired.Count; i++)
         {
+            int min = int.MaxValue;
+            string nameUsbMin = "";
+            //BaseSensor sensorUsb = RoomSensor.;
+            BaseSensor sensorUsb = GameDataBase.Instance.UsbSensor;
             RoomGoodRedirector redirector = Instantiate(_prefab, transform);
             redirector.ToggleComponent.group = _toggleGroup;
             redirector.Good = Sensor.Type.Acquired[i];
 
-            //string nameNormal = GameDataBase.Instance.UsbSebsor.Type.Acquired.Select(g => g.Level >= redirector.Good.Value.Level)
-            IEnumerable sizeNoraml = from g in GameDataBase.Instance.UsbSebsor.Type.Acquired
-                                     where g.Level >= redirector.Good.Value.Level
-                                     select g;
-            foreach (GameGoods good in sizeNoraml)
+            if (Sensor.Type.Index != sensorUsb.Type.Index)
             {
-                //good
-            }
 
-            redirector.Lable.text = $"Usb Size: { redirector.Good.Value.Level} " + Sensor.Type.Acquired[i].Key.GetLocalizedString();
+                var sizeNormal = from g in sensorUsb.Type.Acquired
+                                 where g.Level >= redirector.Good.Value.Level
+                                 select g;
+
+                foreach (GameGoods good in sizeNormal)
+                {
+                    if (min > good.Level)
+                    {
+                        min = good.Level;
+                        nameUsbMin = good.Key.GetLocalizedString();
+                    }
+                }
+                nameUsbMin = (nameUsbMin == "") ? "No Usb!" : nameUsbMin;
+                redirector.Lable.text = Sensor.Type.Acquired[i].Key.GetLocalizedString() + $": { nameUsbMin}";
+            }
+            else
+                redirector.Lable.text = Sensor.Type.Acquired[i].Key.GetLocalizedString();
+
             if (Sensor.Good != null)
             {
                 if (Sensor.Good.Value.Id == redirector.Good.Value.Id)
@@ -53,9 +69,9 @@ public class RoomGood : MonoBehaviour
     public void UpdateSensor()
     {
 
-        //_sensor.SelectId = SelectedId;
         RoomSensor roomSensor = transform.root.GetComponent<RoomSensor>();
-        BaseSensor typeUsb = GameDataBase.Instance.UsbSebsor;
+        BaseSensor typeUsb = GameDataBase.Instance.UsbSensor;
+
         foreach (var sensor in roomSensor.Sensors)
         {
             Sensor.Good = SelectGood;
@@ -63,7 +79,7 @@ public class RoomGood : MonoBehaviour
             {
                 if (typeUsb.Type.Index != Sensor.Type.Index)
                 {
-
+                    CreateObject(Sensor.Good);
                     if (typeUsb.Good != null)
                     {
 
@@ -80,12 +96,11 @@ public class RoomGood : MonoBehaviour
                     m.Sensor.Type.Index != typeUsb.Type.Index) ?
                     m.Sensor.Good.Value.Level :
                     0);
-                    Debug.Log(typeUsb.Good.Value.Level);
-                    if (max > typeUsb.Good.Value.Level)
+
+                    if (typeUsb.Good != null && max > typeUsb.Good.Value.Level)
                     {
                         Sensor.Good = null;
                     }
-
                 }
 
                 sensor.ImageComponent.sprite = (Sensor.Good != null) ? sensor.Sensor.OK : sensor.Sensor.Error;
@@ -101,5 +116,14 @@ public class RoomGood : MonoBehaviour
                                       where s.Sensor.Type.Index == usb.Type.Index
                                       select s).First();
         sensorUsb.ImageComponent.sprite = sensorUsb.Sensor.Error;
+    }
+
+    private void CreateObject(GameGoods? good)
+    {
+        if (Sensor.CreateGood != null)
+            Destroy(Sensor.CreateGood.gameObject);
+        if (good != null)
+            Sensor.CreateGood = Instantiate(good.Value.Product, transform.root);
+
     }
 }

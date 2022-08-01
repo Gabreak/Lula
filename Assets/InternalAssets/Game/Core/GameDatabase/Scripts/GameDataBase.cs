@@ -11,9 +11,10 @@ public class GameDataBase : MonoBehaviour
 
     [NonReorderable, Space(1)]
     public BaseSensor[] Sensor;
-
-    public TypeProducts UsbRecord;
-    public BaseSensor UsbSebsor;
+    [Space(20)]
+    public BaseRecord UsbRecord;
+    [Space(10)]
+    public BaseSensor UsbSensor;
 
     public static GameDataBase Instance;
 

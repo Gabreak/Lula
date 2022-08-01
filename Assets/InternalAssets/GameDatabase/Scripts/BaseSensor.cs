@@ -11,4 +11,5 @@ public class BaseSensor : ScriptableObject
     public TypeProducts Type;
     public LocalizedString Key;
     public GameGoods? Good;
+    public GameObject CreateGood;
 }

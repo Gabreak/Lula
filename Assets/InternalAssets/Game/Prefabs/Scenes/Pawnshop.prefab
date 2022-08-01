@@ -505,7 +505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &594526185
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2373,9 +2373,11 @@ MonoBehaviour:
   Data:
     Goods:
       Icon: {fileID: 0}
+      EditName: 
       Type: 0
       Id: 0
       Price: 0
+      Level: 0
       PawnPrice: 0
       BuyBackPrice: 0
       Key:
@@ -2675,9 +2677,11 @@ MonoBehaviour:
   Data:
     Goods:
       Icon: {fileID: 0}
+      EditName: 
       Type: 0
       Id: 0
       Price: 0
+      Level: 0
       PawnPrice: 0
       BuyBackPrice: 0
       Key:
