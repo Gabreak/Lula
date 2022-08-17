@@ -16,12 +16,12 @@ public class RoomGood : MonoBehaviour
 
     private void OnEnable()
     {
+        SelectGood = null;
         _toggleGroup = GetComponent<ToggleGroup>();
         for (int i = 0; i < Sensor.Type.Acquired.Count; i++)
         {
             int min = int.MaxValue;
             string nameUsbMin = "";
-            //BaseSensor sensorUsb = RoomSensor.;
             BaseSensor sensorUsb = GameDataBase.Instance.UsbSensor;
             RoomGoodRedirector redirector = Instantiate(_prefab, transform);
             redirector.ToggleComponent.group = _toggleGroup;
@@ -72,39 +72,51 @@ public class RoomGood : MonoBehaviour
         RoomSensor roomSensor = transform.root.GetComponent<RoomSensor>();
         BaseSensor typeUsb = GameDataBase.Instance.UsbSensor;
 
+        if (SelectGood == null)
+        {
+            Sensor.Good = null;
+            foreach (var sensor in roomSensor.Sensors)
+            {
+                if (sensor.Sensor.Type.Index != Sensor.Type.Index) continue;
+                sensor.ImageComponent.sprite = (Sensor.Good != null) ? sensor.Sensor.OK : sensor.Sensor.Error;
+                return;
+            }
+        }
+
+        Sensor.Good = SelectGood;
+
         foreach (var sensor in roomSensor.Sensors)
         {
-            Sensor.Good = SelectGood;
-            if (sensor.Sensor.Type.Index == Sensor.Type.Index)
+            if (sensor.Sensor.Type.Index != Sensor.Type.Index) continue;
+
+            if (typeUsb.Type.Index != Sensor.Type.Index)
             {
-                if (typeUsb.Type.Index != Sensor.Type.Index)
+                CreateObject(Sensor.Good);
+                if (typeUsb.Good != null)
                 {
-                    CreateObject(Sensor.Good);
-                    if (typeUsb.Good != null)
+                    if (typeUsb.Good.Value.Level < sensor.Sensor.Good.Value.Level)
                     {
-
-                        if (typeUsb.Good.Value.Level < sensor.Sensor.Good.Value.Level)
-                        {
-                            UsbReset(typeUsb, roomSensor);
-                        }
+                        UsbReset(typeUsb, roomSensor);
                     }
                 }
-                else
-                {
-                    int max = roomSensor.Sensors.Max(m =>
-                    (m.Sensor.Good != null &&
-                    m.Sensor.Type.Index != typeUsb.Type.Index) ?
-                    m.Sensor.Good.Value.Level :
-                    0);
-
-                    if (typeUsb.Good != null && max > typeUsb.Good.Value.Level)
-                    {
-                        Sensor.Good = null;
-                    }
-                }
-
-                sensor.ImageComponent.sprite = (Sensor.Good != null) ? sensor.Sensor.OK : sensor.Sensor.Error;
             }
+            else
+            {
+                int max = roomSensor.Sensors.Max(m =>
+                (m.Sensor.Good != null &&
+                m.Sensor.Type.Index != typeUsb.Type.Index) ?
+                m.Sensor.Good.Value.Level :
+                0);
+
+                if (typeUsb.Good != null && max > typeUsb.Good.Value.Level)
+                {
+                    Sensor.Good = null;
+                }
+
+            }
+
+            sensor.ImageComponent.sprite = (Sensor.Good != null) ? sensor.Sensor.OK : sensor.Sensor.Error;
+
         }
     }
 

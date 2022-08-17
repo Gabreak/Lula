@@ -7,7 +7,7 @@ using UnityEngine.TextCore.Text;
 public class BarManager : MonoBehaviour
 {
     public CharacterDataBase CharacterData;
-
+    public bool isWorking = false;
     public static BarManager Instance;
 
     private void Awake()
@@ -33,9 +33,19 @@ public class BarManager : MonoBehaviour
 
         if (index >= 0)
         {
+
+            int begin = CharacterData.Working[index].Begin;
             int end = CharacterData.Working[index].End;
+
+            if (begin == hour)
+                isWorking = true;
+            else if (end == hour)
+                isWorking = false;
+
             if (end == hour)
                 MoneyProperties.Money += CharacterData.Working[index].Profit;
         }
+        else if (isWorking == true)
+            isWorking = false;
     }
 }

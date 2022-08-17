@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 
@@ -12,9 +13,16 @@ public class RoomSensor : MonoBehaviour
     [SerializeField] private BaseSensor _sensorPhoto;
     [SerializeField] private BaseSensor _sensorVideo;
     [SerializeField] private BaseSensor _sensorUsb;
+    [SerializeField] private UnityEvent _onEnableHandle;
 
     [Space(20), Header("Usb")]
     [SerializeField] private TMP_InputField _usbName;
+
+
+    private void OnEnable()
+    {
+        _onEnableHandle.Invoke();
+    }
 
     private void Start()
     {
@@ -37,6 +45,8 @@ public class RoomSensor : MonoBehaviour
     }
     public void PlayPhotoVideo()
     {
+        Debug.Log(_sensorLight.Good);
+        Debug.Log(_sensorUsb.Good);
         bool isGoodLight = _sensorLight.Good != null;
         bool isGoodPhoto = _sensorPhoto.Good != null;
         bool isGoodUsb = _sensorUsb.Good != null;

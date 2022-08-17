@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class ObjectInformation : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public string TextInfo { get; set; }
+    public string TextInfo { get; set; } = "";
 
 
     private void Start() => MouseManager.Instance.TextInfo("");

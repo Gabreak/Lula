@@ -17,6 +17,7 @@ public class LightHubController : MonoBehaviour
     private void Start()
     {
         Instance = this;
+        SceneDataHub.PrefabObject = _hubNight;
     }
     private void UpdateScene(bool isLight)
     {

@@ -1,0 +1,45 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+using UnityEngine;
+
+public class ReseptionDialogue : MonoBehaviour
+{
+    [SerializeField] private GameObject[] _dialogue;
+    private const int IndexMyDoor = 0;
+    private void OnEnable()
+    {
+        int index = Convert.ToInt32(DoorManager.Instance.isDoor[IndexMyDoor]);
+        _dialogue[index].SetActive(true);
+    }
+    private void OnDisable()
+    {
+        for (int i = 0; i < _dialogue.Length; i++)
+        {
+            _dialogue[i].SetActive(false);
+        }
+    }
+
+    public void DoorTake()
+    {
+        DoorManager door = DoorManager.Instance;
+        if (door.HourMax != 0 && MoneyProperties.Money >= door.Price)
+        {
+            door.isDoor[IndexMyDoor] = true;
+            door.Hour = door.HourMax;
+            door.HourMax = 0;
+
+            MoneyProperties.Money -= door.Price;
+        }
+
+
+    }
+
+    public void DoorClose()
+    {
+        DoorManager.Instance.isDoor[IndexMyDoor] = false;
+        DoorManager.Instance.Hour = 0;
+    }
+
+}

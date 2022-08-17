@@ -12,6 +12,11 @@ public class PrefabTransition : MonoBehaviour
 
     private void OnMouseDown()
     {
+        OpenPrefab();
+    }
+
+    public void OpenPrefab()
+    {
         if (_prefab != null)
             LoadManager.OpenPrefab(transform.root, _prefab);
         else if (_prefabScene != null)
