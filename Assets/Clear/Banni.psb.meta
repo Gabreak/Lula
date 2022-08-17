@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3ca75fd9cec8c034f805d9f0a4820084
+guid: c88623fa8bc295e49bfbaa890a889ac7
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -11,7 +11,7 @@ ScriptedImporter:
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     fadeOut: 0
     borderMipMap: 0
     mipMapsPreserveCoverage: 0
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 380
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -92,46 +92,6 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Stocking Right
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1091
-      y: 3523
-      width: 364
-      height: 251
-    spriteID: cc35acfbea5fc9644a02624bfcda59b8
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: -257, y: 3523}
-  - name: Stocking Left
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1829
-      y: 2190
-      width: 989
-      height: 1147
-    spriteID: e11b5698c83c08642b2c308b712ed859
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 1079, y: 2188}
   - name: Topic
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -139,11 +99,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 2777
-      width: 1079
-      height: 1142
-    spriteID: f84c544e96a06c140be6804d94679246
+      x: 2278
+      y: 4
+      width: 1040
+      height: 778
+    spriteID: d07820d9477d30a46a0c4fb1be6a23f3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -151,7 +111,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -1186, y: 1952}
+    uvTransform: {x: 1774, y: -1353}
   - name: Underpants
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -159,11 +119,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1829
-      y: 3345
-      width: 974
-      height: 635
-    spriteID: 1c562b5708290bb48b05463e757b916b
+      x: 4
+      y: 3026
+      width: 1885
+      height: 1810
+    spriteID: e37e477d399faf8429750a1848c3ef18
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -171,19 +131,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1064, y: 3087}
-  - name: Arms
+    uvTransform: {x: -408, y: 2325}
+  - name: Gloves
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1829
-      y: 4
-      width: 1295
-      height: 2178
-    spriteID: 0ec60800ac2fcc740b212b9039ea1786
+      x: 1897
+      y: 3026
+      width: 1924
+      height: 1147
+    spriteID: 0738307480afc4c438670428c437e448
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -191,19 +151,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 887, y: -219}
-  - name: Bow
+    uvTransform: {x: 1485, y: 1660}
+  - name: Stocking Right
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1091
-      y: 2777
-      width: 458
-      height: 738
-    spriteID: b51f6f55b818e7c46a4dc1804bc1a82a
+      x: 2278
+      y: 790
+      width: 668
+      height: 1103
+    spriteID: ea2e10604b0e83e48b7d9875684d4426
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -211,7 +171,27 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -432, y: 857}
+    uvTransform: {x: 1298, y: 790}
+  - name: Stocking Left
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2278
+      y: 1901
+      width: 255
+      height: 1020
+    spriteID: a30784a31c6f27d4aa499cdbdcf384be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1500, y: 1779}
   - name: Body
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -221,9 +201,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 1817
-      height: 2765
-    spriteID: bbef4289639194148be877a6109d768a
+      width: 2266
+      height: 3014
+    spriteID: 4d5267a2715ca3c428d66471365725cf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -231,7 +211,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -669, y: 4}
+    uvTransform: {x: -195, y: 4}
   characterData:
     bones: []
     parts: []
@@ -247,40 +227,7 @@ ScriptedImporter:
     characterGroups: []
     pivot: {x: 0, y: 0}
     boneReadOnly: 0
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Server
-    overridden: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+  platformSettings: []
   mosaicLayers: 1
   characterMode: 1
   documentPivot: {x: 0, y: 0}
@@ -302,49 +249,19 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 0bb473ae44ba48646846cbce6cc666e7
-    layerID: 46
+    spriteID: 260d9f187322f3a4b97c5084c11958d6
+    layerID: 83
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 1
-  - name: Stockings
-    spriteName: 
-    isGroup: 1
-    parentIndex: 0
-    spriteID: 3f1b8c560f2123c49b74313553d01976
-    layerID: 54
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 1
-  - name: Stocking Right
-    spriteName: Stocking Right
-    isGroup: 0
-    parentIndex: 1
-    spriteID: cc35acfbea5fc9644a02624bfcda59b8
-    layerID: 52
-    mosaicPosition: {x: 1091, y: 3523}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: Stocking Left
-    spriteName: Stocking Left
-    isGroup: 0
-    parentIndex: 1
-    spriteID: e11b5698c83c08642b2c308b712ed859
-    layerID: 43
-    mosaicPosition: {x: 1829, y: 2190}
-    flatten: 0
-    isImported: 1
     isVisible: 1
   - name: Topic
     spriteName: Topic
     isGroup: 0
     parentIndex: 0
-    spriteID: f84c544e96a06c140be6804d94679246
-    layerID: 48
-    mosaicPosition: {x: 4, y: 2777}
+    spriteID: d07820d9477d30a46a0c4fb1be6a23f3
+    layerID: 73
+    mosaicPosition: {x: 2278, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -352,29 +269,49 @@ ScriptedImporter:
     spriteName: Underpants
     isGroup: 0
     parentIndex: 0
-    spriteID: 1c562b5708290bb48b05463e757b916b
-    layerID: 51
-    mosaicPosition: {x: 1829, y: 3345}
+    spriteID: e37e477d399faf8429750a1848c3ef18
+    layerID: 4
+    mosaicPosition: {x: 4, y: 3026}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Arms
-    spriteName: Arms
+  - name: Gloves
+    spriteName: Gloves
     isGroup: 0
     parentIndex: 0
-    spriteID: 0ec60800ac2fcc740b212b9039ea1786
-    layerID: 53
-    mosaicPosition: {x: 1829, y: 4}
+    spriteID: 0738307480afc4c438670428c437e448
+    layerID: 80
+    mosaicPosition: {x: 1897, y: 3026}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Bow
-    spriteName: Bow
-    isGroup: 0
+  - name: Stockings
+    spriteName: 
+    isGroup: 1
     parentIndex: 0
-    spriteID: b51f6f55b818e7c46a4dc1804bc1a82a
-    layerID: 45
-    mosaicPosition: {x: 1091, y: 2777}
+    spriteID: 7cc844e41a6ac234997a0e512fcf5609
+    layerID: 88
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Stocking Right
+    spriteName: Stocking Right
+    isGroup: 0
+    parentIndex: 4
+    spriteID: ea2e10604b0e83e48b7d9875684d4426
+    layerID: 86
+    mosaicPosition: {x: 2278, y: 790}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Stocking Left
+    spriteName: Stocking Left
+    isGroup: 0
+    parentIndex: 4
+    spriteID: a30784a31c6f27d4aa499cdbdcf384be
+    layerID: 87
+    mosaicPosition: {x: 2278, y: 1901}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -382,8 +319,8 @@ ScriptedImporter:
     spriteName: Body
     isGroup: 0
     parentIndex: -1
-    spriteID: bbef4289639194148be877a6109d768a
-    layerID: 29
+    spriteID: 4d5267a2715ca3c428d66471365725cf
+    layerID: 24
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
@@ -391,7 +328,7 @@ ScriptedImporter:
   sharedRigPSDLayers: []
   pSDLayerImportSetting: []
   importFileNodeState: 1
-  generateGOHierarchy: 1
+  generateGOHierarchy: 0
   textureAssetName: 
   prefabAssetName: 
   spriteLibAssetName: 

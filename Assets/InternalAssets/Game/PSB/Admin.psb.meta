@@ -21,6 +21,8 @@ ScriptedImporter:
     convertToNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
@@ -87,7 +89,6 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData:
   - name: Hear
@@ -109,7 +110,6 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: -177, y: 1580}
   - name: Left Brassiere
     originalName: 
@@ -130,7 +130,6 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 801, y: 340}
   - name: Right Brassiere
     originalName: 
@@ -151,7 +150,6 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 562, y: -96}
   - name: Clothes
     originalName: 
@@ -172,7 +170,6 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: -153, y: 1378}
   - name: Dress
     originalName: 
@@ -193,7 +190,6 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: -237, y: 3199}
   - name: Right Eye
     originalName: 
@@ -214,7 +210,6 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 761, y: -624}
   - name: Left Eye
     originalName: 
@@ -235,7 +230,6 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 881, y: -698}
   - name: Body
     originalName: 
@@ -256,7 +250,6 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: -126, y: 4}
   - name: Hear
     originalName: 
@@ -277,7 +270,6 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 697, y: -974}
   rigSpriteImportData:
   - name: Hear
@@ -1350,7 +1342,6 @@ ScriptedImporter:
     - {x: 81, y: 82}
     - {x: 82, y: 83}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: -177, y: 1580}
   - name: Left Brassiere
     originalName: 
@@ -1801,7 +1792,6 @@ ScriptedImporter:
     - {x: 30, y: 31}
     - {x: 31, y: 32}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 801, y: 340}
   - name: Right Brassiere
     originalName: 
@@ -2299,7 +2289,6 @@ ScriptedImporter:
     - {x: 28, y: 29}
     - {x: 29, y: 30}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 562, y: -96}
   - name: Clothes
     originalName: 
@@ -3087,7 +3076,6 @@ ScriptedImporter:
     - {x: 55, y: 56}
     - {x: 56, y: 57}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: -153, y: 1378}
   - name: Dress
     originalName: 
@@ -3655,7 +3643,6 @@ ScriptedImporter:
     - {x: 38, y: 39}
     - {x: 39, y: 40}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: -237, y: 3199}
   - name: Right Eye
     originalName: 
@@ -4221,7 +4208,6 @@ ScriptedImporter:
     - {x: 43, y: 44}
     - {x: 44, y: 45}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 761, y: -624}
   - name: Left Eye
     originalName: 
@@ -4502,7 +4488,6 @@ ScriptedImporter:
     - {x: 18, y: 19}
     - {x: 19, y: 20}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 881, y: -698}
   - name: Body
     originalName: 
@@ -5675,7 +5660,6 @@ ScriptedImporter:
     - {x: 48, y: 80}
     - {x: 48, y: 49}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: -126, y: 4}
   - name: Hear
     originalName: 
@@ -6115,7 +6099,6 @@ ScriptedImporter:
     - {x: 30, y: 31}
     - {x: 31, y: 32}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 697, y: -974}
   characterData:
     bones:
@@ -6410,6 +6393,7 @@ ScriptedImporter:
       order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
+    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   sharedRigSpriteImportData: []
   sharedRigCharacterData:
@@ -6417,6 +6401,7 @@ ScriptedImporter:
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
+    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   platformSettings:
   - name: DefaultTexturePlatform
@@ -6462,6 +6447,7 @@ ScriptedImporter:
   paperDollMode: 0
   keepDupilcateSpriteName: 1
   skeletonAssetReferenceID: 
+  padding: 4
   spriteCategoryList:
     categories: []
   spritePackingTag: 
@@ -6710,6 +6696,7 @@ ScriptedImporter:
     isVisible: 1
   sharedRigPSDLayers: []
   pSDLayerImportSetting: []
+  importFileNodeState: 1
   generateGOHierarchy: 1
   textureAssetName: 
   prefabAssetName: 
