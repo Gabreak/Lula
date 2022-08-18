@@ -42,8 +42,6 @@ public class PoliceManager : MonoBehaviour
     public void LoadJail(GameObject currentScene)
     {
         ToJail++;
-
-        Debug.Log(ToJail + ":" + WasInJail);
         if (ToJail >= MaxInPrison)
         {
             WasInJail++;
