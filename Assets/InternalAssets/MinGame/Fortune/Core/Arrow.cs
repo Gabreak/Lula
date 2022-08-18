@@ -12,7 +12,7 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     [SerializeField] private float _rotationMax = 10;
-    [SerializeField] private GameObject[] _transitionLock;
+    //[SerializeField] private GameObject[] _transitionLock;
 
     private Rigidbody2D _physics;
     private float _rotationSpeed = 1000;
@@ -25,14 +25,19 @@ public class Arrow : MonoBehaviour
         _physics = GetComponent<Rigidbody2D>();
     }
 
+    private void OnDisable()
+    {
+        if (!_isRotation)
+        {
+            StopAllCoroutines();
+            MoneyProperties.Money -= 1000;
+        }
+    }
+
     private IEnumerator StartRotation(float radius)
     {
 
         _isRotation = false;
-        foreach (var transition in _transitionLock)
-        {
-            transition.SetActive(_isRotation);
-        }
         float max = UnityEngine.Random.Range(_rotationMax - (_rotationMax / 2f), _rotationMax + (_rotationMax / 2f));
         float speed = (Time.deltaTime * radius) / 2f;
         while (speed > 0.001f)
@@ -44,10 +49,6 @@ public class Arrow : MonoBehaviour
         }
         Nearest();
         _isRotation = true;
-        foreach (var transition in _transitionLock)
-        {
-            transition.SetActive(_isRotation);
-        }
         yield return null;
     }
 
