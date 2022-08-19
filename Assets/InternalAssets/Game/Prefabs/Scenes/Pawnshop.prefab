@@ -2521,6 +2521,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2354006593004185114}
+  - {fileID: 953496817838206543}
   m_Father: {fileID: 3003773723671722370}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2802,3 +2803,106 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1001 &1879221806651660177
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7249112616806873493}
+    m_Modifications:
+    - target: {fileID: -8653719598885068355, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+      propertyPath: m_Name
+      value: Pawnshop
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 4843985084834002234, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+--- !u!4 &953496817838206543 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+  m_PrefabInstance: {fileID: 1879221806651660177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1671640067447661884 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 947600412954129069, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+  m_PrefabInstance: {fileID: 1879221806651660177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2158237528937559596 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8653719598885068355, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+  m_PrefabInstance: {fileID: 1879221806651660177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1335331132904771857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2158237528937559596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac2ad304f2aea834fa3a6e22f3fd3203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabUpgrade: {fileID: 7719784513135462899, guid: 9edf1ec231694864484d8f962f958d00, type: 3}
+  _name: Jani
+  Objects:
+  - Object: {fileID: 6862708985583188884}
+    Price: 420
+  - Object: {fileID: 1671640067447661884}
+    Price: 600
+  - Object: {fileID: 9123342840463348127}
+    Price: 1400
+--- !u!1 &6862708985583188884 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4983632319202126853, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+  m_PrefabInstance: {fileID: 1879221806651660177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9123342840463348127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7244261823309415950, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
+  m_PrefabInstance: {fileID: 1879221806651660177}
+  m_PrefabAsset: {fileID: 0}

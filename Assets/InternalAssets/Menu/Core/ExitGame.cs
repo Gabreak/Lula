@@ -7,8 +7,6 @@ public class ExitGame : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        
         Application.Quit();
-        
     }
 }

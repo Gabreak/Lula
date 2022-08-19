@@ -70,13 +70,18 @@ public class Arrow : MonoBehaviour
         float z = transform.eulerAngles.z;
 
         var minPrefabs = from p in prefabs
-                         where p.transform.eulerAngles.z > z - fortune.Diff / 2f && p.transform.eulerAngles.z < z + fortune.Diff / 2f
+                         where p.transform.eulerAngles.z - fortune.Diff / 2f <= z && p.transform.eulerAngles.z + fortune.Diff / 2f >= z
                          select p;
-
-        foreach (var prefab in minPrefabs)
+        Debug.Log(minPrefabs.FirstOrDefault().transform.name);
+        if (minPrefabs.Count() > 0)
         {
-            prefab.Play();
+            foreach (var prefab in minPrefabs)
+            {
+                prefab.Play();
+            }
         }
+        else
+            prefabs[00].Play();
 
     }
 }

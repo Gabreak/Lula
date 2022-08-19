@@ -13,7 +13,7 @@ public class PresentAnimation : MonoBehaviour
     [SerializeField] private TypePresent _type;
     [SerializeField] private int _money;
     [SerializeField] private Rigidbody2D _prefab;
-    [SerializeField] GoodPresent _good;
+    [SerializeField] private GoodPresent _good;
 
     private TextMesh _textMesh;
 

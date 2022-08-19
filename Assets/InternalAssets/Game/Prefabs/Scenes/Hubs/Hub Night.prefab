@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 410486461}
   - component: {fileID: 410486460}
   - component: {fileID: 410486462}
+  - component: {fileID: 7890132196952870705}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -26,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410486458}
-  m_LocalRotation: {x: -0, y: -0, z: 0.9999933, w: 0.0036613422}
-  m_LocalPosition: {x: -11.0938225, y: 0.2984694, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.032294195, w: 0.9994784}
+  m_LocalPosition: {x: 9.341806, y: 0.16474691, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -104,7 +105,7 @@ MonoBehaviour:
   - {fileID: 1543845269}
   - {fileID: 1040618418}
   _moneyText: {fileID: 1316859296163371212, guid: b293f700148e74549bde35301cd8bfc5, type: 3}
-  _time: 0.008120418
+  _time: 0.928583
 --- !u!61 &410486462
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -131,6 +132,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &7890132196952870705
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410486458}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d54e65f544ee0034f94850495bd5c80b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1040618417
 GameObject:
   m_ObjectHideFlags: 0
