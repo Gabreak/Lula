@@ -27,7 +27,8 @@ public class RoomSensor : MonoBehaviour
     private void Start()
     {
         BaseSensor[] sensors = GameDataBase.Instance.Sensor;
-        for (int i = 0; i < sensors.Length; i++)
+    
+            for (int i = 0; i < sensors.Length; i++)
         {
             GameGoods? good = sensors[i].Good;
             bool isGood = good == null;
@@ -43,6 +44,8 @@ public class RoomSensor : MonoBehaviour
             sensors[i].CreateGood = createGood;
         }
     }
+
+
     public void PlayPhotoVideo()
     {
         Debug.Log(_sensorLight.Good);
@@ -95,7 +98,4 @@ public class RoomSensor : MonoBehaviour
         record.Clip = VideoController.Instance.GetVideo(indexType, indexVideo);
         baseRecord.Records.Add(record);
     }
-
-
-
 }
