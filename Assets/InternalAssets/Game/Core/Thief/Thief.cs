@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Thief : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Text _pricePilice;
+    private PoliceManager _police;
+
+    private void Start()
     {
-        
+        _police = PoliceManager.Instance;
+        int price = 100 * (_police.ToJail + 1) * (_police.WasInJail + 1);
+        _pricePilice.text = price + "$";
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PayPolice()
     {
-        
+        int price = 100 * (_police.ToJail + 1) * (_police.WasInJail + 1);
+        _pricePilice.text = price + "$";
     }
 }

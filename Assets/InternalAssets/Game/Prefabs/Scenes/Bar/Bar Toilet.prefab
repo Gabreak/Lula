@@ -143,7 +143,6 @@ PolygonCollider2D:
       - {x: -0.31441435, y: -2.5259762}
       - {x: 0.5618619, y: -2.4950457}
       - {x: 0.7474474, y: -0.24234241}
-  m_UseDelaunayMesh: 0
 --- !u!114 &468584181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98dcbba283bc554abd2ae93249991c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chance: 20
+  _chance: 100
 --- !u!114 &2009573580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,7 +686,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 3003773723671722370}
     m_Modifications:
     - target: {fileID: 8960692411915152198, guid: 582366148bf697743908c9d1582b99c3, type: 3}
@@ -791,7 +789,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 582366148bf697743908c9d1582b99c3, type: 3}
 --- !u!224 &1525058907 stripped
 RectTransform:

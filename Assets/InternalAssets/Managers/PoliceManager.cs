@@ -21,6 +21,10 @@ public class PoliceManager : MonoBehaviour
     }
     public int WasInJail { get; set; }
 
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void OnEnable()
     {
@@ -34,10 +38,7 @@ public class PoliceManager : MonoBehaviour
         PlayerPrefs.SetInt("WasInJail", WasInJail);
     }
 
-    private void Awake()
-    {
-        Instance = this;
-    }
+
 
     public void LoadJail(GameObject currentScene)
     {
