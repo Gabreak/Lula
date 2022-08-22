@@ -1920,7 +1920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1679382856
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5759,6 +5759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3003773723671722370}
   - component: {fileID: 1339820381}
+  - component: {fileID: 4720494447825417116}
   m_Layer: 0
   m_Name: My Room
   m_TagString: Untagged
@@ -5840,6 +5841,18 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   _usbName: {fileID: 1712520586}
+--- !u!114 &4720494447825417116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773723671722369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a0572be9bcda84a9fe1388e0babc0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3238696262645404243
 GameObject:
   m_ObjectHideFlags: 0
