@@ -13,12 +13,24 @@ public class Thief : MonoBehaviour
     {
         _police = PoliceManager.Instance;
         int price = 100 * (_police.ToJail + 1) * (_police.WasInJail + 1);
+        if (_police.ToJail == 0 && _police.WasInJail == 0)
+        {
+            price = 0;
+        }
         _pricePilice.text = price + "$";
     }
 
     public void PayPolice()
     {
+        if (_police.ToJail == 0 && _police.WasInJail == 0) return;
+
         int price = 100 * (_police.ToJail + 1) * (_police.WasInJail + 1);
-        _pricePilice.text = price + "$";
+        if (MoneyProperties.Money >= price)
+        {
+            MoneyProperties.Money -= price;
+            _police.ToJail = 0;
+            _police.WasInJail = 0;
+            _pricePilice.text = 0 + "$";
+        }
     }
 }

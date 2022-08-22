@@ -56,7 +56,7 @@ public class RoomSensor : MonoBehaviour
 
         if (isGoodUsb && isGoodPhoto && isGoodLight)
         {
-            int price = _sensorLight.Good.Value.Price + _sensorPhoto.Good.Value.Price + Random.Range(0, 200);
+            int price = _sensorLight.Good.Value.Price + _sensorPhoto.Good.Value.Price + Random.Range(-100, 0);
             int indexVideo = _sensorPhoto.Good.Value.Level;
             UsbRecord(price, 0, indexVideo);
             VideoController.Instance.VideoPlay(transform.gameObject, 0, indexVideo);
@@ -71,7 +71,7 @@ public class RoomSensor : MonoBehaviour
 
         if (isGoodUsb && isGoodVideo && isGoodLight)
         {
-            int price = _sensorLight.Good.Value.Price + _sensorVideo.Good.Value.Price + Random.Range(0, 200);
+            int price = _sensorLight.Good.Value.Price + _sensorVideo.Good.Value.Price + Random.Range(-1000, 0);
             int indexVideo = _sensorVideo.Good.Value.Level;
             UsbRecord(price, 1, indexVideo);
             VideoController.Instance.VideoPlay(transform.gameObject, 1, indexVideo);
