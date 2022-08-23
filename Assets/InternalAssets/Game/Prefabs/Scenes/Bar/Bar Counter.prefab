@@ -8201,7 +8201,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 854813568149853166}
-  - component: {fileID: 7331322200073670407}
   m_Layer: 0
   m_Name: Dialog Amara
   m_TagString: Untagged
@@ -8256,19 +8255,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7331322200073670407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767909009353162568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5f41d5e5747d504d9f20bbbd8c78960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _girl: 1
 --- !u!1 &775499248976719490
 GameObject:
   m_ObjectHideFlags: 0
@@ -31009,7 +30995,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7331322200073670407}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GirlController, Assembly-CSharp
         m_MethodName: InviteGirl
         m_Mode: 1
@@ -36672,7 +36658,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9048883829162784244}
-  - component: {fileID: 8818736507792497739}
   m_Layer: 5
   m_Name: Dialog Meilee
   m_TagString: Untagged
@@ -36701,19 +36686,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8818736507792497739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4773520261862219666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5f41d5e5747d504d9f20bbbd8c78960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _girl: 2
 --- !u!1 &4775235595814529168
 GameObject:
   m_ObjectHideFlags: 0
@@ -42134,7 +42106,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7331322200073670407}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GirlController, Assembly-CSharp
         m_MethodName: InviteGirl
         m_Mode: 1
@@ -46343,7 +46315,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7331322200073670407}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GirlController, Assembly-CSharp
         m_MethodName: InviteGirl
         m_Mode: 1
@@ -47862,7 +47834,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8285457353771273219}
-  - component: {fileID: 3446035917148244032}
   m_Layer: 0
   m_Name: Dialog Gabriel
   m_TagString: Untagged
@@ -47922,19 +47893,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3446035917148244032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6082873064246418691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5f41d5e5747d504d9f20bbbd8c78960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _girl: 3
 --- !u!1 &6091245238170965812
 GameObject:
   m_ObjectHideFlags: 0
@@ -60419,6 +60377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5340004088505795400}
   - component: {fileID: 4136107832088830068}
+  - component: {fileID: 1562977252}
   m_Layer: 0
   m_Name: Dialogues
   m_TagString: Untagged
@@ -60524,6 +60483,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &1562977252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7922621260156425170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f41d5e5747d504d9f20bbbd8c78960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data: {fileID: 11400000, guid: 95421b87c3d245c429c76f7ee81cd58e, type: 2}
 --- !u!1 &7925308603791115212
 GameObject:
   m_ObjectHideFlags: 0
