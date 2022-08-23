@@ -5606,14 +5606,26 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 4136107832088830068}
+        m_TargetAssemblyTypeName: ObjectTransition, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1562977252}
+        m_TargetAssemblyTypeName: GirlController, Assembly-CSharp
+        m_MethodName: InviteGirl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -5814,10 +5826,10 @@ RectTransform:
   m_Father: {fileID: 7847779681226759756}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -149.99998}
-  m_SizeDelta: {x: 469.2, y: 57.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3339989200743975394
 CanvasRenderer:
@@ -7037,7 +7049,7 @@ GameObject:
   - component: {fileID: 480865245922393368}
   - component: {fileID: 5654521279086473636}
   m_Layer: 5
-  m_Name: Dialog1 (no4) (7)
+  m_Name: D11 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7592,7 +7604,7 @@ GameObject:
   - component: {fileID: 6407948193212132001}
   - component: {fileID: 5716099072960101262}
   m_Layer: 5
-  m_Name: Dialog1 (yes4) (1)
+  m_Name: D5 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8574,7 +8586,7 @@ GameObject:
   - component: {fileID: 3133357188566147322}
   - component: {fileID: 5218842209160964659}
   m_Layer: 5
-  m_Name: Dialog1 (yes4)
+  m_Name: D4Yes > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9660,10 +9672,10 @@ RectTransform:
   m_Father: {fileID: 1869567820352271472}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -149.99998}
-  m_SizeDelta: {x: 469.2, y: 57.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3811849410748759225
 CanvasRenderer:
@@ -10003,7 +10015,7 @@ GameObject:
   - component: {fileID: 2323174009299341047}
   - component: {fileID: 1103098301359742750}
   m_Layer: 5
-  m_Name: Dialog1 (yes4) (2)
+  m_Name: D6 > Bad Wine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10633,7 +10645,7 @@ GameObject:
   - component: {fileID: 5793140003526771654}
   - component: {fileID: 2321229497427037021}
   m_Layer: 5
-  m_Name: Dialog1 (no4) (10)
+  m_Name: D14 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10991,10 +11003,10 @@ RectTransform:
   m_Father: {fileID: 8413691196556002742}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -304.655}
-  m_SizeDelta: {x: 469.2, y: 90.69}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4144944001971794898
 CanvasRenderer:
@@ -16092,7 +16104,7 @@ GameObject:
   - component: {fileID: 8566574670665383048}
   - component: {fileID: 7387956888788525046}
   m_Layer: 5
-  m_Name: Dialog1 (no3) (1)
+  m_Name: D8 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16272,10 +16284,10 @@ RectTransform:
   m_Father: {fileID: 9050415608813706955}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -213.965}
-  m_SizeDelta: {x: 469.2, y: 90.69}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1947053199984216388
 CanvasRenderer:
@@ -16691,7 +16703,7 @@ GameObject:
   - component: {fileID: 2106984600552475998}
   - component: {fileID: 6425660044375561885}
   m_Layer: 5
-  m_Name: Dialog1 (no4) (12)
+  m_Name: D16 > Finish Good
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17439,7 +17451,7 @@ GameObject:
   - component: {fileID: 425208364496697174}
   - component: {fileID: 9088476699511282441}
   m_Layer: 5
-  m_Name: Dialog1 (no3) (2)
+  m_Name: D9 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20276,7 +20288,7 @@ GameObject:
   - component: {fileID: 5619749136160590751}
   - component: {fileID: 2342557771340089063}
   m_Layer: 5
-  m_Name: Dialog1 (no3) (3)
+  m_Name: D10 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22241,10 +22253,10 @@ RectTransform:
   m_Father: {fileID: 8978797024386206807}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -149.99998}
-  m_SizeDelta: {x: 469.2, y: 57.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2151886983756775923
 CanvasRenderer:
@@ -22689,10 +22701,10 @@ RectTransform:
   m_Father: {fileID: 3381029389560380045}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -149.99998}
-  m_SizeDelta: {x: 469.2, y: 57.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7523867039525129406
 CanvasRenderer:
@@ -24470,7 +24482,7 @@ GameObject:
   - component: {fileID: 2485827491937009647}
   - component: {fileID: 1202656983101982033}
   m_Layer: 5
-  m_Name: Dialog1 (no4) (3)
+  m_Name: D7 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24891,6 +24903,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4136107832088830068}
+        m_TargetAssemblyTypeName: ObjectTransition, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1562977252}
         m_TargetAssemblyTypeName: GirlController, Assembly-CSharp
@@ -25370,7 +25394,7 @@ GameObject:
   - component: {fileID: 8905538622038260105}
   - component: {fileID: 6337867366203662694}
   m_Layer: 5
-  m_Name: Dialog1 (no2) (2)
+  m_Name: D8 > Bad Wine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25795,7 +25819,7 @@ GameObject:
   - component: {fileID: 7034830000868065608}
   - component: {fileID: 3528038660908192757}
   m_Layer: 5
-  m_Name: D3 > Next
+  m_Name: D3Yes > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25963,7 +25987,7 @@ GameObject:
   - component: {fileID: 3084076447397832433}
   - component: {fileID: 7972786522506490781}
   m_Layer: 5
-  m_Name: Dialog1 (no2)
+  m_Name: D6No > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27129,7 +27153,7 @@ GameObject:
   - component: {fileID: 6810476653529653603}
   - component: {fileID: 3297697310370887801}
   m_Layer: 5
-  m_Name: Dialog1 (no3) (4)
+  m_Name: D11 > Finish Good
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28688,7 +28712,7 @@ GameObject:
   - component: {fileID: 4431210261084779277}
   - component: {fileID: 6580171514564174198}
   m_Layer: 5
-  m_Name: Dialog1 (no4) (6)
+  m_Name: D10 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31274,7 +31298,7 @@ GameObject:
   - component: {fileID: 4275060555814233025}
   - component: {fileID: 113789723116640540}
   m_Layer: 5
-  m_Name: Dialog1 (no4) (11)
+  m_Name: D15 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37775,14 +37799,26 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 4136107832088830068}
+        m_TargetAssemblyTypeName: ObjectTransition, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1562977252}
+        m_TargetAssemblyTypeName: GirlController, Assembly-CSharp
+        m_MethodName: InviteGirl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -38799,10 +38835,10 @@ RectTransform:
   m_Father: {fileID: 9050415608813706955}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -304.655}
-  m_SizeDelta: {x: 469.2, y: 90.69}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3458547327867115462
 CanvasRenderer:
@@ -40606,7 +40642,7 @@ GameObject:
   - component: {fileID: 5629550999615982255}
   - component: {fileID: 9145830098404525665}
   m_Layer: 5
-  m_Name: Dialog2 (yes) (2)
+  m_Name: D5 > Yes No
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40990,7 +41026,7 @@ GameObject:
   - component: {fileID: 6258522274774825556}
   - component: {fileID: 4843875850683866556}
   m_Layer: 5
-  m_Name: Dialog1 (yes3)
+  m_Name: D7Yes > Finish Good
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48290,10 +48326,10 @@ RectTransform:
   m_Father: {fileID: 6957874153659008111}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -149.99998}
-  m_SizeDelta: {x: 469.2, y: 57.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8656877614052232165
 CanvasRenderer:
@@ -48781,7 +48817,7 @@ GameObject:
   - component: {fileID: 9135556981229131671}
   - component: {fileID: 7618946513009846122}
   m_Layer: 5
-  m_Name: Dialog2 (no)
+  m_Name: D3No > Yes No
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51053,7 +51089,7 @@ GameObject:
   - component: {fileID: 1666420453252174165}
   - component: {fileID: 5437390411024458257}
   m_Layer: 5
-  m_Name: Dialog2 (yes2)
+  m_Name: D6Yes > Yes No
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52667,7 +52703,7 @@ GameObject:
   - component: {fileID: 5098603372010958758}
   - component: {fileID: 8878109968856345402}
   m_Layer: 5
-  m_Name: Dialog1 (no2) (1)
+  m_Name: D7 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53590,7 +53626,7 @@ GameObject:
   - component: {fileID: 2592754294282204675}
   - component: {fileID: 6802995329972087277}
   m_Layer: 5
-  m_Name: Dialog1 (no4) (4)
+  m_Name: D8 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55593,7 +55629,7 @@ GameObject:
   - component: {fileID: 8258603589055894437}
   - component: {fileID: 6064064676089618541}
   m_Layer: 5
-  m_Name: Dialog1 (no4) (8)
+  m_Name: D12 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56245,7 +56281,7 @@ GameObject:
   - component: {fileID: 473406626611856545}
   - component: {fileID: 7119894743272075786}
   m_Layer: 5
-  m_Name: Dialog1 (no4) (9)
+  m_Name: D13 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60495,10 +60531,10 @@ RectTransform:
   m_Father: {fileID: 8413691196556002742}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -213.965}
-  m_SizeDelta: {x: 469.2, y: 90.69}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7235172802933050985
 CanvasRenderer:
@@ -62625,7 +62661,7 @@ GameObject:
   - component: {fileID: 1950328286319811005}
   - component: {fileID: 7952498323720584418}
   m_Layer: 5
-  m_Name: Dialog1 (no4) (5)
+  m_Name: D9 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62835,6 +62871,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1562977252}
+        m_TargetAssemblyTypeName: GirlController, Assembly-CSharp
+        m_MethodName: InviteGirl
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -64474,7 +64522,7 @@ GameObject:
   - component: {fileID: 4808998495459614275}
   - component: {fileID: 1193466497078410689}
   m_Layer: 5
-  m_Name: Dialog1 (no3)
+  m_Name: D7No > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66230,7 +66278,7 @@ GameObject:
   - component: {fileID: 5285828497729460257}
   - component: {fileID: 5544462352705218128}
   m_Layer: 5
-  m_Name: Dialog1 (no4) (2)
+  m_Name: D6 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67219,7 +67267,7 @@ GameObject:
   - component: {fileID: 1922746673505732503}
   - component: {fileID: 6945824109879315482}
   m_Layer: 5
-  m_Name: Dialog1 (no4) (1)
+  m_Name: D5 > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68441,7 +68489,7 @@ GameObject:
   - component: {fileID: 2741799431309892961}
   - component: {fileID: 1147290308290804406}
   m_Layer: 5
-  m_Name: Dialog1 (no4)
+  m_Name: D4No > Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68724,6 +68772,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4136107832088830068}
+        m_TargetAssemblyTypeName: ObjectTransition, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1562977252}
         m_TargetAssemblyTypeName: GirlController, Assembly-CSharp
