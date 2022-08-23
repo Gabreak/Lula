@@ -6,8 +6,9 @@ using UnityEngine;
 using UnityEngine.Video;
 
 [CreateAssetMenu(fileName = "Girls", menuName = "GameData/Girl", order = 270)]
-public class GirlsData : ScriptableObject
+public class VideoGirlsData : ScriptableObject
 {
+    public int IndexVideo;
     public VideoGirl[] Videos;
     public GirlBase[] Girls;
 }

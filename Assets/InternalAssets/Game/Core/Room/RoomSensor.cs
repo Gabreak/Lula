@@ -5,9 +5,11 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Video;
 
 public class RoomSensor : MonoBehaviour
 {
+
     public List<SensorRedirector> Sensors;
     [SerializeField] private BaseSensor _sensorLight;
     [SerializeField] private BaseSensor _sensorPhoto;
@@ -15,9 +17,13 @@ public class RoomSensor : MonoBehaviour
     [SerializeField] private BaseSensor _sensorUsb;
     [SerializeField] private UnityEvent _onEnableHandle;
 
+
+
     [Space(20), Header("Usb")]
     [SerializeField] private TMP_InputField _usbName;
 
+    [Space(20), Header("Video")]
+    [SerializeField] private VideoGirlsData _dataVideo;
 
     private void OnEnable()
     {
@@ -27,8 +33,8 @@ public class RoomSensor : MonoBehaviour
     private void Start()
     {
         BaseSensor[] sensors = GameDataBase.Instance.Sensor;
-    
-            for (int i = 0; i < sensors.Length; i++)
+
+        for (int i = 0; i < sensors.Length; i++)
         {
             GameGoods? good = sensors[i].Good;
             bool isGood = good == null;
@@ -48,8 +54,6 @@ public class RoomSensor : MonoBehaviour
 
     public void PlayPhotoVideo()
     {
-        Debug.Log(_sensorLight.Good);
-        Debug.Log(_sensorUsb.Good);
         bool isGoodLight = _sensorLight.Good != null;
         bool isGoodPhoto = _sensorPhoto.Good != null;
         bool isGoodUsb = _sensorUsb.Good != null;
@@ -58,8 +62,8 @@ public class RoomSensor : MonoBehaviour
         {
             int price = _sensorLight.Good.Value.Price + _sensorPhoto.Good.Value.Price + Random.Range(-100, 0);
             int indexVideo = _sensorPhoto.Good.Value.Level;
-            UsbRecord(price, 0, indexVideo);
-            VideoController.Instance.VideoPlay(transform.gameObject, 0, indexVideo);
+
+            PlayDefault(0, indexVideo, price);
         }
     }
 
@@ -71,14 +75,32 @@ public class RoomSensor : MonoBehaviour
 
         if (isGoodUsb && isGoodVideo && isGoodLight)
         {
-            int price = _sensorLight.Good.Value.Price + _sensorVideo.Good.Value.Price + Random.Range(-1000, 0);
-            int indexVideo = _sensorVideo.Good.Value.Level;
-            UsbRecord(price, 1, indexVideo);
-            VideoController.Instance.VideoPlay(transform.gameObject, 1, indexVideo);
+            if (_dataVideo.IndexVideo == 0)
+            {
+                int price = _sensorLight.Good.Value.Price + _sensorVideo.Good.Value.Price + Random.Range(-1000, 0);
+                int indexVideo = _sensorVideo.Good.Value.Level;
+
+                PlayDefault(1, indexVideo, price);
+            }
+            else
+                PlayOtherGirls();
         }
     }
 
-    private void UsbRecord(int price, int indexType, int indexVideo)
+    public void PlayDefault(int indexList, int indexVideo, int price)
+    {
+        VideoClip clip = VideoController.Instance.GetVideo(indexList, indexVideo);
+        UsbRecord(price, clip);
+        VideoController.Instance.VideoPlay(transform.gameObject, indexList, indexVideo);
+    }
+
+    public void PlayOtherGirls()
+    {
+
+    }
+
+
+    private void UsbRecord(int price, VideoClip clip)
     {
         GameGoods[] usbGoods = _sensorUsb.Type.Acquired.ToArray();
         for (int i = 0; i < usbGoods.Length; i++)
@@ -95,7 +117,7 @@ public class RoomSensor : MonoBehaviour
         VideoRecord record = new VideoRecord();
         record.Name = _usbName.text;
         record.Price = price;
-        record.Clip = VideoController.Instance.GetVideo(indexType, indexVideo);
+        record.Clip = clip;
         baseRecord.Records.Add(record);
     }
 }

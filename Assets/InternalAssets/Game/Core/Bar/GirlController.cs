@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GirlController : MonoBehaviour
 {
-    [SerializeField] private GirlsData _data;
+    [SerializeField] private VideoGirlsData _data;
     public void InviteGirl(int indexGirl)
     {
         _data.Girls[indexGirl].IsActive = true;
