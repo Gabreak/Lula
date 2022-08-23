@@ -6,6 +6,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Video;
+using System.Diagnostics;
 
 public class RoomSensor : MonoBehaviour
 {
@@ -96,7 +97,13 @@ public class RoomSensor : MonoBehaviour
 
     public void PlayOtherGirls()
     {
+        //проверка игрушки
 
+        VideoClip clip = _dataVideo.Videos[_dataVideo.IndexVideo].Clip[0];
+
+        int price = 0;
+        UsbRecord(price, clip);
+        VideoController.Instance.VideoPlay(transform.gameObject, clip);
     }
 
 
