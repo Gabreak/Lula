@@ -3831,6 +3831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -4363,12 +4364,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 205382888305841890, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
+      propertyPath: m_Name
+      value: D12Next > Next
+      objectReference: {fileID: 0}
+    - target: {fileID: 205382888305841890, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 260377892106673471, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_Name
-      value: Next 1 -> Next 2
+      value: D4Next > Next
       objectReference: {fileID: 0}
     - target: {fileID: 260377892106673471, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
@@ -4397,6 +4402,10 @@ PrefabInstance:
     - target: {fileID: 542800581568240203, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 742342833941293642, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
+      propertyPath: m_Name
+      value: D10Next > Next
       objectReference: {fileID: 0}
     - target: {fileID: 742342833941293642, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
@@ -4571,12 +4580,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1337361783613408603, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
+      propertyPath: m_Name
+      value: D9Next > Next
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337361783613408603, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1420718193825566907, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_Name
-      value: Dialog2 (No Version 3) Finish Good
+      value: D6Next > Finish Good
       objectReference: {fileID: 0}
     - target: {fileID: 1420718193825566907, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
@@ -4672,7 +4685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2745784275552113323, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_Name
-      value: 0>1
+      value: D1 Next
       objectReference: {fileID: 0}
     - target: {fileID: 2745784275552113323, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
@@ -4680,11 +4693,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2885150883061802645, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_Name
-      value: 11>111
+      value: D4Yes > Yes No
       objectReference: {fileID: 0}
     - target: {fileID: 2885150883061802645, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2945170544181671404, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4783,6 +4796,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3407649292740628047, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
+      propertyPath: m_Name
+      value: D9Next > Next
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407649292740628047, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -4851,6 +4868,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4257636379715370974, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
+      propertyPath: m_Name
+      value: D6No > Next
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257636379715370974, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -4879,6 +4900,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4491628613969764518, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
+      propertyPath: m_Name
+      value: D10Next > Next
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491628613969764518, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -4905,6 +4930,10 @@ PrefabInstance:
     - target: {fileID: 4505617469548161429, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773315052687967885, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
+      propertyPath: m_Name
+      value: D5No > Next
       objectReference: {fileID: 0}
     - target: {fileID: 4773315052687967885, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
@@ -4936,7 +4965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852338336731801341, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_Name
-      value: 3>4
+      value: D6Next > Next
       objectReference: {fileID: 0}
     - target: {fileID: 4852338336731801341, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
@@ -4992,7 +5021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5212671601809807855, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_Name
-      value: 1>11
+      value: 'D3Yes > Yes No '
       objectReference: {fileID: 0}
     - target: {fileID: 5212671601809807855, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
@@ -5000,7 +5029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5524961864740008574, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_Name
-      value: Begin No -> Next 1
+      value: D3No > Next
       objectReference: {fileID: 0}
     - target: {fileID: 5524961864740008574, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
@@ -5029,6 +5058,10 @@ PrefabInstance:
     - target: {fileID: 5628894016640910606, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631479936634493919, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
+      propertyPath: m_Name
+      value: D6Yes > Bad Wine
       objectReference: {fileID: 0}
     - target: {fileID: 5631479936634493919, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
@@ -5107,12 +5140,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6683447030630516935, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
+      propertyPath: m_Name
+      value: D8Yes > Next
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683447030630516935, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7063245270572870288, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_Name
-      value: 111>111
+      value: D5Yes > Next
       objectReference: {fileID: 0}
     - target: {fileID: 7063245270572870288, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
@@ -5191,12 +5228,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7360458250560164978, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
+      propertyPath: m_Name
+      value: D7Next > Yes No
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360458250560164978, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7447476695200482620, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_Name
-      value: Dialog2 (Yes Version 5) Finish Good
+      value: D13Next > Finish Good
       objectReference: {fileID: 0}
     - target: {fileID: 7447476695200482620, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
@@ -5228,11 +5269,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7560859226124862780, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_Name
-      value: Dialog2 (No2)
+      value: D4No > Bad Wine
       objectReference: {fileID: 0}
     - target: {fileID: 7560859226124862780, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696641733210642695, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
+      propertyPath: m_Name
+      value: D11Next > Next
       objectReference: {fileID: 0}
     - target: {fileID: 7696641733210642695, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
@@ -5263,12 +5308,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8277467267281735916, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
+      propertyPath: m_Name
+      value: D12Next > Bad Wine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8277467267281735916, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8307874413506177239, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_Name
-      value: Dialog 5 (Next) Finish Good
+      value: D7Next > Finish Good
       objectReference: {fileID: 0}
     - target: {fileID: 8307874413506177239, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
@@ -5276,15 +5325,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8368365532041230658, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_Name
-      value: 1>11-00
+      value: D2Next > Yes No
       objectReference: {fileID: 0}
     - target: {fileID: 8368365532041230658, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8460881651088353078, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
+      propertyPath: m_Name
+      value: D11Next > Next
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460881651088353078, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663775531309471101, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
+      propertyPath: m_Name
+      value: D8No > Next
       objectReference: {fileID: 0}
     - target: {fileID: 8663775531309471101, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
@@ -5340,7 +5397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8812427427333860156, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_Name
-      value: Next 2 -> Pick 2
+      value: D5Next > Yes No
       objectReference: {fileID: 0}
     - target: {fileID: 8812427427333860156, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
       propertyPath: m_IsActive
