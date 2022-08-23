@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class GirlController : MonoBehaviour
 {
-    [SerializeField] private GirlHef _girl;
-    public void InviteGirl()
+    [SerializeField] private GirlsData _data;
+    public void InviteGirl(int indexGirl)
     {
-        GirlManager.Instance.Invited = _girl;
+        _data.Girls[indexGirl].IsActive = true;
     }
 }
