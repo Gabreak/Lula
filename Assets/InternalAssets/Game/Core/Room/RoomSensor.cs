@@ -1,12 +1,14 @@
+using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Video;
-using System.Diagnostics;
 
 public class RoomSensor : MonoBehaviour
 {
@@ -25,6 +27,11 @@ public class RoomSensor : MonoBehaviour
 
     [Space(20), Header("Video")]
     [SerializeField] private VideoGirlsData _dataVideo;
+    [SerializeField] private Transform parentGirls;
+
+    [Space(20), Header("Toys")]
+    [SerializeField] private TypeProducts _toys;
+    [SerializeField] private LocalizedString _noMoney;
 
     private void OnEnable()
     {
@@ -33,6 +40,11 @@ public class RoomSensor : MonoBehaviour
 
     private void Start()
     {
+        CreateGirls();
+        //int girl = Convert.ToString(_dataVideo.IndexVideo, 2).Count(ch => ch == '1');
+        //string idGirl = Convert.ToString(_dataVideo.IndexVideo, 2);
+        //bool isShantal = idGirl.Substring(idGirl.Length) == "1";
+        //Debug.Log(idGirl.Length - 1);
         BaseSensor[] sensors = GameDataBase.Instance.Sensor;
 
         for (int i = 0; i < sensors.Length; i++)
@@ -52,6 +64,20 @@ public class RoomSensor : MonoBehaviour
         }
     }
 
+    private void CreateGirls()
+    {
+        int length = _dataVideo.Girls.Length;
+
+        for (int i = 0; i < length; i++)
+        {
+            if (_dataVideo.Girls[i].IsActive)
+            {
+
+                RoomGirlController girl = Instantiate(_dataVideo.Girls[i].Object, parentGirls);
+                girl.IdBinary = _dataVideo.Girls[i].Id;
+            }
+        }
+    }
 
     public void PlayPhotoVideo()
     {
@@ -61,7 +87,7 @@ public class RoomSensor : MonoBehaviour
 
         if (isGoodUsb && isGoodPhoto && isGoodLight)
         {
-            int price = _sensorLight.Good.Value.Price + _sensorPhoto.Good.Value.Price + Random.Range(-100, 0);
+            int price = _sensorLight.Good.Value.Price + _sensorPhoto.Good.Value.Price + UnityEngine.Random.Range(-100, 0);
             int indexVideo = _sensorPhoto.Good.Value.Level;
 
             PlayDefault(0, indexVideo, price);
@@ -74,17 +100,18 @@ public class RoomSensor : MonoBehaviour
         bool isGoodVideo = _sensorVideo.Good != null;
         bool isGoodUsb = _sensorUsb.Good != null;
 
-        if (isGoodUsb && isGoodVideo && isGoodLight)
+        //if (isGoodUsb && isGoodVideo && isGoodLight)
         {
+            //int price = _sensorLight.Good.Value.Price + _sensorVideo.Good.Value.Price + UnityEngine.Random.Range(-1000, 0);
+            int price = 0;//_sensorLight.Good.Value.Price + _sensorVideo.Good.Value.Price + UnityEngine.Random.Range(-1000, 0);
             if (_dataVideo.IndexVideo == 0)
             {
-                int price = _sensorLight.Good.Value.Price + _sensorVideo.Good.Value.Price + Random.Range(-1000, 0);
                 int indexVideo = _sensorVideo.Good.Value.Level;
 
                 PlayDefault(1, indexVideo, price);
             }
             else
-                PlayOtherGirls();
+                PlayOtherGirls(price);
         }
     }
 
@@ -95,13 +122,55 @@ public class RoomSensor : MonoBehaviour
         VideoController.Instance.VideoPlay(transform.gameObject, indexList, indexVideo);
     }
 
-    public void PlayOtherGirls()
+    public void PlayOtherGirls(int price)
     {
-        //проверка игрушки
+        string idGirl = Convert.ToString(_dataVideo.IndexVideo, 2);
+        bool isShantal = idGirl.Substring(idGirl.Length - 1) == "1";
+        int girl = Convert.ToString(_dataVideo.IndexVideo, 2).Count(ch => ch == '1');
+        if (isShantal) girl--;
 
-        VideoClip clip = _dataVideo.Videos[_dataVideo.IndexVideo].Clip[0];
 
-        int price = 0;
+        if (MoneyProperties.Money < girl * 200)
+        {
+            string text = _noMoney.GetLocalizedString();
+            WindowInfoRedirector.Message(text, WindowIcon.Warning, Color.yellow);
+            return;
+        }
+        VideoClip clipNoToy = _dataVideo.Videos[_dataVideo.IndexVideo].Clip[0];
+        VideoClip clipToy = _dataVideo.Videos[_dataVideo.IndexVideo].Clip[1];
+        string textError = _dataVideo.Videos[_dataVideo.IndexVideo].Warning.GetLocalizedString();
+        string textToyError = _dataVideo.Videos[_dataVideo.IndexVideo].WarningToy.GetLocalizedString();
+        bool isToy = false;
+
+        foreach (var toy in _toys.Acquired)
+        {
+            isToy = toy.Id == _dataVideo.Videos[_dataVideo.IndexVideo].IndexToy;
+            if (isToy) break;
+        }
+        Debug.Log(isToy);
+        VideoClip clip = (isToy) ? clipToy : clipNoToy;
+
+        bool isClipNoToy = clipNoToy == null;
+        bool isClipToy = clipToy == null;
+
+        if (isClipToy)
+        {
+            clip = clipNoToy;
+            if (isClipNoToy)
+            {
+                WindowInfoRedirector.Message(textError, WindowIcon.Warning, Color.yellow);
+                return;
+            }
+        }
+
+        if (!isToy && isClipNoToy)
+        {
+            WindowInfoRedirector.Message(textToyError, WindowIcon.Warning, Color.yellow);
+            return;
+        }
+
+        int sumPrice = price + (girl * 250);
+        MoneyProperties.Money -= girl * 200;
         UsbRecord(price, clip);
         VideoController.Instance.VideoPlay(transform.gameObject, clip);
     }
