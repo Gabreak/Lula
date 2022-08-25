@@ -3452,7 +3452,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165179393673654960}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a27cbdf4a5c5c054888875e926529cca, type: 3}
   m_Name: 
@@ -4115,7 +4115,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631766874682744782}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a27cbdf4a5c5c054888875e926529cca, type: 3}
   m_Name: 
@@ -6240,21 +6240,6 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   _usbName: {fileID: 1712520586}
-  _dataVideo: {fileID: 11400000, guid: 95421b87c3d245c429c76f7ee81cd58e, type: 2}
-  parentGirls: {fileID: 5685564295565073886}
-  _toys: {fileID: 11400000, guid: 3eb12694983100e43ae8fc1798549c42, type: 2}
-  _noMoney:
-    m_TableReference:
-      m_TableCollectionName: 
-    m_TableEntryReference:
-      m_KeyId: 0
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  references:
-    version: 2
-    RefIds: []
 --- !u!114 &4720494447825417116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6280,6 +6265,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 95421b87c3d245c429c76f7ee81cd58e, type: 2}
+  _parentGirls: {fileID: 5685564295565073886}
+  _toys: {fileID: 11400000, guid: 3eb12694983100e43ae8fc1798549c42, type: 2}
 --- !u!1 &3238696262645404243
 GameObject:
   m_ObjectHideFlags: 0

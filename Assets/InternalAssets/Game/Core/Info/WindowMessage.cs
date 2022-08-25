@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class WindowInfoRedirector : MonoBehaviour
+public class WindowMessage : MonoBehaviour
 {
     [SerializeField] private Sprite[] _icon;
     [SerializeField] private GameObject _panel;
     [SerializeField] private Image _typeWindow;
     [SerializeField] private TextMeshProUGUI _text;
 
-    private static WindowInfoRedirector _instance;
+    private static WindowMessage _instance;
 
     private void Awake()
     {
