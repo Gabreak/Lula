@@ -25,6 +25,12 @@ public class RoomSensor : MonoBehaviour
     [Space(20), Header("Usb")]
     [SerializeField] private TMP_InputField _usbName;
 
+    [Space(20), Header("Messages")]
+    [SerializeField] private LocalizedString _usbErrorText;
+    [SerializeField] private LocalizedString _lightErrorText;
+    [SerializeField] private LocalizedString _photoCameraErrorText;
+    [SerializeField] private LocalizedString _videoCameraErrorText;
+
 
     private void OnEnable()
     {
@@ -59,13 +65,14 @@ public class RoomSensor : MonoBehaviour
         bool isGoodPhoto = _sensorPhoto.Good != null;
         bool isGoodUsb = _sensorUsb.Good != null;
 
-        if (isGoodUsb && isGoodPhoto && isGoodLight)
-        {
-            int price = _sensorLight.Good.Value.Price + _sensorPhoto.Good.Value.Price + UnityEngine.Random.Range(-100, 0);
-            int indexVideo = _sensorPhoto.Good.Value.Level;
+        if (LightMessage(isGoodLight)) return;
+        if (PhotoCameraMessage(isGoodPhoto)) return;
+        if (UsbMessage(isGoodUsb)) return;
 
-            PlayDefault(0, indexVideo, price);
-        }
+        int price = _sensorLight.Good.Value.Price + _sensorPhoto.Good.Value.Price + UnityEngine.Random.Range(-100, 0);
+        int indexVideo = _sensorPhoto.Good.Value.Level;
+
+        PlayDefault(0, indexVideo, price);
     }
 
     public void PlayVideo()
@@ -73,20 +80,19 @@ public class RoomSensor : MonoBehaviour
         bool isGoodLight = _sensorLight.Good != null;
         bool isGoodVideo = _sensorVideo.Good != null;
         bool isGoodUsb = _sensorUsb.Good != null;
+        if (LightMessage(isGoodLight)) return;
+        if (VideoCameraMessage(isGoodVideo)) return;
+        if (UsbMessage(isGoodUsb)) return;
 
-        //if (isGoodUsb && isGoodVideo && isGoodLight)
+        int price = _sensorLight.Good.Value.Price + _sensorVideo.Good.Value.Price + UnityEngine.Random.Range(-1000, 0);
+        if (RoomGirls.VideoIndex == 0)
         {
-            //int price = _sensorLight.Good.Value.Price + _sensorVideo.Good.Value.Price + UnityEngine.Random.Range(-1000, 0);
-            int price = 0;
-            if (RoomGirls.VideoIndex == 0)
-            {
-                int indexVideo = _sensorVideo.Good.Value.Level;
+            int indexVideo = _sensorVideo.Good.Value.Level;
 
-                PlayDefault(1, indexVideo, price);
-            }
-            else
-                PlayOtherGirls(price);
+            PlayDefault(1, indexVideo, price);
         }
+        else
+            PlayOtherGirls(price);
     }
 
     public void PlayDefault(int indexList, int indexVideo, int price)
@@ -109,6 +115,7 @@ public class RoomSensor : MonoBehaviour
         if (clip == null) return;
 
         int sumPrice = price + (girl * 250);
+
         MoneyProperties.Money -= girl * 200;
 
         UsbRecord(sumPrice, clip);
@@ -138,5 +145,43 @@ public class RoomSensor : MonoBehaviour
         baseRecord.Records.Add(record);
     }
 
+    private bool UsbMessage(bool isUsb)
+    {
+        if (!isUsb)
+        {
+            WindowMessage.Message(_usbErrorText.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+            return true;
+        }
+        return false;
+    }
 
+    private bool VideoCameraMessage(bool isCamera)
+    {
+        if (!isCamera)
+        {
+            WindowMessage.Message(_photoCameraErrorText.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+            return true;
+        }
+        return false;
+    }
+
+    private bool PhotoCameraMessage(bool isPhoto)
+    {
+        if (!isPhoto)
+        {
+            WindowMessage.Message(_photoCameraErrorText.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+            return true;
+        }
+        return false;
+    }
+
+    private bool LightMessage(bool isLight)
+    {
+        if (!isLight)
+        {
+            WindowMessage.Message(_lightErrorText.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+            return true;
+        }
+        return false;
+    }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.Localization;
 
 public class DoorManager : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class DoorManager : MonoBehaviour
     public int HourMax = 0;
 
     public int Price;
-    public bool[] isDoor;
+    public bool isDoor;
+    [SerializeField] private LocalizedString _rent;
 
     private void Awake()
     {
@@ -31,7 +33,10 @@ public class DoorManager : MonoBehaviour
     {
         if (Hour > 0)
             Hour--;
-        else
-            isDoor[0] = false;
+        else if (isDoor)
+        {
+            WindowMessage.Message(_rent.GetLocalizedString(),WindowIcon.Information);
+            isDoor = false;
+        }
     }
 }

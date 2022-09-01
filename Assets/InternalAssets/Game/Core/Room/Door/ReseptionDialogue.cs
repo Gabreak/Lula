@@ -10,7 +10,7 @@ public class ReseptionDialogue : MonoBehaviour
     private const int IndexMyDoor = 0;
     private void OnEnable()
     {
-        int index = Convert.ToInt32(DoorManager.Instance.isDoor[IndexMyDoor]);
+        int index = Convert.ToInt32(DoorManager.Instance.isDoor);
         _dialogue[index].SetActive(true);
     }
     private void OnDisable()
@@ -26,7 +26,7 @@ public class ReseptionDialogue : MonoBehaviour
         DoorManager door = DoorManager.Instance;
         if (door.HourMax != 0 && MoneyProperties.Money >= door.Price)
         {
-            door.isDoor[IndexMyDoor] = true;
+            door.isDoor = true;
             door.Hour = door.HourMax;
             door.HourMax = 0;
 
@@ -38,7 +38,7 @@ public class ReseptionDialogue : MonoBehaviour
 
     public void DoorClose()
     {
-        DoorManager.Instance.isDoor[IndexMyDoor] = false;
+        DoorManager.Instance.isDoor = false;
         DoorManager.Instance.Hour = 0;
     }
 

@@ -155,7 +155,6 @@ public class SaveManager : MonoBehaviour
     {
 
         save.SaveRoomDoor.Hour = DoorManager.Instance.Hour;
-        save.SaveRoomDoor.IsDoor = new bool[DoorManager.Instance.isDoor.Length];
         save.SaveRoomDoor.IsDoor = DoorManager.Instance.isDoor;
 
     }
@@ -273,5 +272,5 @@ public struct SaveGood
 public struct SaveDoor
 {
     public int Hour;
-    public bool[] IsDoor;
+    public bool IsDoor;
 }

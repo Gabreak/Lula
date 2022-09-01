@@ -2285,6 +2285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3003773723671722370}
   - component: {fileID: 3203333953131275892}
+  - component: {fileID: 7404817409907851939}
   m_Layer: 0
   m_Name: Sex Shop
   m_TagString: Untagged
@@ -2324,6 +2325,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isNightHub: 1
+--- !u!114 &7404817409907851939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773723671722369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015ea44cdf1398e48833ac364c10c9ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objects:
+  - Object: {fileID: 218789758}
+    IsEnable: 0
 --- !u!1 &6938220606297299895
 GameObject:
   m_ObjectHideFlags: 0

@@ -1328,6 +1328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3003773723671722370}
   - component: {fileID: 7948325726880032568}
+  - component: {fileID: 6062456244800673418}
   m_Layer: 0
   m_Name: Biker
   m_TagString: Untagged
@@ -1367,3 +1368,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pricePilice: {fileID: 406036616}
+--- !u!114 &6062456244800673418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773723671722369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015ea44cdf1398e48833ac364c10c9ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objects:
+  - Object: {fileID: 2073744710}
+    IsEnable: 0
