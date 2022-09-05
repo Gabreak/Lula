@@ -32,4 +32,5 @@ public class HubLight : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }

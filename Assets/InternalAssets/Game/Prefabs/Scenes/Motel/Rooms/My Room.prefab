@@ -1985,7 +1985,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -4, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &1633629767
@@ -2016,7 +2016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4ca61193f8007e4439a088705ce4d98d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5599f0f28862a2f42820d166e74b32ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2047,11 +2047,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.078431375, g: 0.34988007, b: 0.9019608, a: 0.7058824}
-    m_HighlightedColor: {r: 0.078431375, g: 0.3529412, b: 0.9019608, a: 0.78431374}
-    m_PressedColor: {r: 0.078431375, g: 0.3529412, b: 0.9019608, a: 1}
-    m_SelectedColor: {r: 0.078431375, g: 0.3529412, b: 0.9019608, a: 0.7058824}
-    m_DisabledColor: {r: 0.078431375, g: 0.3529412, b: 0.9019608, a: 0.7058824}
+    m_NormalColor: {r: 0.11764706, g: 0.9019608, b: 0.07843135, a: 0.7058824}
+    m_HighlightedColor: {r: 0.11764706, g: 0.9019608, b: 0.078431375, a: 0.78431374}
+    m_PressedColor: {r: 0.11764706, g: 0.9019608, b: 0.078431375, a: 1}
+    m_SelectedColor: {r: 0.11764706, g: 0.9019608, b: 0.078431375, a: 0.7058824}
+    m_DisabledColor: {r: 0.11764706, g: 0.9019608, b: 0.078431375, a: 0.7058824}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3044,7 +3044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2182840812123316642
 Transform:
   m_ObjectHideFlags: 0
@@ -3668,8 +3668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e30eba99bceda458a1d41e01b6d75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animationEnter: {fileID: 7400000, guid: e9c02fca12acd6e49abccacd34632000, type: 2}
-  _animationExit: {fileID: 7400000, guid: 69fdccefd07892040912aa585a5a10b6, type: 2}
+  _animationEnter: {fileID: 7400000, guid: 314e0d9472156d74e8802f253f4ce1df, type: 2}
+  _animationExit: {fileID: 7400000, guid: 59be8c29d52cbc94db71cc9833c66ccc, type: 2}
   _animationDown: {fileID: 7400000, guid: 562c373f3258fe447ae131dd39b9a786, type: 2}
   _animationUp: {fileID: 7400000, guid: 0a646c339b6e8d34699ed757610f405b, type: 2}
 --- !u!114 &2314888476482396461
@@ -4181,7 +4181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4ca61193f8007e4439a088705ce4d98d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5599f0f28862a2f42820d166e74b32ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4672,7 +4672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -63.999985, y: 0}
+  m_AnchoredPosition: {x: 312, y: 0}
   m_SizeDelta: {x: 272, y: 64}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &2754015495675182448
@@ -6718,6 +6718,8 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  _priceGirl: 200
+  _incomeGirl: 250
   references:
     version: 2
     RefIds: []
@@ -7846,7 +7848,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:c4631bdafa7dbe646b7ac9a097a27a66
     m_TableEntryReference:
-      m_KeyId: 2220853467652096
+      m_KeyId: 2220934518382592
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -9198,7 +9200,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -63.999985, y: 0}
+  m_AnchoredPosition: {x: 160, y: 0}
   m_SizeDelta: {x: 140, y: 64}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &5000297872250679080
@@ -9759,7 +9761,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:c4631bdafa7dbe646b7ac9a097a27a66
     m_TableEntryReference:
-      m_KeyId: 2220853467652096
+      m_KeyId: 23245759923724288
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -9798,7 +9800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7315241160291455722
 Transform:
   m_ObjectHideFlags: 0

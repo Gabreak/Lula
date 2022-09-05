@@ -34,6 +34,7 @@ public class ScenesManager : MonoBehaviour
         SceneOpen = isNew;
         StartCoroutine(Loading(index));
     }
+
     private IEnumerator Loading(int index)
     {
         LoadingRedirector redirector = Instantiate(_redirector);

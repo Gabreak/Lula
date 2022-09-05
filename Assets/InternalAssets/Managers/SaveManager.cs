@@ -65,18 +65,18 @@ public class SaveManager : MonoBehaviour
 
     private void OnGUI()
     {
-        if (GUI.Button(new Rect(16, 16, 64, 16), "Save"))
-        {
-            SaveGame();
-        }
-        if (GUI.Button(new Rect(16, 32, 64, 16), "Load"))
-        {
-            LoadGame();
-        }
-        if (GUI.Button(new Rect(16, 48, 64, 16), "Clear"))
-        {
-            DeleteSave();
-        }
+        //if (GUI.Button(new Rect(16, 16, 64, 16), "Save"))
+        //{
+        //    SaveGame();
+        //}
+        //if (GUI.Button(new Rect(16, 32, 64, 16), "Load"))
+        //{
+        //    LoadGame();
+        //}
+        //if (GUI.Button(new Rect(16, 48, 64, 16), "Clear"))
+        //{
+        //    DeleteSave();
+        //}
 
     }
 
