@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Events;
-using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Video;
 
@@ -30,6 +29,11 @@ public class RoomSensor : MonoBehaviour
     [SerializeField] private LocalizedString _lightErrorText;
     [SerializeField] private LocalizedString _photoCameraErrorText;
     [SerializeField] private LocalizedString _videoCameraErrorText;
+
+    [Space(20), Header("Price")]
+    [SerializeField] private int _priceGirl = 200;
+    [SerializeField] private int _incomeGirl = 250;
+
 
 
     private void OnEnable()
@@ -109,14 +113,14 @@ public class RoomSensor : MonoBehaviour
 
         if (isShantal) girl--;
 
-        if (MoneyProperties.NoMoneyMessage(girl * 200)) return;
+        if (MoneyProperties.NoMoneyMessage(girl * _priceGirl)) return;
 
         VideoClip clip = RoomGirls.GetVideo(RoomGirls.IsToy());
         if (clip == null) return;
 
-        int sumPrice = price + (girl * 250);
+        int sumPrice = price + (girl * _incomeGirl);
 
-        MoneyProperties.Money -= girl * 200;
+        MoneyProperties.Money -= girl * _priceGirl;
 
         UsbRecord(sumPrice, clip);
 

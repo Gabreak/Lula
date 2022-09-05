@@ -10,9 +10,10 @@ public class PrefabTransition : MonoBehaviour
     [SerializeField] private SceneData _prefabScene;
 
 
+
     private void OnMouseDown()
     {
-        OpenPrefab();
+        ColorManager.Instance.Play(OpenPrefab);
     }
 
     public void OpenPrefab()

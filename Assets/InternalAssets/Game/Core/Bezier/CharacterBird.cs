@@ -7,10 +7,11 @@ using UnityEngine;
 public class CharacterBird : MonoBehaviour
 {
     [SerializeField] private Transform[] _pointers;
-    [SerializeField] private GameObject _moneyText;
+    [SerializeField] private TextMesh _moneyText;
 
     [Range(0, 1)]
     [SerializeField] private float _time;
+    [SerializeField] private int _money = 1;
 
 
     private void Update()
@@ -37,7 +38,11 @@ public class CharacterBird : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Instantiate(_moneyText, transform.position, Quaternion.identity);
-        MoneyProperties.Money += 1;
+        TextMesh text = Instantiate(_moneyText, transform.position, Quaternion.identity);
+        text.text = _money + "$";
+
+        MoneyProperties.Money += _money;
+        int money = Random.Range(0, 5 + _money) < 5 ? 1 : -1;
+        _money += money;
     }
 }
