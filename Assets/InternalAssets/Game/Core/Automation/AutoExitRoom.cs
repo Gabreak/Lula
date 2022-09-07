@@ -1,6 +1,4 @@
 using System.Threading.Tasks;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AutoExitRoom : MonoBehaviour
@@ -24,6 +22,7 @@ public class AutoExitRoom : MonoBehaviour
 
         await Task.Delay(1);
 
+        Debug.Log(DoorManager.Instance.Hour);
         if (DoorManager.Instance.Hour == 0)
         {
             Instantiate(LightHubController.Instance.SceneDataHub.PrefabObject);

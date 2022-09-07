@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
+
+
 public class Settings : MonoBehaviour
 {
     [SerializeField] private GameObject _settingPanel;

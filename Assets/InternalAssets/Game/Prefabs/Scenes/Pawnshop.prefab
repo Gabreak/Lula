@@ -679,7 +679,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.75, y: -1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6222910892200876898}
   m_Father: {fileID: 3949056910166182624}
@@ -773,7 +773,9 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: 07cf91dd6b3d6c1448ac715503936e41, type: 2}
+  - {fileID: 7400000, guid: 9989117117b5b764c904cefa20e5327e, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -790,8 +792,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e30eba99bceda458a1d41e01b6d75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animationEnter: {fileID: 7400000, guid: e9c02fca12acd6e49abccacd34632000, type: 2}
-  _animationExit: {fileID: 7400000, guid: 69fdccefd07892040912aa585a5a10b6, type: 2}
+  _animationEnter: {fileID: 7400000, guid: 9989117117b5b764c904cefa20e5327e, type: 2}
+  _animationExit: {fileID: 7400000, guid: 07cf91dd6b3d6c1448ac715503936e41, type: 2}
   _animationDown: {fileID: 7400000, guid: 562c373f3258fe447ae131dd39b9a786, type: 2}
   _animationUp: {fileID: 7400000, guid: 0a646c339b6e8d34699ed757610f405b, type: 2}
 --- !u!114 &7684439731530408153
@@ -1872,7 +1874,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 653e6d78c6b81c8498bcd6a31eabcaab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 824d75285b7f27743bcf7bed269959c6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2105,8 +2107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e30eba99bceda458a1d41e01b6d75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animationEnter: {fileID: 7400000, guid: e9c02fca12acd6e49abccacd34632000, type: 2}
-  _animationExit: {fileID: 7400000, guid: 69fdccefd07892040912aa585a5a10b6, type: 2}
+  _animationEnter: {fileID: 7400000, guid: 314e0d9472156d74e8802f253f4ce1df, type: 2}
+  _animationExit: {fileID: 7400000, guid: 59be8c29d52cbc94db71cc9833c66ccc, type: 2}
   _animationDown: {fileID: 7400000, guid: 562c373f3258fe447ae131dd39b9a786, type: 2}
   _animationUp: {fileID: 7400000, guid: 0a646c339b6e8d34699ed757610f405b, type: 2}
 --- !u!114 &3003773722691502295
@@ -2388,7 +2390,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 4b1650e260bb1af4abba91d417f0ebfd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2693,7 +2695,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 4b1650e260bb1af4abba91d417f0ebfd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

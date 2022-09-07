@@ -3368,11 +3368,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startMoney: 500
   _textMoney: {fileID: 259768708}
-  _messageNoMoney:
+  _messageNoMoneyGirl:
     m_TableReference:
       m_TableCollectionName: GUID:bab79b81f509a4e4a88e5d04ac224470
     m_TableEntryReference:
       m_KeyId: 33231777406976
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _messageNoMoney:
+    m_TableReference:
+      m_TableCollectionName: GUID:c4631bdafa7dbe646b7ac9a097a27a66
+    m_TableEntryReference:
+      m_KeyId: 24663687508369408
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -3504,7 +3513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681d8d45430033d4d84128c4c07e211e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _time: 2
+  _time: 4
   _color: {fileID: 893429668}
 --- !u!1 &1052897566
 GameObject:
@@ -6465,19 +6474,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 410486459, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.028361
+      value: -11.38
       objectReference: {fileID: 0}
     - target: {fileID: 410486459, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.341102
+      value: 2.11
       objectReference: {fileID: 0}
     - target: {fileID: 410486459, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.95803916
+      value: 0.0014822041
       objectReference: {fileID: 0}
     - target: {fileID: 410486459, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.28663728
+      value: -0.9999989
       objectReference: {fileID: 0}
     - target: {fileID: 1530560540315612637, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_IsActive

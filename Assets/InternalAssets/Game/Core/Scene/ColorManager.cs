@@ -27,9 +27,9 @@ public class ColorManager : MonoBehaviour
     {
         _color.enabled = true;
         float a = 0;
-        float r = Random.Range(0f, 1f);
-        float g = Random.Range(0f, 1f);
-        float b = Random.Range(0f, 1f);
+        float r = 0;//Random.Range(0f, 1f);
+        float g = 0;//Random.Range(0f, 1f);
+        float b = 0;//Random.Range(0f, 1f);
         while (a <= 1)
         {
             a += Time.deltaTime * _time;

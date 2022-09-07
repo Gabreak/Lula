@@ -32,6 +32,8 @@ public class ReseptionDialogue : MonoBehaviour
 
             MoneyProperties.Money -= door.Price;
         }
+        else
+            MoneyProperties.NoMoneyMessage();
 
 
     }

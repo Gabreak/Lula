@@ -19,8 +19,6 @@ public class ScenesManager : MonoBehaviour
     public void NewGame(int index)
     {
         OpenScene(index, 0);
-
-
     }
 
     public void LoadGame(int index)

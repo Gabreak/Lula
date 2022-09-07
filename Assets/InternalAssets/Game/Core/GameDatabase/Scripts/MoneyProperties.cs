@@ -11,6 +11,7 @@ public class MoneyProperties : MonoBehaviour
 
     [SerializeField] private Text _textMoney;
 
+    [SerializeField] private LocalizedString _messageNoMoneyGirl;
     [SerializeField] private LocalizedString _messageNoMoney;
 
     private static int s_Money;
@@ -50,11 +51,17 @@ public class MoneyProperties : MonoBehaviour
     {
         if (price > Money)
         {
-            string text = _instance._messageNoMoney.GetLocalizedString();
+            string text = _instance._messageNoMoneyGirl.GetLocalizedString();
             WindowMessage.Message(text, WindowIcon.Warning, Color.yellow);
             return true;
         }
         return false;
+    }
+    public static void NoMoneyMessage()
+    {
+            string text = _instance._messageNoMoney.GetLocalizedString();
+            WindowMessage.Message(text, WindowIcon.Warning, Color.yellow);
+
     }
 
 }
