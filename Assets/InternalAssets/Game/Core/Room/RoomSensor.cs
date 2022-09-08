@@ -11,7 +11,7 @@ using UnityEngine.Video;
 
 public class RoomSensor : MonoBehaviour
 {
-
+    [SerializeField] private Transform _parent;
     public List<SensorRedirector> Sensors;
     [SerializeField] private BaseSensor _sensorLight;
     [SerializeField] private BaseSensor _sensorPhoto;
@@ -34,7 +34,7 @@ public class RoomSensor : MonoBehaviour
     [SerializeField] private int _priceGirl = 200;
     [SerializeField] private int _incomeGirl = 250;
 
-
+    
 
     private void OnEnable()
     {
@@ -57,7 +57,7 @@ public class RoomSensor : MonoBehaviour
             bool isUsb = sensors[i].Type.Index == GameDataBase.Instance.UsbSensor.Type.Index;
             if (isUsb) continue;
 
-            GameObject createGood = Instantiate(good.Value.Product, transform);
+            GameObject createGood = Instantiate(good.Value.Product, _parent);
             sensors[i].CreateGood = createGood;
         }
     }

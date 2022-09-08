@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class RoomGood : MonoBehaviour
 {
     [SerializeField] private RoomGoodRedirector _prefab;
+    [SerializeField] private Transform _parent;
     public BaseSensor Sensor;
     public GameGoods? SelectGood { get; set; }
 
@@ -74,6 +75,7 @@ public class RoomGood : MonoBehaviour
 
         if (SelectGood == null)
         {
+            Destroy(Sensor.CreateGood);
             Sensor.Good = null;
             foreach (var sensor in roomSensor.Sensors)
             {
@@ -135,7 +137,7 @@ public class RoomGood : MonoBehaviour
         if (Sensor.CreateGood != null)
             Destroy(Sensor.CreateGood.gameObject);
         if (good != null)
-            Sensor.CreateGood = Instantiate(good.Value.Product, transform.root);
+            Sensor.CreateGood = Instantiate(good.Value.Product, _parent);
 
     }
 }
