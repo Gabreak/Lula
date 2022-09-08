@@ -47,7 +47,7 @@ public class Cart : MonoBehaviour
         _price += data.Goods.Price;
 
         MoneyProperties.InfoMoneyBasket(_textPrice, _price);
-        _buttonBuy.interactable = _price < MoneyProperties.Money;
+        _buttonBuy.interactable = _price <= MoneyProperties.Money;
     }
 
     private void FromTheCart(DataProduct data)
@@ -57,7 +57,7 @@ public class Cart : MonoBehaviour
         GoodsProperties.ProductsBasket.Remove(data);
 
         MoneyProperties.InfoMoneyBasket(_textPrice, _price);
-        _buttonBuy.interactable = _price < MoneyProperties.Money;
+        _buttonBuy.interactable = _price <= MoneyProperties.Money;
 
     }
 

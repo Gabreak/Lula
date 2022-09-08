@@ -62,7 +62,16 @@ public class PawnProperties : MonoBehaviour
             GoodsProperties.OnPawn(DataPawn);
             RedirectorPawn.TextPrice.text = "0$ Price";
             MoneyProperties.Money += DataPawn.Goods.PawnPrice;
+
+            BaseSensor[] sensors = GameDataBase.Instance.Sensor;
+            foreach (var sensor in sensors)
+            {
+                if (sensor.Good != null)
+                    if (sensor.Good.Value.Product == DataPawn.Goods.Product)
+                        sensor.Good = null;
+            }
             DataPawn = new DataProduct();
+
         }
 
     }

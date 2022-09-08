@@ -14,5 +14,6 @@ public class InputFieldConsole : MonoBehaviour
     private void OnEnable()
     {
         _field.ActivateInputField();
+        _field.Select();
     }
 }

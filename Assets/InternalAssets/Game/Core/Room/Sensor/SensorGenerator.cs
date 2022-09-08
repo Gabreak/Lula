@@ -17,7 +17,7 @@ public class SensorGenerator : MonoBehaviour
     {
         await Task.Delay(1);
         BaseSensor[] sensors = GameDataBase.Instance.Sensor;
-
+        
         foreach (BaseSensor sensor in sensors)
         {
             SensorRedirector redirecotr = Instantiate(PrefabSensor, transform);

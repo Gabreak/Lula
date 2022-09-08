@@ -30,6 +30,7 @@ public class Console : MonoBehaviour
         _pointer.ActivateInputField();
     }
 
+
     private string SetData()
     {
         switch (_previousCommand)

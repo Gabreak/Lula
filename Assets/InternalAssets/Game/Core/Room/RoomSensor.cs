@@ -1,24 +1,50 @@
+using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Localization;
+using UnityEngine.Events;
 using TMPro;
+using UnityEngine.Video;
 
 public class RoomSensor : MonoBehaviour
 {
+
     public List<SensorRedirector> Sensors;
     [SerializeField] private BaseSensor _sensorLight;
     [SerializeField] private BaseSensor _sensorPhoto;
     [SerializeField] private BaseSensor _sensorVideo;
     [SerializeField] private BaseSensor _sensorUsb;
+    [SerializeField] private UnityEvent _onEnableHandle;
+
+
 
     [Space(20), Header("Usb")]
     [SerializeField] private TMP_InputField _usbName;
 
+    [Space(20), Header("Messages")]
+    [SerializeField] private LocalizedString _usbErrorText;
+    [SerializeField] private LocalizedString _lightErrorText;
+    [SerializeField] private LocalizedString _photoCameraErrorText;
+    [SerializeField] private LocalizedString _videoCameraErrorText;
+
+    [Space(20), Header("Price")]
+    [SerializeField] private int _priceGirl = 200;
+    [SerializeField] private int _incomeGirl = 250;
+
+
+
+    private void OnEnable()
+    {
+        _onEnableHandle.Invoke();
+    }
+
     private void Start()
     {
         BaseSensor[] sensors = GameDataBase.Instance.Sensor;
+
         for (int i = 0; i < sensors.Length; i++)
         {
             GameGoods? good = sensors[i].Good;
@@ -35,19 +61,22 @@ public class RoomSensor : MonoBehaviour
             sensors[i].CreateGood = createGood;
         }
     }
+
+
     public void PlayPhotoVideo()
     {
         bool isGoodLight = _sensorLight.Good != null;
         bool isGoodPhoto = _sensorPhoto.Good != null;
         bool isGoodUsb = _sensorUsb.Good != null;
 
-        if (isGoodUsb && isGoodPhoto && isGoodLight)
-        {
-            int price = _sensorLight.Good.Value.Price + _sensorPhoto.Good.Value.Price + Random.Range(0, 200);
-            int indexVideo = _sensorPhoto.Good.Value.Level;
-            UsbRecord(price, 0, indexVideo);
-            VideoController.Instance.VideoPlay(transform.gameObject, 0, indexVideo);
-        }
+        if (LightMessage(isGoodLight)) return;
+        if (PhotoCameraMessage(isGoodPhoto)) return;
+        if (UsbMessage(isGoodUsb)) return;
+
+        int price = _sensorLight.Good.Value.Price + _sensorPhoto.Good.Value.Price + UnityEngine.Random.Range(-100, 0);
+        int indexVideo = _sensorPhoto.Good.Value.Level;
+
+        PlayDefault(0, indexVideo, price);
     }
 
     public void PlayVideo()
@@ -55,17 +84,51 @@ public class RoomSensor : MonoBehaviour
         bool isGoodLight = _sensorLight.Good != null;
         bool isGoodVideo = _sensorVideo.Good != null;
         bool isGoodUsb = _sensorUsb.Good != null;
+        if (LightMessage(isGoodLight)) return;
+        if (VideoCameraMessage(isGoodVideo)) return;
+        if (UsbMessage(isGoodUsb)) return;
 
-        if (isGoodUsb && isGoodVideo && isGoodLight)
+        int price = _sensorLight.Good.Value.Price + _sensorVideo.Good.Value.Price + UnityEngine.Random.Range(-1000, 0);
+        if (RoomGirls.VideoIndex == 0)
         {
-            int price = _sensorLight.Good.Value.Price + _sensorVideo.Good.Value.Price + Random.Range(0, 200);
             int indexVideo = _sensorVideo.Good.Value.Level;
-            UsbRecord(price, 1, indexVideo);
-            VideoController.Instance.VideoPlay(transform.gameObject, 1, indexVideo);
+
+            PlayDefault(1, indexVideo, price);
         }
+        else
+            PlayOtherGirls(price);
     }
 
-    private void UsbRecord(int price, int indexType, int indexVideo)
+    public void PlayDefault(int indexList, int indexVideo, int price)
+    {
+        VideoClip clip = VideoController.Instance.GetVideo(indexList, indexVideo);
+        UsbRecord(price, clip);
+        VideoController.Instance.VideoPlay(transform.gameObject, indexList, indexVideo);
+    }
+
+    private void PlayOtherGirls(int price)
+    {
+        int girl = RoomGirls.GetCount(RoomGirls.VideoIndex);
+        bool isShantal = RoomGirls.FindShantal(RoomGirls.GetBinary(RoomGirls.VideoIndex));
+
+        if (isShantal) girl--;
+
+        if (MoneyProperties.NoMoneyMessage(girl * _priceGirl)) return;
+
+        VideoClip clip = RoomGirls.GetVideo(RoomGirls.IsToy());
+        if (clip == null) return;
+
+        int sumPrice = price + (girl * _incomeGirl);
+
+        MoneyProperties.Money -= girl * _priceGirl;
+
+        UsbRecord(sumPrice, clip);
+
+        VideoController.Instance.VideoPlay(transform.gameObject, clip);
+    }
+
+
+    private void UsbRecord(int price, VideoClip clip)
     {
         GameGoods[] usbGoods = _sensorUsb.Type.Acquired.ToArray();
         for (int i = 0; i < usbGoods.Length; i++)
@@ -82,10 +145,47 @@ public class RoomSensor : MonoBehaviour
         VideoRecord record = new VideoRecord();
         record.Name = _usbName.text;
         record.Price = price;
-        record.Clip = VideoController.Instance.GetVideo(indexType, indexVideo);
+        record.Clip = clip;
         baseRecord.Records.Add(record);
     }
 
+    private bool UsbMessage(bool isUsb)
+    {
+        if (!isUsb)
+        {
+            WindowMessage.Message(_usbErrorText.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+            return true;
+        }
+        return false;
+    }
 
+    private bool VideoCameraMessage(bool isCamera)
+    {
+        if (!isCamera)
+        {
+            WindowMessage.Message(_photoCameraErrorText.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+            return true;
+        }
+        return false;
+    }
 
+    private bool PhotoCameraMessage(bool isPhoto)
+    {
+        if (!isPhoto)
+        {
+            WindowMessage.Message(_photoCameraErrorText.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+            return true;
+        }
+        return false;
+    }
+
+    private bool LightMessage(bool isLight)
+    {
+        if (!isLight)
+        {
+            WindowMessage.Message(_lightErrorText.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+            return true;
+        }
+        return false;
+    }
 }

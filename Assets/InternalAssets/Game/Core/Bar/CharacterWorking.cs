@@ -24,18 +24,9 @@ public class CharacterWorking : MonoBehaviour
 
     private void Tick(int hour)
     {
-        int index = BarManager.Instance.CharacterData.IndexTime;
-
-        if (index >= 0)
-        {
-            int begin = BarManager.Instance.CharacterData.Working[index].Begin;
-            int end = BarManager.Instance.CharacterData.Working[index].End;
-            if (begin == hour)
-                _character.SetActive(true);
-            else if (end == hour)
-                _character.SetActive(false);
-        }
+        _character.SetActive(BarManager.Instance.isWorking);
     }
+
     private IEnumerator DelayEnable()
     {
         _character.SetActive(false);

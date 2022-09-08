@@ -10,8 +10,8 @@ public class PoliceManager : MonoBehaviour
     public const int MaxInPrison = 3;
 
 
-    private static int _toJail;
-    public static int ToJail
+    private int _toJail;
+    public int ToJail
     {
         get => _toJail;
         set
@@ -19,33 +19,50 @@ public class PoliceManager : MonoBehaviour
             _toJail = value;
         }
     }
-    public static int WasInJail { get; set; }
+    public int WasInJail { get; set; }
 
-
-    private void Start()
+    private void Awake()
     {
         Instance = this;
     }
 
+    private void OnEnable()
+    {
+        ToJail = PlayerPrefs.GetInt("ToJail", 0);
+        WasInJail = PlayerPrefs.GetInt("WasInJail", 0);
+    }
+
+    private void OnDisable()
+    {
+        PlayerPrefs.SetInt("ToJail", _toJail);
+        PlayerPrefs.SetInt("WasInJail", WasInJail);
+    }
+
+
+
     public void LoadJail(GameObject currentScene)
     {
         ToJail++;
-        if (WasInJail > MaxInPrison)
-        {
-            GameOver();
-        }
-        else if (ToJail > MaxInPrison)
+        if (ToJail >= MaxInPrison)
         {
             WasInJail++;
             ToJail = 0;
-            Instantiate(JailPrefab);
-            Destroy(currentScene);
+            if (WasInJail >= MaxInPrison)
+            {
+                GameOver();
+            }
+            else
+            {
+
+                Instantiate(JailPrefab);
+                Destroy(currentScene);
+            }
         }
     }
 
     public void GameOver()
     {
-
+        SaveManager.Instance.DeleteSave();
     }
 
 }
