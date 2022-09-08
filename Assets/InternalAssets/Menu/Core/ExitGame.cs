@@ -9,4 +9,9 @@ public class ExitGame : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

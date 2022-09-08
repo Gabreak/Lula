@@ -33,9 +33,9 @@ public class DoorManager : MonoBehaviour
     {
         if (Hour > 0)
             Hour--;
-        else if (isDoor)
+        if (Hour == 0 && isDoor)
         {
-            WindowMessage.Message(_rent.GetLocalizedString(),WindowIcon.Information);
+            WindowMessage.Message(_rent.GetLocalizedString(), WindowIcon.Information);
             isDoor = false;
         }
     }

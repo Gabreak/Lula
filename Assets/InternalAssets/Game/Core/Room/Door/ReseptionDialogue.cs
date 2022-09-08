@@ -7,7 +7,6 @@ using UnityEngine;
 public class ReseptionDialogue : MonoBehaviour
 {
     [SerializeField] private GameObject[] _dialogue;
-    private const int IndexMyDoor = 0;
     private void OnEnable()
     {
         int index = Convert.ToInt32(DoorManager.Instance.isDoor);

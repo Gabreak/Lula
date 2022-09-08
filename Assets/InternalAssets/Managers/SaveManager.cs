@@ -51,7 +51,7 @@ public class SaveManager : MonoBehaviour
     {
         SaveProducts save = new SaveProducts();
         save.Money = MoneyProperties.Money;
-        
+
         MyGoodsSave(ref save);
         PawnshopSave(ref save);
         MyRoomSave(ref save);

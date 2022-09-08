@@ -9,7 +9,8 @@ public class ScenesManager : MonoBehaviour
     [SerializeField] private LoadingRedirector _redirector;
 
 
-    public static int SceneOpen = 0;
+    public static int SceneOpen { get; set; } = 0;
+
     public void OpenMenu(int index)
     {
         OpenScene(index, 3);
@@ -36,7 +37,7 @@ public class ScenesManager : MonoBehaviour
     private IEnumerator Loading(int index)
     {
         LoadingRedirector redirector = Instantiate(_redirector);
-        float prograss = 0;
+        float prograss;
         AsyncOperation asyncOperation;
         yield return null;
         asyncOperation = SceneManager.LoadSceneAsync(index);
