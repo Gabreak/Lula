@@ -44,8 +44,10 @@ public class SaveManager : MonoBehaviour
             MyRoomLoad(load);
             loadRecordVideo(load);
             LoadDoor(load);
+            LoadGirlsParadaize(load);
         }
     }
+
 
     public void SaveGame()
     {
@@ -57,6 +59,7 @@ public class SaveManager : MonoBehaviour
         MyRoomSave(ref save);
         SaveRecordVideo(ref save);
         SaveDoorRoom(ref save);
+        SaveGirlsParadaize(ref save);
 
         json = JsonUtility.ToJson(save);
 
@@ -159,6 +162,17 @@ public class SaveManager : MonoBehaviour
 
     }
 
+    private void SaveGirlsParadaize(ref SaveProducts save)
+    {
+        DataCharacter[] data = GameDataBase.Instance.GirlsData.Character;
+        save.IsActiveGirls = new bool[data.Length];
+
+        for (int i = 0; i < data.Length; i++)
+        {
+            save.IsActiveGirls[i] = data[i].InVisible;
+        }
+    }
+
     private void MyGoodsLoad(SaveProducts load)
     {
         BaseProduct[] baseProducts = GameDataBase.Instance.BaseProducts;
@@ -241,6 +255,16 @@ public class SaveManager : MonoBehaviour
         DoorManager.Instance.Hour = load.SaveRoomDoor.Hour;
         DoorManager.Instance.isDoor = load.SaveRoomDoor.IsDoor;
     }
+    public void LoadGirlsParadaize(SaveProducts load)
+    {
+        DataCharacter[] data = GameDataBase.Instance.GirlsData.Character;
+
+        for (int i = 0; i < data.Length; i++)
+        {
+            data[i].InVisible = load.IsActiveGirls[i];
+        }
+    }
+
 }
 
 [Serializable]
@@ -252,6 +276,7 @@ public class SaveProducts
     public SaveGood[] SensorGood;
     public VideoRecord[] VideoData;
     public SaveDoor SaveRoomDoor;
+    public bool[] IsActiveGirls;
 }
 
 [Serializable]

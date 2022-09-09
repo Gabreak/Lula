@@ -15,6 +15,8 @@ public class CharacterData : ScriptableObject
 public struct DataCharacter
 {
     public CharacterUpgrade Prefab;
+    public bool InVisible;
     public bool InRoom;
-    public int Id;
+    public int CurrentIndexDialog;
+    public GameObject[] Dialogs;
 }
