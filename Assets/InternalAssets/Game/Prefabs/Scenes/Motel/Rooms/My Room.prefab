@@ -3044,7 +3044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2182840812123316642
 Transform:
   m_ObjectHideFlags: 0
@@ -5540,7 +5540,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 5934746828973100760, guid: be9b2bb51926c784a92d9c937f9a23b7, type: 3}
-  _parent: {fileID: 2182840812123316642}
   Sensor: {fileID: 11400000, guid: 943e4ebd0f5e56046ac2f55bf32d408e, type: 2}
 --- !u!1 &2242421910711869683
 GameObject:
@@ -6638,7 +6637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce2f628f2fa725143a4559b18e93448d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parent: {fileID: 2182840812123316642}
   Sensors: []
   _sensorLight: {fileID: 11400000, guid: 758a21d84949d5043a1dd58957d1ec1a, type: 2}
   _sensorPhoto: {fileID: 11400000, guid: 3dff8179d9cdc294491794bafbe738fb, type: 2}
@@ -8585,7 +8583,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 8}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2029917206555695388
 MonoBehaviour:
@@ -8653,7 +8651,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 5934746828973100760, guid: be9b2bb51926c784a92d9c937f9a23b7, type: 3}
-  _parent: {fileID: 2182840812123316642}
   Sensor: {fileID: 11400000, guid: 758a21d84949d5043a1dd58957d1ec1a, type: 2}
 --- !u!1 &6411265408880970492
 GameObject:
@@ -9164,7 +9161,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 5934746828973100760, guid: be9b2bb51926c784a92d9c937f9a23b7, type: 3}
-  _parent: {fileID: 2182840812123316642}
   Sensor: {fileID: 11400000, guid: cf61a47b91d63c64cb33b7eef6335cb6, type: 2}
 --- !u!1 &6854425219284385012
 GameObject:
@@ -9804,7 +9800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7315241160291455722
 Transform:
   m_ObjectHideFlags: 0
@@ -9929,7 +9925,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 5934746828973100760, guid: be9b2bb51926c784a92d9c937f9a23b7, type: 3}
-  _parent: {fileID: 2182840812123316642}
   Sensor: {fileID: 11400000, guid: 3dff8179d9cdc294491794bafbe738fb, type: 2}
 --- !u!1 &7904382585259326756
 GameObject:
