@@ -8,9 +8,11 @@ using UnityEngine.Events;
 public class DoorRedirector : MonoBehaviour
 {
     public Text TextMoney;
+    public CharacterData GirlsData;
     public GameObject Prefab { get; set; }
     public int RoomNumber { get; set; }
     public int Money { get; set; }
+    public int IndexGirl { get; set; }
 
     public UnityAction CloseHandle;
 
@@ -24,6 +26,7 @@ public class DoorRedirector : MonoBehaviour
         if (MoneyProperties.Money >= Money)
         {
             PlayerPrefs.SetInt(transform.root.name + RoomNumber, RoomNumber);
+            GirlsData.Character[IndexGirl].InVisible = true;
             MoneyProperties.Money -= Money;
 
             RoomOpen();

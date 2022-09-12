@@ -17,7 +17,6 @@ public class DoorController : MonoBehaviour
     public void TransitionRoom()
     {
         int index = PlayerPrefs.GetInt(transform.root.name + _roomNumber, -1);
-        Debug.Log(index);
         if (index == _roomNumber)
         {
             LoadManager.OpenPrefab(transform.root, _room);
@@ -28,9 +27,10 @@ public class DoorController : MonoBehaviour
             rooms.TextMoney.text = _price + "$";
             rooms.Prefab = _room;
             rooms.RoomNumber = _roomNumber;
+            rooms.IndexGirl = _roomNumber - 1;
             rooms.Money = _price;
             ControlSystemProperties.DisableInvoke();
-            
+
         }
     }
     [Serializable]
