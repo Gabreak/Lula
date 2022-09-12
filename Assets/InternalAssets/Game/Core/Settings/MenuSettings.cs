@@ -30,7 +30,7 @@ public class MenuSettings : MonoBehaviour
 
         foreach (Resolution resolution in _resolutions)
         {
-            string option = resolution.width + "x" + resolution.height + " " + resolution.refreshRate + "Hz";
+            string option = resolution.width + "x" + resolution.height + " "+ resolution.refreshRate +"Hz";
             options.Add(option);
         }
         _resolution.AddOptions(options);
@@ -41,7 +41,7 @@ public class MenuSettings : MonoBehaviour
     {
         Debug.Log(index);
         Screen.SetResolution(_resolutions[index].width, _resolutions[index].height, _fullScreen.isOn);
-        PlayerPrefs.SetInt("DropResolution", (index));
+        PlayerPrefs.SetInt("DropResolution",(index));
         _resolution.value = index;
     }
 

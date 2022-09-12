@@ -8,7 +8,7 @@ public class CreateCharacter : MonoBehaviour
     [SerializeField] private CharacterData _character;
 
     [SerializeField] private int _characterIndex;
-    private void OnEnable()
+    private void Start()
     {
         if (_character.Character[_characterIndex].InRoom)
         {

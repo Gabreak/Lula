@@ -15,10 +15,6 @@ public class GameDataBase : MonoBehaviour
     public BaseRecord UsbRecord;
     [Space(10)]
     public BaseSensor UsbSensor;
-    [Space(30)]
-    public CharacterData GirlsData;
-    [Space(10)]
-    public VideoData GirlsVideo;
 
     public static GameDataBase Instance;
 
