@@ -20,4 +20,5 @@ public class GirlController : MonoBehaviour
         PlayerPrefs.SetInt("IsActiveGirl" + indexGirl, 1);
 
     }
+
 }

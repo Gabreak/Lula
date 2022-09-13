@@ -183,6 +183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3003773723216957821}
   - component: {fileID: 3003773723216957822}
+  - component: {fileID: 152739624}
   m_Layer: 0
   m_Name: Localize
   m_TagString: Untagged
@@ -245,6 +246,18 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!114 &152739624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773723216957820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757f7fbd9246363408898845fccbbc3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3003773723671722369
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,9 +391,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:286e4b091700e484cbdc344a682fb90b
+      m_TableCollectionName: GUID:e9d1a794c8f198e4f8d51b42f81486b8
     m_TableEntryReference:
-      m_KeyId: 11252710037364736
+      m_KeyId: 6459962793984
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -929,7 +942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7987787686808123816
 RectTransform:
   m_ObjectHideFlags: 0

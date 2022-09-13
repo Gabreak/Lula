@@ -31,6 +31,7 @@ public class SaveManager : MonoBehaviour
 
     public void LoadGame()
     {
+
         if (PlayerPrefs.HasKey("Goods"))
         {
             json = PlayerPrefs.GetString("Goods");
@@ -95,6 +96,15 @@ public class SaveManager : MonoBehaviour
 
         PoliceManager.Instance.ToJail = 0;
         PoliceManager.Instance.WasInJail = 0;
+
+        DataCharacter[] character = GameDataBase.Instance.GirlsData.Character;
+        for (int i = 0; i < character.Length; i++)
+        {
+            character[i].InRoom = false;
+            character[i].IsRoomBuy = false;
+            Debug.Log(character[i].InRoom);
+        }
+
         if (reset)
             SceneManager.LoadScene(0);
     }
@@ -169,7 +179,7 @@ public class SaveManager : MonoBehaviour
 
         for (int i = 0; i < data.Length; i++)
         {
-            save.IsActiveGirls[i] = data[i].InVisible;
+            save.IsActiveGirls[i] = data[i].IsRoomBuy;
         }
     }
 
@@ -259,9 +269,10 @@ public class SaveManager : MonoBehaviour
     {
         DataCharacter[] data = GameDataBase.Instance.GirlsData.Character;
 
+
         for (int i = 0; i < data.Length; i++)
         {
-            data[i].InVisible = load.IsActiveGirls[i];
+            data[i].IsRoomBuy = load.IsActiveGirls[i];
         }
     }
 

@@ -26,7 +26,7 @@ public class DoorRedirector : MonoBehaviour
         if (MoneyProperties.Money >= Money)
         {
             PlayerPrefs.SetInt(transform.root.name + RoomNumber, RoomNumber);
-            GirlsData.Character[IndexGirl].InVisible = true;
+            GirlsData.Character[IndexGirl].IsRoomBuy = true;
             MoneyProperties.Money -= Money;
 
             RoomOpen();

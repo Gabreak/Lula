@@ -14,8 +14,8 @@ public class CharacterData : ScriptableObject
 [Serializable]
 public struct DataCharacter
 {
-    public CharacterUpgrade Prefab;
-    public bool InVisible;
+    public string Name;
+    public bool IsRoomBuy;
     public bool InRoom;
     public int CurrentIndexDialog;
     public GameObject[] Dialogs;
