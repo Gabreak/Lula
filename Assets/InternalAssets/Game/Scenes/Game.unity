@@ -6677,6 +6677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _NameBoolOne: IsActive
+  _animator2: {fileID: 0}
 --- !u!95 &2002782705
 Animator:
   serializedVersion: 4
@@ -7022,6 +7023,14 @@ PrefabInstance:
       propertyPath: _prefabScene
       value: 
       objectReference: {fileID: 11400000, guid: 8935c2a287adaed4498a2b09ad1078e5, type: 2}
+    - target: {fileID: 8665706190780399960, guid: 3671bdd1046ec1d46afecd3e39b3a2d1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665706190916540329, guid: 3671bdd1046ec1d46afecd3e39b3a2d1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3671bdd1046ec1d46afecd3e39b3a2d1, type: 3}
 --- !u!1 &2118814166
