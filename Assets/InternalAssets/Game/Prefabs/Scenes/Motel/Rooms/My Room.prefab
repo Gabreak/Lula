@@ -272,7 +272,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!1 &545732593
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,7 +982,6 @@ GameObject:
   - component: {fileID: 1218438250}
   - component: {fileID: 1218438249}
   - component: {fileID: 1218438248}
-  - component: {fileID: 981244636}
   m_Layer: 0
   m_Name: Video Play
   m_TagString: Untagged
@@ -1104,19 +1103,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &981244636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1218438246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90ad7d16ef7f9c54c895a4fa0f08c4f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _isOpen: 0
 --- !u!1 &1262604037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,6 +2101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _NameBoolOne: IsOpen
+  _animator: {fileID: 1633629769}
+  _animator2: {fileID: 0}
 --- !u!1 &1679382855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2636,6 +2624,7 @@ GameObject:
   - component: {fileID: 2140144092}
   - component: {fileID: 2140144093}
   - component: {fileID: 2140144099}
+  - component: {fileID: 9123689640434127937}
   m_Layer: 0
   m_Name: Transition Hub
   m_TagString: Untagged
@@ -2795,6 +2784,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308c0f7514d2da8439eab9e949ad6360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9123689640434127937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140144090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &96455492815470963
 GameObject:
   m_ObjectHideFlags: 0
@@ -3540,6 +3543,7 @@ GameObject:
   - component: {fileID: 3686507035644463663}
   - component: {fileID: 2314888476482396461}
   - component: {fileID: 2917265735038247982}
+  - component: {fileID: 4908600645514993522}
   m_Layer: 0
   m_Name: Transition Rooms
   m_TagString: Untagged
@@ -3640,7 +3644,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.011903405, y: 0.10365105}
@@ -3723,6 +3727,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4908600645514993522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165179393673654960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &1233358922417494495
 GameObject:
   m_ObjectHideFlags: 0
@@ -4280,6 +4298,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _NameBoolOne: IsOpen
+  _animator: {fileID: 8136422812528747880}
+  _animator2: {fileID: 0}
 --- !u!1 &1622038206554896136
 GameObject:
   m_ObjectHideFlags: 0
@@ -4372,6 +4392,7 @@ GameObject:
   - component: {fileID: 5062405327206680373}
   - component: {fileID: 8653853698855975941}
   - component: {fileID: 448394385372913932}
+  - component: {fileID: 3415499205479939600}
   m_Layer: 0
   m_Name: Transition Rooms 2
   m_TagString: Untagged
@@ -4555,6 +4576,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3415499205479939600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631766874682744782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &1679923098970095268
 GameObject:
   m_ObjectHideFlags: 0
@@ -6357,6 +6392,7 @@ GameObject:
   - component: {fileID: 3003773722691502292}
   - component: {fileID: 3003773722691502295}
   - component: {fileID: 7248678800598992101}
+  - component: {fileID: 5962569818591399235}
   m_Layer: 0
   m_Name: Transition Rooms
   m_TagString: Untagged
@@ -6457,7 +6493,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.015854836, y: 0.024951696}
@@ -6515,6 +6551,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 3003773723671722369, guid: f0f20a914d34e044ebacfdf3aebe8134, type: 3}
   _prefabScene: {fileID: 0}
+--- !u!114 &5962569818591399235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773722691502303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &3003773723216957820
 GameObject:
   m_ObjectHideFlags: 0
@@ -6600,6 +6650,7 @@ GameObject:
   - component: {fileID: 4720494447825417116}
   - component: {fileID: 813505769709333642}
   - component: {fileID: 2034352606}
+  - component: {fileID: 3099323485040380223}
   m_Layer: 0
   m_Name: My Room
   m_TagString: Untagged
@@ -6781,6 +6832,19 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: 95421b87c3d245c429c76f7ee81cd58e, type: 2}
   _parentGirls: {fileID: 5685564295565073886}
   _toys: {fileID: 11400000, guid: 3eb12694983100e43ae8fc1798549c42, type: 2}
+--- !u!114 &3099323485040380223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773723671722369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ad7d16ef7f9c54c895a4fa0f08c4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isOpen: 0
 --- !u!1 &3238696262645404243
 GameObject:
   m_ObjectHideFlags: 0
@@ -9804,7 +9868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7315241160291455722
 Transform:
   m_ObjectHideFlags: 0
