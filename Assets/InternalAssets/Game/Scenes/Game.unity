@@ -752,7 +752,7 @@ VideoPlayer:
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 0
-  m_AspectRatio: 2
+  m_AspectRatio: 1
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 1
@@ -6914,7 +6914,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!114 &2088334831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7014,6 +7014,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hub
       objectReference: {fileID: 0}
+    - target: {fileID: 6981165800806726099, guid: 3671bdd1046ec1d46afecd3e39b3a2d1, type: 3}
+      propertyPath: _prefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981165800806726099, guid: 3671bdd1046ec1d46afecd3e39b3a2d1, type: 3}
+      propertyPath: _prefabScene
+      value: 
+      objectReference: {fileID: 11400000, guid: 8935c2a287adaed4498a2b09ad1078e5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3671bdd1046ec1d46afecd3e39b3a2d1, type: 3}
 --- !u!1 &2118814166

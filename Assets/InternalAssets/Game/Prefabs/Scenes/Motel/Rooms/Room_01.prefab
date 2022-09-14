@@ -288,6 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3003773723671722370}
   - component: {fileID: 5647523753155822727}
+  - component: {fileID: 7157475015702652368}
   m_Layer: 0
   m_Name: Room_01
   m_TagString: Untagged
@@ -324,11 +325,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ae206ef24df884aaf8ae45237486b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CharacterObject: {fileID: 7170560345109818674}
   _character: {fileID: 11400000, guid: 08254484949c02649aa28bc680ee26c2, type: 2}
   _characterIndex: 0
-  _characterObject: {fileID: 7170560345109818674}
   _isRoom: 1
   _onEnable: 1
+--- !u!114 &7157475015702652368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773723671722369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ad7d16ef7f9c54c895a4fa0f08c4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isOpen: 0
 --- !u!1 &3347076538642347187
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +489,59 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8887355084503922400, guid: 5ce0988a7b525d1488eeaa34d5e5596f, type: 3}
   m_PrefabInstance: {fileID: 1789275920362363858}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &396060528923261293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7170560345109818674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fdd8e916e13094f8d38c5b9bcc4663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onMouseDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5647523753155822727}
+        m_TargetAssemblyTypeName: CreateCharacter, Assembly-CSharp
+        m_MethodName: OpenDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7157475015702652368}
+        m_TargetAssemblyTypeName: ControlMonoSystem, Assembly-CSharp
+        m_MethodName: Disable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4995166779027450196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7170560345109818674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!4 &8307711330355164497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7754674677013114499, guid: 5ce0988a7b525d1488eeaa34d5e5596f, type: 3}

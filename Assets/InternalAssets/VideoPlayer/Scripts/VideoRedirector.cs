@@ -13,7 +13,7 @@ public class VideoRedirector : MonoBehaviour
     private void OnEnable()
     {
         _image = GetComponent<Image>();
-        _image.color = Random.ColorHSV() - new Color(0,0,0,0.5f);
+        _image.color = Random.ColorHSV() - new Color(0, 0, 0, 0.5f);
     }
 
     public void Play()

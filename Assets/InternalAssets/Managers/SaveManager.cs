@@ -102,6 +102,7 @@ public class SaveManager : MonoBehaviour
         {
             character[i].InRoom = false;
             character[i].IsRoomBuy = false;
+            character[i].CurrentIndexDialog = 0;
             Debug.Log(character[i].InRoom);
         }
 

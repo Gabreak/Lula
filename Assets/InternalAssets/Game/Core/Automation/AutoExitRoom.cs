@@ -23,7 +23,6 @@ public class AutoExitRoom : MonoBehaviour
 
         await Task.Delay(0);
 
-        Debug.Log(DoorManager.Instance.Hour);
         if (DoorManager.Instance.Hour == 0)
         {
             Instantiate(LightHubController.Instance.SceneDataHub.PrefabObject);

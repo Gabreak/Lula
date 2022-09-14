@@ -1,3 +1,5 @@
+using Sirenix.OdinInspector;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,5 +20,6 @@ public struct DataCharacter
     public bool IsRoomBuy;
     public bool InRoom;
     public int CurrentIndexDialog;
+    [ListDrawerSettings(ShowIndexLabels =true)]
     public GameObject[] Dialogs;
 }
