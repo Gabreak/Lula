@@ -11,6 +11,8 @@ public class ColorManager : MonoBehaviour
     public static ColorManager Instance;
     private Coroutine _coroutine;
 
+    private GameObject _currentScene;
+
     private void Awake()
     {
         Instance = this;
@@ -20,6 +22,9 @@ public class ColorManager : MonoBehaviour
     {
         if (_coroutine != null)
             StopCoroutine(_coroutine);
+
+        _currentScene = LightHubController.Instance.SceneDataHub.PrefabObject;
+
         _coroutine = StartCoroutine(Disable(action));
     }
 
@@ -36,7 +41,8 @@ public class ColorManager : MonoBehaviour
             _color.color = new Color(r, g, b, a);
             yield return null;
         }
-        action.Invoke();
+        if (_currentScene == LightHubController.Instance.SceneDataHub.PrefabObject)
+            action?.Invoke();
         while (a > 0)
         {
             a -= Time.deltaTime * _time;

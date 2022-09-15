@@ -1982,7 +1982,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
 --- !u!114 &553332019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3696,7 +3696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &979964137
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4016,7 +4016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lightTime: 1
   _nightTime: 19
-  Speed: 1
+  Speed: 100
   _textTime: {fileID: 1707935401}
   _lightComponent: {fileID: 700117364}
 --- !u!114 &1041370027
@@ -5336,7 +5336,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
 --- !u!114 &1273967869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6677,7 +6677,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _NameBoolOne: IsActive
-  _animator: {fileID: 0}
   _animator2: {fileID: 0}
 --- !u!95 &2002782705
 Animator:
@@ -7024,6 +7023,14 @@ PrefabInstance:
       propertyPath: _prefabScene
       value: 
       objectReference: {fileID: 11400000, guid: 8935c2a287adaed4498a2b09ad1078e5, type: 2}
+    - target: {fileID: 8665706190780399960, guid: 3671bdd1046ec1d46afecd3e39b3a2d1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665706190916540329, guid: 3671bdd1046ec1d46afecd3e39b3a2d1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3671bdd1046ec1d46afecd3e39b3a2d1, type: 3}
 --- !u!1 &2118814166
@@ -7088,7 +7095,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
 --- !u!114 &2118814169
 MonoBehaviour:
   m_ObjectHideFlags: 0
