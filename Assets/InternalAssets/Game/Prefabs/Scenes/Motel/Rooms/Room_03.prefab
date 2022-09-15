@@ -502,7 +502,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.21977234, y: 3.9314795}
+  m_Offset: {x: -0.21977234, y: 5.059795}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -513,8 +513,22 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.539589, y: 8.862959}
+  m_Size: {x: 3.539589, y: 6.606328}
   m_EdgeRadius: 0
+--- !u!114 &3173353518244672185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610834802712786705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!114 &6832465392374732084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,20 +568,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3173353518244672185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5610834802712786705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _isBoxCollsion: 0
-  _isObject: 1
 --- !u!4 &6707453391193468786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5719573728609824257, guid: d13f302cc29ecae48ae428645ba4095d, type: 3}

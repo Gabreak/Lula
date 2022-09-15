@@ -11,4 +11,10 @@ public class LoadManager : MonoBehaviour
         Instantiate(open);
         Destroy(current.gameObject);
     }
+
+
+    public static void OpenPrefab(GameObject open)
+    {
+        Instantiate(open);
+    }
 }
