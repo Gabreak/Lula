@@ -12,10 +12,13 @@ public class PrefabTransition : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (ColorManager.Instance.CurrentScene == null && ColorManager.Instance.DestroyScene == null)
+        {
 
-        ColorManager.Instance.CurrentScene = (_prefab != null) ? _prefab : _prefabScene.PrefabObject;
-        ColorManager.Instance.DestroyScene = transform.root;
-        ColorManager.Instance.Play();
+            ColorManager.Instance.CurrentScene = (_prefab != null) ? _prefab : _prefabScene.PrefabObject;
+            ColorManager.Instance.DestroyScene = transform.root;
+            ColorManager.Instance.Play();
+        }
     }
 
 

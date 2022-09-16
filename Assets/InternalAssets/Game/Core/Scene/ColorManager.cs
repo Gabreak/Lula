@@ -9,10 +9,11 @@ public class ColorManager : MonoBehaviour
     [SerializeField] private int _time = 1;
     [SerializeField] private Image _color;
     public static ColorManager Instance;
-    private Coroutine _coroutine;
+    //private Coroutine _coroutine;
 
-    public GameObject CurrentScene { get; set; }
-    public Transform DestroyScene { get; set; }
+    public GameObject CurrentScene;
+    public Transform DestroyScene;
+    private bool _isClick = false;
 
     private void Awake()
     {
@@ -21,10 +22,11 @@ public class ColorManager : MonoBehaviour
 
     public void Play()
     {
-        if (_coroutine != null)
-            StopCoroutine(_coroutine);
-
-        _coroutine = StartCoroutine(Disable());
+        if (!_isClick)
+        {
+            _isClick = true;
+            StartCoroutine(Disable());
+        }
     }
 
     public IEnumerator Disable()
@@ -40,24 +42,24 @@ public class ColorManager : MonoBehaviour
             _color.color = new Color(r, g, b, a);
             yield return null;
         }
+        if (CurrentScene != null && DestroyScene != null)
+            OpenPrefab();
 
-        OpenPrefab();
-        while (a > 0)
+        while (a > 0.1f)
         {
             a -= Time.deltaTime * _time;
             _color.color = new Color(r, g, b, a);
             yield return null;
         }
-
         _color.enabled = false;
+        _isClick = false;
+        DestroyScene = null;
+        CurrentScene = null;
         yield return null;
     }
 
     public void OpenPrefab()
     {
-        if (DestroyScene != null)
-            LoadManager.OpenPrefab(DestroyScene, CurrentScene);
-        else
-            LoadManager.OpenPrefab(CurrentScene);
+        LoadManager.OpenPrefab(DestroyScene, CurrentScene);
     }
 }

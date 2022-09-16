@@ -10,6 +10,7 @@ public class LoadManager : MonoBehaviour
     {
         Instantiate(open);
         Destroy(current.gameObject);
+
     }
 
 
