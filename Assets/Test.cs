@@ -13,8 +13,8 @@ public class Test : MonoBehaviour
 
         _test = GetComponent<LocalizeStringEvent>();
         //Debug.Log(_test.StringReference.ContainsKey(_test.StringReference.GetLocalizedString()));
-        Debug.Log(_test.StringReference.GetLocalizedString()[0] == 'N');
-        Debug.Log(_test.StringReference == null);
+        //Debug.Log(_test.StringReference.GetLocalizedString()[0] == 'N');
+        //Debug.Log(_test.StringReference == null);
     }
 
 

@@ -11,24 +11,23 @@ public class ColorManager : MonoBehaviour
     public static ColorManager Instance;
     private Coroutine _coroutine;
 
-    private GameObject _currentScene;
+    public GameObject CurrentScene;
+    public Transform DestroyScene;
 
     private void Awake()
     {
         Instance = this;
     }
 
-    public void Play(UnityAction action)
+    public void Play()
     {
         if (_coroutine != null)
             StopCoroutine(_coroutine);
 
-        _currentScene = LightHubController.Instance.SceneDataHub.PrefabObject;
-
-        _coroutine = StartCoroutine(Disable(action));
+        _coroutine = StartCoroutine(Disable());
     }
 
-    public IEnumerator Disable(UnityAction action)
+    public IEnumerator Disable()
     {
         _color.enabled = true;
         float a = 0;
@@ -41,8 +40,8 @@ public class ColorManager : MonoBehaviour
             _color.color = new Color(r, g, b, a);
             yield return null;
         }
-        if (_currentScene == LightHubController.Instance.SceneDataHub.PrefabObject)
-            action?.Invoke();
+
+        OpenPrefab();
         while (a > 0)
         {
             a -= Time.deltaTime * _time;
@@ -52,5 +51,13 @@ public class ColorManager : MonoBehaviour
 
         _color.enabled = false;
         yield return null;
+    }
+
+    public void OpenPrefab()
+    {
+        if (DestroyScene != null)
+            LoadManager.OpenPrefab(DestroyScene, CurrentScene);
+        else
+            LoadManager.OpenPrefab(CurrentScene);
     }
 }

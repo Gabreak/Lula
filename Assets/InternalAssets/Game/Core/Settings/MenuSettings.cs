@@ -39,7 +39,7 @@ public class MenuSettings : MonoBehaviour
     }
     public void Drop(int index)
     {
-        Debug.Log(index);
+        //Debug.Log(index);
         Screen.SetResolution(_resolutions[index].width, _resolutions[index].height, _fullScreen.isOn);
         PlayerPrefs.SetInt("DropResolution", (index));
         _resolution.value = index;
