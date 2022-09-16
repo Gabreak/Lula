@@ -1312,7 +1312,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!1 &445854423022172391
 GameObject:
   m_ObjectHideFlags: 0
@@ -2725,27 +2725,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -8653719598885068355, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
   m_PrefabInstance: {fileID: 1879221806651660177}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1335331132904771857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2158237528937559596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac2ad304f2aea834fa3a6e22f3fd3203, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _prefabUpgrade: {fileID: 7719784513135462899, guid: 9edf1ec231694864484d8f962f958d00, type: 3}
-  _name: Jani
-  Objects:
-  - Object: {fileID: 6862708985583188884}
-    Price: 420
-  - Object: {fileID: 1671640067447661884}
-    Price: 600
-  - Object: {fileID: 9123342840463348127}
-    Price: 1400
 --- !u!61 &3777263936112822447
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2791,7 +2770,7 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &3318325790717294595
+--- !u!114 &716825100402343673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2800,14 +2779,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 2158237528937559596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2e30eba99bceda458a1d41e01b6d75d, type: 3}
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animationEnter: {fileID: 7400000, guid: 8a7db1e58b8bcd14e9fe9b7b10467d04, type: 2}
-  _animationExit: {fileID: 7400000, guid: 444eaa525ba138743a803a618b6e4f4d, type: 2}
-  _animationDown: {fileID: 7400000, guid: dc206855a56e5a4479107787232e0271, type: 2}
-  _animationUp: {fileID: 7400000, guid: 1e50c89020f368342922bd1062e2563c, type: 2}
---- !u!114 &5324517719409905403
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:c4631bdafa7dbe646b7ac9a097a27a66
+    m_TableEntryReference:
+      m_KeyId: 2612904185143296
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5324517719409905403}
+        m_TargetAssemblyTypeName: ObjectInformation, Assembly-CSharp
+        m_MethodName: set_TextInfo
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1335331132904771857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2816,9 +2819,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2158237528937559596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a27cbdf4a5c5c054888875e926529cca, type: 3}
+  m_Script: {fileID: 11500000, guid: ac2ad304f2aea834fa3a6e22f3fd3203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _prefabUpgrade: {fileID: 7719784513135462899, guid: 9edf1ec231694864484d8f962f958d00, type: 3}
+  _name: Jani
+  Objects:
+  - Object: {fileID: 6862708985583188884}
+    Price: 420
+  - Object: {fileID: 1671640067447661884}
+    Price: 600
+  - Object: {fileID: 9123342840463348127}
+    Price: 1400
 --- !u!114 &3140337614110000838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2870,7 +2882,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &716825100402343673
+--- !u!114 &3318325790717294595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2879,37 +2891,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 2158237528937559596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Script: {fileID: 11500000, guid: f2e30eba99bceda458a1d41e01b6d75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_StringReference:
-    m_TableReference:
-      m_TableCollectionName: GUID:c4631bdafa7dbe646b7ac9a097a27a66
-    m_TableEntryReference:
-      m_KeyId: 2612904185143296
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  m_FormatArguments: []
-  m_UpdateString:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5324517719409905403}
-        m_TargetAssemblyTypeName: ObjectInformation, Assembly-CSharp
-        m_MethodName: set_TextInfo
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  references:
-    version: 2
-    RefIds: []
+  _animationEnter: {fileID: 7400000, guid: 8a7db1e58b8bcd14e9fe9b7b10467d04, type: 2}
+  _animationExit: {fileID: 7400000, guid: 444eaa525ba138743a803a618b6e4f4d, type: 2}
+  _animationDown: {fileID: 7400000, guid: dc206855a56e5a4479107787232e0271, type: 2}
+  _animationUp: {fileID: 7400000, guid: 1e50c89020f368342922bd1062e2563c, type: 2}
+--- !u!114 &5324517719409905403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2158237528937559596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27cbdf4a5c5c054888875e926529cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6862708985583188884 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4983632319202126853, guid: 1ce35448ff5dd134da002e477e9dd5c3, type: 3}
