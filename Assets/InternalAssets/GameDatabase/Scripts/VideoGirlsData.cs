@@ -1,3 +1,5 @@
+using Sirenix.OdinInspector;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +12,7 @@ using UnityEngine.Video;
 public class VideoGirlsData : ScriptableObject
 {
     public int IndexVideo;
+    [ListDrawerSettings(ShowIndexLabels =true)]
     public VideoGirl[] Videos;
     public GirlBase[] Girls;
 }

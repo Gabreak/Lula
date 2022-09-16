@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class DistributorTable : MonoBehaviour
 {
     [SerializeField] private BaseRecord _video;
     [SerializeField] private VideoRedirector _redirecotorVideo;
-    [SerializeField] private TextMeshProUGUI _priceSumText;
+    [SerializeField] private Text _priceSumText;
     private int _priceSum = 0;
     private void OnEnable()
     {
