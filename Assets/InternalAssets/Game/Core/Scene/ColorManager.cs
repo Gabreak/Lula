@@ -11,8 +11,8 @@ public class ColorManager : MonoBehaviour
     public static ColorManager Instance;
     private Coroutine _coroutine;
 
-    public GameObject CurrentScene;
-    public Transform DestroyScene;
+    public GameObject CurrentScene { get; set; }
+    public Transform DestroyScene { get; set; }
 
     private void Awake()
     {

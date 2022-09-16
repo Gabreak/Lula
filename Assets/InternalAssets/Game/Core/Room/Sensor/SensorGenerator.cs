@@ -17,15 +17,16 @@ public class SensorGenerator : MonoBehaviour
     {
         await Task.Delay(1);
         BaseSensor[] sensors = GameDataBase.Instance.Sensor;
-        
+        List<SensorRedirector> redirectorSensor = transform.root.GetComponent<RoomSensor>().Sensors;
+        redirectorSensor.Clear();
         foreach (BaseSensor sensor in sensors)
         {
-            SensorRedirector redirecotr = Instantiate(PrefabSensor, transform);
-            redirecotr.Info.TextInfo = sensor.Key.GetLocalizedString();
-            redirecotr.ImageComponent.sprite = (sensor.Good != null) ? sensor.OK : sensor.Error;
-            redirecotr.Sensor = sensor;
+            SensorRedirector redirector = Instantiate(PrefabSensor, transform);
+            redirector.Info.TextInfo = sensor.Key.GetLocalizedString();
+            redirector.ImageComponent.sprite = (sensor.Good != null) ? sensor.OK : sensor.Error;
+            redirector.Sensor = sensor;
 
-            transform.root.GetComponent<RoomSensor>().Sensors.Add(redirecotr);
+            redirectorSensor.Add(redirector);
         }
     }
 

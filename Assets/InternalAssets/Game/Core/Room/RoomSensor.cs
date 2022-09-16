@@ -8,11 +8,14 @@ using UnityEngine.Localization;
 using UnityEngine.Events;
 using TMPro;
 using UnityEngine.Video;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 
 public class RoomSensor : MonoBehaviour
 {
     [SerializeField] private Transform _parent;
-    public List<SensorRedirector> Sensors;
+
+    public List<SensorRedirector> Sensors; /*{ get; set; }*/
     [SerializeField] private BaseSensor _sensorLight;
     [SerializeField] private BaseSensor _sensorPhoto;
     [SerializeField] private BaseSensor _sensorVideo;
@@ -34,7 +37,7 @@ public class RoomSensor : MonoBehaviour
     [SerializeField] private int _priceGirl = 200;
     [SerializeField] private int _incomeGirl = 250;
 
-    
+
 
     private void OnEnable()
     {
