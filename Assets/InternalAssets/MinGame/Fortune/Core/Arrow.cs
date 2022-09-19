@@ -72,7 +72,7 @@ public class Arrow : MonoBehaviour
         var minPrefabs = from p in prefabs
                          where p.transform.eulerAngles.z - fortune.Diff / 2f <= z && p.transform.eulerAngles.z + fortune.Diff / 2f >= z
                          select p;
-        Debug.Log(minPrefabs.FirstOrDefault().transform.name);
+
         if (minPrefabs.Count() > 0)
         {
             foreach (var prefab in minPrefabs)

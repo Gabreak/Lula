@@ -6,10 +6,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Events;
-using TMPro;
+//using TMPro;
 using UnityEngine.Video;
-using Sirenix.OdinInspector;
-using Sirenix.Serialization;
+using UnityEngine.UI;
 
 public class RoomSensor : MonoBehaviour
 {
@@ -25,7 +24,7 @@ public class RoomSensor : MonoBehaviour
 
 
     [Space(20), Header("Usb")]
-    [SerializeField] private TMP_InputField _usbName;
+    [SerializeField] private Text _usbName;
 
     [Space(20), Header("Messages")]
     [SerializeField] private LocalizedString _usbErrorText;

@@ -12,6 +12,12 @@ public class PrefabTransition : MonoBehaviour
 
     private void OnMouseDown()
     {
+        OpenPrefab();
+    }
+
+
+    public void OpenPrefab()
+    {
         if (ColorManager.Instance.CurrentScene == null && ColorManager.Instance.DestroyScene == null)
         {
 
@@ -21,9 +27,4 @@ public class PrefabTransition : MonoBehaviour
         }
     }
 
-
-    //public void OpenPrefab(GameObject prefab)
-    //{
-    //    LoadManager.OpenPrefab(transform.root, prefab);
-    //}
 }
