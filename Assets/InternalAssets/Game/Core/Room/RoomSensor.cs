@@ -69,39 +69,31 @@ public class RoomSensor : MonoBehaviour
         }
     }
 
-    public void RecordPlay()
+    public void AutoInstall()
     {
         AutoLightInstall();
-        if (_sliderValue == 0)
-        {
-            PlayPhotoVideo();
-            return;
-        }
-        if (_sliderValue == 1)
-            PlayVideo();
+        AutoUSBInstall();
     }
 
     public void Changed(float single)
     {
-        //AutoLightInstall();
-        _sliderValue = (Mathf.RoundToInt(single));
-        if (_sliderCoroutine == null)
-            _sliderCoroutine = StartCoroutine(SliderNormalize());
+        int valueRound = (Mathf.RoundToInt(single));
+        if (_sliderValue != valueRound)
+        {
+            _sliderValue = valueRound;
+            if (_sliderCoroutine == null)
+                _sliderCoroutine = StartCoroutine(SliderNormalize());
+        }
 
     }
 
     private IEnumerator SliderNormalize()
     {
-        while (Input.GetMouseButton(0))
-        {
-            yield return new WaitForSeconds(0.1f);
-            continue;
-        }
+
         while (Mathf.Abs(_sliderChoice.value - _sliderValue) > 0.001f)
         {
             _sliderChoice.value = Mathf.MoveTowards(_sliderChoice.value, _sliderValue, Time.deltaTime * 4f);
             yield return null;
-
         }
         _sliderCoroutine = null;
         yield return null;
@@ -118,6 +110,38 @@ public class RoomSensor : MonoBehaviour
                                  where g.Price == price
                                  select g).First();
         }
+    }
+
+    private void AutoUSBInstall()
+    {
+        GameGoods? good;
+        //var usbGood;
+        if (_sliderValue == 0)
+        {
+            good = _sensorPhoto.Good;
+        }
+        else
+            good = _sensorVideo.Good;
+
+        if (good != null)
+        {
+
+            var usbGoods = from u in _sensorUsb.Type.Acquired
+                           where u.Level >= good.Value.Level
+                           select u;
+            int min = usbGoods.Min(u => u.Level);
+            Debug.Log(min);
+            foreach (var usbGood in usbGoods)
+            {
+                if (usbGood.Level == min)
+                {
+                    _sensorUsb.Good = usbGood;
+                    break;
+                }
+            }
+        }
+        else
+            Debug.LogError("Камера не выбрана!!");
     }
 
     public void PlayPhotoVideo()

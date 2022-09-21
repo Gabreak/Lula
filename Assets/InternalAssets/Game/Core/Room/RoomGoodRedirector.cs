@@ -23,7 +23,5 @@ public class RoomGoodRedirector : MonoBehaviour
         _parentRoom.SelectGood = null;
         if (isActive)
             _parentRoom.SelectGood = Good;
-        //else if (_parentRoom.Sensor.Good.Value == Good)
-        //    _parentRoom.SelectedId = -1;
     }
 }
