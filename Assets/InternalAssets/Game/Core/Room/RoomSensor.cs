@@ -36,6 +36,11 @@ public class RoomSensor : MonoBehaviour
     [SerializeField] private int _priceGirl = 200;
     [SerializeField] private int _incomeGirl = 250;
 
+    [SerializeField] private Slider _sliderChoice;
+    private int _sliderValue = 0;
+    private Coroutine _sliderCoroutine;
+
+
 
 
     private void OnEnable()
@@ -64,6 +69,56 @@ public class RoomSensor : MonoBehaviour
         }
     }
 
+    public void RecordPlay()
+    {
+        AutoLightInstall();
+        if (_sliderValue == 0)
+        {
+            PlayPhotoVideo();
+            return;
+        }
+        if (_sliderValue == 1)
+            PlayVideo();
+    }
+
+    public void Changed(float single)
+    {
+        //AutoLightInstall();
+        _sliderValue = (Mathf.RoundToInt(single));
+        if (_sliderCoroutine == null)
+            _sliderCoroutine = StartCoroutine(SliderNormalize());
+
+    }
+
+    private IEnumerator SliderNormalize()
+    {
+        while (Input.GetMouseButton(0))
+        {
+            yield return new WaitForSeconds(0.1f);
+            continue;
+        }
+        while (Mathf.Abs(_sliderChoice.value - _sliderValue) > 0.001f)
+        {
+            _sliderChoice.value = Mathf.MoveTowards(_sliderChoice.value, _sliderValue, Time.deltaTime * 4f);
+            yield return null;
+
+        }
+        _sliderCoroutine = null;
+        yield return null;
+    }
+
+    private void AutoLightInstall()
+    {
+        if (_sensorLight.Type.Acquired.Count > 0)
+        {
+
+            int price = _sensorLight.Type.Acquired.Max(a => a.Price);
+
+            _sensorLight.Good = (from g in _sensorLight.Type.Acquired
+                                 where g.Price == price
+                                 select g).First();
+        }
+    }
 
     public void PlayPhotoVideo()
     {
@@ -107,6 +162,7 @@ public class RoomSensor : MonoBehaviour
         UsbRecord(price, clip);
         VideoController.Instance.VideoPlay(transform.gameObject, indexList, indexVideo);
     }
+
 
     private void PlayOtherGirls(int price)
     {
@@ -165,7 +221,7 @@ public class RoomSensor : MonoBehaviour
     {
         if (!isCamera)
         {
-            WindowMessage.Message(_photoCameraErrorText.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+            WindowMessage.Message(_videoCameraErrorText.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
             return true;
         }
         return false;
