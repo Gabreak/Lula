@@ -13,11 +13,12 @@ public class RoomGood : MonoBehaviour
     public GameGoods? SelectGood { get; set; }
 
     private ToggleGroup _toggleGroup;
-
+    [SerializeField] private bool _isSelectGood = false;
 
     private void OnEnable()
     {
-        SelectGood = null;
+        if (_isSelectGood)
+            SelectGood = null;
         _toggleGroup = GetComponent<ToggleGroup>();
         for (int i = 0; i < Sensor.Type.Acquired.Count; i++)
         {

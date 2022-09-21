@@ -123,14 +123,25 @@ public class RoomSensor : MonoBehaviour
         else
             good = _sensorVideo.Good;
 
+        if (_sensorUsb.Type.Acquired.Count == 0)
+        {
+            Debug.LogError("Купите Usb в Video Shop!");
+            return;
+        }
+
         if (good != null)
         {
 
             var usbGoods = from u in _sensorUsb.Type.Acquired
                            where u.Level >= good.Value.Level
                            select u;
+
+            if (usbGoods.Count() == 0)
+            {
+                Debug.LogError("Нет подходяшего USB");
+                return;
+            }
             int min = usbGoods.Min(u => u.Level);
-            Debug.Log(min);
             foreach (var usbGood in usbGoods)
             {
                 if (usbGood.Level == min)
