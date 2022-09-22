@@ -6943,7 +6943,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1339820381}
         m_TargetAssemblyTypeName: RoomSensor, Assembly-CSharp
-        m_MethodName: AutoInstall
+        m_MethodName: StartVideo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6953,9 +6953,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1339820381}
-        m_TargetAssemblyTypeName: RoomSensor, Assembly-CSharp
-        m_MethodName: PlayVideo
+      - m_Target: {fileID: 3099323485040380223}
+        m_TargetAssemblyTypeName: ControlMonoSystem, Assembly-CSharp
+        m_MethodName: Enable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13912,7 +13912,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1339820381}
         m_TargetAssemblyTypeName: RoomSensor, Assembly-CSharp
-        m_MethodName: AutoInstall
+        m_MethodName: StartPhoto
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13922,9 +13922,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1339820381}
-        m_TargetAssemblyTypeName: RoomSensor, Assembly-CSharp
-        m_MethodName: PlayPhotoVideo
+      - m_Target: {fileID: 3099323485040380223}
+        m_TargetAssemblyTypeName: ControlMonoSystem, Assembly-CSharp
+        m_MethodName: Enable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

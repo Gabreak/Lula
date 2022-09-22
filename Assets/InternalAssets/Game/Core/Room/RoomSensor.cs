@@ -69,11 +69,24 @@ public class RoomSensor : MonoBehaviour
         }
     }
 
-    public void AutoInstall()
+    public void StartVideo()
     {
-        AutoLightInstall();
-        AutoUSBInstall();
+        if (AutoInstall())
+            PlayVideo();
+
     }
+
+    public void StartPhoto()
+    {
+        if (AutoInstall())
+            PlayPhotoVideo();
+    }
+
+    public bool AutoInstall()
+    {
+        return AutoLightInstall() && AutoUSBInstall();
+    }
+
 
     public void Changed(float single)
     {
@@ -99,7 +112,7 @@ public class RoomSensor : MonoBehaviour
         yield return null;
     }
 
-    private void AutoLightInstall()
+    private bool AutoLightInstall()
     {
         if (_sensorLight.Type.Acquired.Count > 0)
         {
@@ -109,10 +122,13 @@ public class RoomSensor : MonoBehaviour
             _sensorLight.Good = (from g in _sensorLight.Type.Acquired
                                  where g.Price == price
                                  select g).First();
+            return true;
         }
+        return false;
+
     }
 
-    private void AutoUSBInstall()
+    private bool AutoUSBInstall()
     {
         GameGoods? good;
         //var usbGood;
@@ -126,7 +142,7 @@ public class RoomSensor : MonoBehaviour
         if (_sensorUsb.Type.Acquired.Count == 0)
         {
             Debug.LogError("Купите Usb в Video Shop!");
-            return;
+            return false;
         }
 
         if (good != null)
@@ -139,7 +155,7 @@ public class RoomSensor : MonoBehaviour
             if (usbGoods.Count() == 0)
             {
                 Debug.LogError("Нет подходяшего USB");
-                return;
+                return false;
             }
             int min = usbGoods.Min(u => u.Level);
             foreach (var usbGood in usbGoods)
@@ -147,15 +163,15 @@ public class RoomSensor : MonoBehaviour
                 if (usbGood.Level == min)
                 {
                     _sensorUsb.Good = usbGood;
-                    break;
+                    return true;
                 }
             }
         }
-        else
-            Debug.LogError("Камера не выбрана!!");
+        Debug.LogError("Камера не выбрана!!");
+        return false;
     }
 
-    public void PlayPhotoVideo()
+    private void PlayPhotoVideo()
     {
         bool isGoodLight = _sensorLight.Good != null;
         bool isGoodPhoto = _sensorPhoto.Good != null;
@@ -171,7 +187,7 @@ public class RoomSensor : MonoBehaviour
         PlayDefault(0, indexVideo, price);
     }
 
-    public void PlayVideo()
+    private void PlayVideo()
     {
         bool isGoodLight = _sensorLight.Good != null;
         bool isGoodVideo = _sensorVideo.Good != null;
