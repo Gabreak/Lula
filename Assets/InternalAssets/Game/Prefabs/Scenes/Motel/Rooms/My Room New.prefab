@@ -3501,6 +3501,7 @@ MonoBehaviour:
   _prefab: {fileID: 5934746828973100760, guid: be9b2bb51926c784a92d9c937f9a23b7, type: 3}
   _parent: {fileID: 2182840812123316642}
   Sensor: {fileID: 11400000, guid: cf61a47b91d63c64cb33b7eef6335cb6, type: 2}
+  _isSelectGood: 0
 --- !u!1 &691638588190753072
 GameObject:
   m_ObjectHideFlags: 0
@@ -6272,6 +6273,7 @@ MonoBehaviour:
   _prefab: {fileID: 5934746828973100760, guid: be9b2bb51926c784a92d9c937f9a23b7, type: 3}
   _parent: {fileID: 2182840812123316642}
   Sensor: {fileID: 11400000, guid: 943e4ebd0f5e56046ac2f55bf32d408e, type: 2}
+  _isSelectGood: 0
 --- !u!1 &2185710847297823750
 GameObject:
   m_ObjectHideFlags: 0
@@ -6805,6 +6807,7 @@ MonoBehaviour:
   _prefab: {fileID: 5934746828973100760, guid: be9b2bb51926c784a92d9c937f9a23b7, type: 3}
   _parent: {fileID: 2182840812123316642}
   Sensor: {fileID: 11400000, guid: 3dff8179d9cdc294491794bafbe738fb, type: 2}
+  _isSelectGood: 0
 --- !u!1 &2575019593418539761
 GameObject:
   m_ObjectHideFlags: 0
@@ -6940,8 +6943,32 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1339820381}
         m_TargetAssemblyTypeName: RoomSensor, Assembly-CSharp
-        m_MethodName: RecordPlay
+        m_MethodName: StartVideo
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3099323485040380223}
+        m_TargetAssemblyTypeName: ControlMonoSystem, Assembly-CSharp
+        m_MethodName: Enable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 691638588190753072}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7997,6 +8024,8 @@ MonoBehaviour:
   - Object: {fileID: 545732593}
     IsEnable: 0
   - Object: {fileID: 1679382855}
+    IsEnable: 0
+  - Object: {fileID: 691638588190753072}
     IsEnable: 0
 --- !u!114 &2034352606
 MonoBehaviour:
@@ -10601,6 +10630,7 @@ MonoBehaviour:
   _prefab: {fileID: 5934746828973100760, guid: be9b2bb51926c784a92d9c937f9a23b7, type: 3}
   _parent: {fileID: 2182840812123316642}
   Sensor: {fileID: 11400000, guid: 758a21d84949d5043a1dd58957d1ec1a, type: 2}
+  _isSelectGood: 0
 --- !u!1 &6411265408880970492
 GameObject:
   m_ObjectHideFlags: 0
@@ -11242,6 +11272,7 @@ MonoBehaviour:
   _prefab: {fileID: 5934746828973100760, guid: be9b2bb51926c784a92d9c937f9a23b7, type: 3}
   _parent: {fileID: 2182840812123316642}
   Sensor: {fileID: 11400000, guid: cf61a47b91d63c64cb33b7eef6335cb6, type: 2}
+  _isSelectGood: 0
 --- !u!1 &6854425219284385012
 GameObject:
   m_ObjectHideFlags: 0
@@ -12419,6 +12450,7 @@ MonoBehaviour:
   _prefab: {fileID: 5934746828973100760, guid: be9b2bb51926c784a92d9c937f9a23b7, type: 3}
   _parent: {fileID: 2182840812123316642}
   Sensor: {fileID: 11400000, guid: 3dff8179d9cdc294491794bafbe738fb, type: 2}
+  _isSelectGood: 0
 --- !u!1 &7904382585259326756
 GameObject:
   m_ObjectHideFlags: 0
@@ -13880,7 +13912,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1339820381}
         m_TargetAssemblyTypeName: RoomSensor, Assembly-CSharp
-        m_MethodName: AutoInstall
+        m_MethodName: StartPhoto
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13890,10 +13922,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1339820381}
-        m_TargetAssemblyTypeName: RoomSensor, Assembly-CSharp
-        m_MethodName: PlayPhotoVideo
+      - m_Target: {fileID: 3099323485040380223}
+        m_TargetAssemblyTypeName: ControlMonoSystem, Assembly-CSharp
+        m_MethodName: Enable
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 691638588190753072}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
