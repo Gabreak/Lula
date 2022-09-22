@@ -3505,6 +3505,26 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!95 &2499079163095256293
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569652436817004557}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 82da1becf0a201b4bb6b6842b75e1457, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &302609967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3521,13 +3541,13 @@ MonoBehaviour:
   _name: Resachina
   Objects:
   - Object: {fileID: 2488797471420147560}
-    Price: 220
-  - Object: {fileID: 2294318406868371026}
-    Price: 1020
-  - Object: {fileID: 5401427380414813598}
     Price: 100
-  - Object: {fileID: 5658145824896591859}
+  - Object: {fileID: 2294318406868371026}
+    Price: 220
+  - Object: {fileID: 5401427380414813598}
     Price: 480
+  - Object: {fileID: 5658145824896591859}
+    Price: 1020
 --- !u!114 &307097270408790364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3595,26 +3615,6 @@ MonoBehaviour:
   _animationExit: {fileID: 7400000, guid: 2a1818038d8ab1542bee3ee6ed8c4fa1, type: 2}
   _animationDown: {fileID: 7400000, guid: 562c373f3258fe447ae131dd39b9a786, type: 2}
   _animationUp: {fileID: 7400000, guid: 0a646c339b6e8d34699ed757610f405b, type: 2}
---- !u!95 &2499079163095256293
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569652436817004557}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 82da1becf0a201b4bb6b6842b75e1457, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1670789330876141678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 450c323c15654444b9253cf301e8fac1, type: 3}
