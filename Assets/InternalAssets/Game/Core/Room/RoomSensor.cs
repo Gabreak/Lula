@@ -19,7 +19,7 @@ public class RoomSensor : MonoBehaviour
     [SerializeField] private BaseSensor _sensorPhoto;
     [SerializeField] private BaseSensor _sensorVideo;
     [SerializeField] private BaseSensor _sensorUsb;
-    [SerializeField] private UnityEvent _onEnableHandle;
+    //[SerializeField] private UnityEvent _onEnableHandle;
 
 
 
@@ -28,9 +28,11 @@ public class RoomSensor : MonoBehaviour
 
     [Space(20), Header("Messages")]
     [SerializeField] private LocalizedString _usbErrorText;
+    [SerializeField] private LocalizedString _usbErrorNo;
     [SerializeField] private LocalizedString _lightErrorText;
     [SerializeField] private LocalizedString _photoCameraErrorText;
     [SerializeField] private LocalizedString _videoCameraErrorText;
+    [SerializeField] private LocalizedString _cameraError;
 
     [Space(20), Header("Price")]
     [SerializeField] private int _priceGirl = 200;
@@ -45,28 +47,28 @@ public class RoomSensor : MonoBehaviour
 
     private void OnEnable()
     {
-        _onEnableHandle.Invoke();
+       // _onEnableHandle.Invoke();
     }
 
     private void Start()
     {
-        BaseSensor[] sensors = GameDataBase.Instance.Sensor;
+        //BaseSensor[] sensors = GameDataBase.Instance.Sensor;
 
-        for (int i = 0; i < sensors.Length; i++)
-        {
-            GameGoods? good = sensors[i].Good;
-            bool isGood = good == null;
-            if (isGood) continue;
+        //for (int i = 0; i < sensors.Length; i++)
+        //{
+        //    GameGoods? good = sensors[i].Good;
+        //    bool isGood = good == null;
+        //    if (isGood) continue;
 
-            bool isIdGood = good.Value.Id == -1;
-            if (isIdGood) continue;
+        //    bool isIdGood = good.Value.Id == -1;
+        //    if (isIdGood) continue;
 
-            bool isUsb = sensors[i].Type.Index == GameDataBase.Instance.UsbSensor.Type.Index;
-            if (isUsb) continue;
+        //    bool isUsb = sensors[i].Type.Index == GameDataBase.Instance.UsbSensor.Type.Index;
+        //    if (isUsb) continue;
 
-            GameObject createGood = Instantiate(good.Value.Product, _parent);
-            sensors[i].CreateGood = createGood;
-        }
+        //    GameObject createGood = Instantiate(good.Value.Product, _parent);
+        //    sensors[i].CreateGood = createGood;
+        //}
     }
 
     public void StartVideo()
@@ -124,6 +126,7 @@ public class RoomSensor : MonoBehaviour
                                  select g).First();
             return true;
         }
+        WindowMessage.Message(_lightErrorText.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
         return false;
 
     }
@@ -131,22 +134,35 @@ public class RoomSensor : MonoBehaviour
     private bool AutoUSBInstall()
     {
         GameGoods? good;
-        //var usbGood;
         if (_sliderValue == 0)
         {
+            if (_sensorPhoto.Type.Acquired.Count == 0)
+            {
+                WindowMessage.Message(_photoCameraErrorText.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+                return false;
+            }
+
             good = _sensorPhoto.Good;
         }
         else
-            good = _sensorVideo.Good;
-
-        if (_sensorUsb.Type.Acquired.Count == 0)
         {
-            Debug.LogError("Купите Usb в Video Shop!");
-            return false;
+            if (_sensorVideo.Type.Acquired.Count == 0)
+            {
+                WindowMessage.Message(_videoCameraErrorText.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+                return false;
+            }
+            good = _sensorVideo.Good;
         }
-
+        Debug.Log(good);
         if (good != null)
         {
+            if (_sensorUsb.Type.Acquired.Count == 0)
+            {
+                WindowMessage.Message(_usbErrorNo.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+                //Debug.LogError("Купите Usb в Video Shop!");
+                return false;
+            }
+
 
             var usbGoods = from u in _sensorUsb.Type.Acquired
                            where u.Level >= good.Value.Level
@@ -154,7 +170,8 @@ public class RoomSensor : MonoBehaviour
 
             if (usbGoods.Count() == 0)
             {
-                Debug.LogError("Нет подходяшего USB");
+                WindowMessage.Message(_usbErrorText.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+                //Debug.LogError("Недостаточно место в USb");
                 return false;
             }
             int min = usbGoods.Min(u => u.Level);
@@ -167,7 +184,8 @@ public class RoomSensor : MonoBehaviour
                 }
             }
         }
-        Debug.LogError("Камера не выбрана!!");
+        WindowMessage.Message(_cameraError.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+        //Debug.LogError("Камера не выбрана!");
         return false;
     }
 

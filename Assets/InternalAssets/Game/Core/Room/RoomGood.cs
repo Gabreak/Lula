@@ -15,10 +15,13 @@ public class RoomGood : MonoBehaviour
     private ToggleGroup _toggleGroup;
     [SerializeField] private bool _isSelectGood = false;
 
+
     private void OnEnable()
     {
+
         if (_isSelectGood)
             SelectGood = null;
+        //Debug.Log(SelectGood);
         _toggleGroup = GetComponent<ToggleGroup>();
         for (int i = 0; i < Sensor.Type.Acquired.Count; i++)
         {
@@ -49,12 +52,14 @@ public class RoomGood : MonoBehaviour
             }
             else
                 redirector.Lable.text = Sensor.Type.Acquired[i].Key.GetLocalizedString();
-
-            if (Sensor.Good != null)
+            if (SelectGood != null)
             {
-                if (Sensor.Good.Value.Id == redirector.Good.Value.Id)
+                if (Sensor.Good != null)
                 {
-                    redirector.ToggleComponent.isOn = true;
+                    if (Sensor.Good.Value.Id == redirector.Good.Value.Id)
+                    {
+                        redirector.ToggleComponent.isOn = true;
+                    }
                 }
             }
         }
@@ -94,7 +99,7 @@ public class RoomGood : MonoBehaviour
 
             if (typeUsb.Type.Index != Sensor.Type.Index)
             {
-                CreateObject(Sensor.Good);
+                //CreateObject(Sensor.Good);
                 if (typeUsb.Good != null)
                 {
                     if (typeUsb.Good.Value.Level < sensor.Sensor.Good.Value.Level)

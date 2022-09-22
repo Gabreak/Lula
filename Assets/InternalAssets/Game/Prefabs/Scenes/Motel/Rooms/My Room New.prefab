@@ -6941,9 +6941,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1339820381}
-        m_TargetAssemblyTypeName: RoomSensor, Assembly-CSharp
-        m_MethodName: StartVideo
+      - m_Target: {fileID: 3099323485040380223}
+        m_TargetAssemblyTypeName: ControlMonoSystem, Assembly-CSharp
+        m_MethodName: Enable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6953,9 +6953,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3099323485040380223}
-        m_TargetAssemblyTypeName: ControlMonoSystem, Assembly-CSharp
-        m_MethodName: Enable
+      - m_Target: {fileID: 1339820381}
+        m_TargetAssemblyTypeName: RoomSensor, Assembly-CSharp
+        m_MethodName: StartVideo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7902,47 +7902,17 @@ MonoBehaviour:
   _sensorPhoto: {fileID: 11400000, guid: 3dff8179d9cdc294491794bafbe738fb, type: 2}
   _sensorVideo: {fileID: 11400000, guid: cf61a47b91d63c64cb33b7eef6335cb6, type: 2}
   _sensorUsb: {fileID: 11400000, guid: 943e4ebd0f5e56046ac2f55bf32d408e, type: 2}
-  _onEnableHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1168498184}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 3003773722691502293}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2140144095}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
   _usbName: {fileID: 3349995946839664912}
   _usbErrorText:
+    m_TableReference:
+      m_TableCollectionName: GUID:bab79b81f509a4e4a88e5d04ac224470
+    m_TableEntryReference:
+      m_KeyId: 10504001091641344
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _usbErrorNo:
     m_TableReference:
       m_TableCollectionName: GUID:bab79b81f509a4e4a88e5d04ac224470
     m_TableEntryReference:
@@ -7974,6 +7944,15 @@ MonoBehaviour:
       m_TableCollectionName: GUID:bab79b81f509a4e4a88e5d04ac224470
     m_TableEntryReference:
       m_KeyId: 2889945530867712
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _cameraError:
+    m_TableReference:
+      m_TableCollectionName: GUID:bab79b81f509a4e4a88e5d04ac224470
+    m_TableEntryReference:
+      m_KeyId: 10505393801895936
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -8223,7 +8202,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 0}
   m_HandleRect: {fileID: 4634136928816387554}
@@ -13910,9 +13889,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1339820381}
-        m_TargetAssemblyTypeName: RoomSensor, Assembly-CSharp
-        m_MethodName: StartPhoto
+      - m_Target: {fileID: 3099323485040380223}
+        m_TargetAssemblyTypeName: ControlMonoSystem, Assembly-CSharp
+        m_MethodName: Enable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13922,9 +13901,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3099323485040380223}
-        m_TargetAssemblyTypeName: ControlMonoSystem, Assembly-CSharp
-        m_MethodName: Enable
+      - m_Target: {fileID: 1339820381}
+        m_TargetAssemblyTypeName: RoomSensor, Assembly-CSharp
+        m_MethodName: StartPhoto
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
