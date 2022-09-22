@@ -675,6 +675,7 @@ GameObject:
   - component: {fileID: 1751202309561602731}
   - component: {fileID: 5997455620041484673}
   - component: {fileID: 456392036297969365}
+  - component: {fileID: 2174359354507404053}
   m_Layer: 0
   m_Name: Anastasia 2.0
   m_TagString: Untagged
@@ -813,6 +814,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.9737768, y: 7.545936}
   m_EdgeRadius: 0
+--- !u!95 &2174359354507404053
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076229811297916103}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 31573cfb5227ddb41a37e7869972ad52, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5147435946416108553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,8 +1232,8 @@ MonoBehaviour:
   - {fileID: 8827089007001752431}
   - {fileID: 1880094842579233314}
   m_Bounds:
-    m_Center: {x: 0.012514949, y: 0.042715013, z: 0}
-    m_Extent: {x: 1.1375151, y: 0.75521505, z: 0}
+    m_Center: {x: 0.21580088, y: 0.2166386, z: 0}
+    m_Extent: {x: 0.9252993, y: 0.5812914, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1317,8 +1338,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 1880094842579233314}
   m_Bounds:
-    m_Center: {x: -0.4038849, y: -1.0543051, z: 0}
-    m_Extent: {x: 0.7788851, y: 0.38069504, z: 0}
+    m_Center: {x: 0.66579866, y: 0.20725712, z: 0}
+    m_Extent: {x: 0.7268723, y: 0.45001283, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1537,8 +1558,8 @@ MonoBehaviour:
   - {fileID: 7036840739357817460}
   - {fileID: 7442428135030125099}
   m_Bounds:
-    m_Center: {x: -0.00000023841858, y: -0.0069594383, z: 0}
-    m_Extent: {x: 2.2800002, y: 3.0830407, z: 0}
+    m_Center: {x: -0.00000023841858, y: 0.14008093, z: 0}
+    m_Extent: {x: 2.2800002, y: 2.9360008, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1643,8 +1664,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 1880094842579233314}
   m_Bounds:
-    m_Center: {x: -0.014999926, y: -0.006254554, z: 0}
-    m_Extent: {x: 0.44000006, y: 0.30624503, z: 0}
+    m_Center: {x: -1.1766543, y: 1.5835375, z: 0}
+    m_Extent: {x: 0.4399153, y: 0.3303951, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
