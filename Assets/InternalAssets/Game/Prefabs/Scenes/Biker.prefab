@@ -762,34 +762,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3003773722691502293}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 200642899184206636}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 2073744710}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5881029867971352408}
+        m_TargetAssemblyTypeName: ControlMonoSystem, Assembly-CSharp
+        m_MethodName: Enable
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -896,6 +884,7 @@ GameObject:
   - component: {fileID: 1158365900382724649}
   - component: {fileID: 3100440320396621438}
   - component: {fileID: 1430216398788632790}
+  - component: {fileID: 1844917075224113621}
   m_Layer: 0
   m_Name: Thiefs
   m_TagString: Untagged
@@ -961,29 +950,17 @@ MonoBehaviour:
   _onMouseDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3003773722691502293}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 5881029867971352408}
+        m_TargetAssemblyTypeName: ControlMonoSystem, Assembly-CSharp
+        m_MethodName: Disable
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 200642899184206636}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 2073744710}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -1040,6 +1017,20 @@ MonoBehaviour:
   _animationExit: {fileID: 7400000, guid: e1735b6d059afea41b80c5785dd666f0, type: 2}
   _animationDown: {fileID: 7400000, guid: 3f35c00a7a7ff5d4bad5f32bff135859, type: 2}
   _animationUp: {fileID: 7400000, guid: c0a334e12b0fdec448c6bef99553a30b, type: 2}
+--- !u!114 &1844917075224113621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657238170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &2073744710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1125,7 @@ GameObject:
   - component: {fileID: 3003773722691502292}
   - component: {fileID: 3003773722691502295}
   - component: {fileID: 7248678800598992101}
+  - component: {fileID: 919467445776504046}
   m_Layer: 0
   m_Name: Transition
   m_TagString: Untagged
@@ -1292,6 +1284,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 0}
   _prefabScene: {fileID: 11400000, guid: aa764058fe4b361489c137b8946871ad, type: 2}
+--- !u!114 &919467445776504046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773722691502303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &3003773723216957820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,6 +1381,7 @@ GameObject:
   - component: {fileID: 3003773723671722370}
   - component: {fileID: 7948325726880032568}
   - component: {fileID: 6062456244800673418}
+  - component: {fileID: 5881029867971352408}
   m_Layer: 0
   m_Name: Biker
   m_TagString: Untagged
@@ -1429,3 +1436,16 @@ MonoBehaviour:
   _objects:
   - Object: {fileID: 2073744710}
     IsEnable: 0
+--- !u!114 &5881029867971352408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773723671722369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ad7d16ef7f9c54c895a4fa0f08c4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isOpen: 0
