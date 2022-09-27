@@ -4826,7 +4826,7 @@ GameObject:
   - component: {fileID: 891765555}
   - component: {fileID: 7297863045494720299}
   m_Layer: 0
-  m_Name: Button (Legacy)
+  m_Name: Button Help
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4880,8 +4880,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: e8421a15d36929043bcb8fe83bfee676, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4933,7 +4933,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 891765556}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7297863045494720299}
+        m_TargetAssemblyTypeName: PrefabTransition, Assembly-CSharp
+        m_MethodName: OpenPrefab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7297863045494720299
 MonoBehaviour:
   m_ObjectHideFlags: 0
