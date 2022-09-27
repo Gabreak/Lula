@@ -590,7 +590,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5903455601416127309}
-  - component: {fileID: 48562997367327806}
   m_Layer: 0
   m_Name: Hub Help
   m_TagString: Untagged
@@ -617,19 +616,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &48562997367327806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5903455601416127310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6fbac69ecca2b046be26e143eaa8fd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _isNightHub: 1
 --- !u!1 &8665706190365845900
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,9 +662,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:c4631bdafa7dbe646b7ac9a097a27a66
+      m_TableCollectionName: GUID:761e7fc6afd67b54b84af3b3db4c374e
     m_TableEntryReference:
-      m_KeyId: 1804196366622720
+      m_KeyId: 19477551489024
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -2054,9 +2040,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:c4631bdafa7dbe646b7ac9a097a27a66
+      m_TableCollectionName: GUID:761e7fc6afd67b54b84af3b3db4c374e
     m_TableEntryReference:
-      m_KeyId: 1804011964047360
+      m_KeyId: 396077146112
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -2210,9 +2196,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:c4631bdafa7dbe646b7ac9a097a27a66
+      m_TableCollectionName: GUID:761e7fc6afd67b54b84af3b3db4c374e
     m_TableEntryReference:
-      m_KeyId: 1804097951473664
+      m_KeyId: 17053424132096
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -2415,7 +2401,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8665706192208787609}
   - component: {fileID: 8665706192208787611}
-  - component: {fileID: 8665706192208787608}
   m_Layer: 0
   m_Name: Localize
   m_TagString: Untagged
@@ -2452,9 +2437,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:c4631bdafa7dbe646b7ac9a097a27a66
+      m_TableCollectionName: GUID:761e7fc6afd67b54b84af3b3db4c374e
     m_TableEntryReference:
-      m_KeyId: 1804138250346496
+      m_KeyId: 18212134166528
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -2478,17 +2463,3 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
---- !u!114 &8665706192208787608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8665706192208787614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccc26910844186749beee27d3eba7ba1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _prefab: {fileID: 0}
-  _prefabScene: {fileID: 0}
