@@ -5,13 +5,20 @@ using UnityEngine;
 
 public class ObjectRandomChild : MonoBehaviour
 {
+    [SerializeField] private VideoGirlsData _data;
     private void OnEnable()
     {
 
-        for (int i = 0; i < transform.childCount; i++)
+        for (int i = 1; i < _data.Girls.Length; i++)
         {
-            transform.GetChild(i).gameObject.SetActive(false);
+            if (!_data.Girls[i].IsActive)
+            {
+                 
+                transform.GetChild(i - 1).gameObject.SetActive(true);
+                break;
+            }
         }
-        transform.GetChild(Random.Range(0, transform.childCount)).gameObject.SetActive(true);
+
+        //transform.GetChild(Random.Range(0, transform.childCount)).gameObject.SetActive(true);
     }
 }
