@@ -10,7 +10,7 @@ public class ScaleImage : MonoBehaviour
     //[SerializeField] private float _scale;
     void Update()
     {
-        float distance = Vector3.Distance(_target.position, transform.position) / 140f;
+        float distance = Vector3.Distance(_target.position, transform.position) / (Screen.width /4);
         transform.localScale = new Vector3(1f - distance, 1f - distance, 1f);
     }
 }
