@@ -4217,7 +4217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd28e14ca59cd74db46fbd73cd4377b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lightTime: 1
+  _lightTime: 8
   _nightTime: 19
   Speed: 10
   _textTime: {fileID: 1707935401}
@@ -7453,6 +7453,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hub
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 5903455601416127310, guid: 3671bdd1046ec1d46afecd3e39b3a2d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+>>>>>>> parent of 13f63ca (Ga)
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3671bdd1046ec1d46afecd3e39b3a2d1, type: 3}
 --- !u!1 &2118814166
@@ -7585,6 +7592,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 410486459, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -0.1886239
       objectReference: {fileID: 0}
     - target: {fileID: 410486459, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
@@ -7598,6 +7606,21 @@ PrefabInstance:
     - target: {fileID: 410486459, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.1545087
+=======
+      value: -6.7431245
+      objectReference: {fileID: 0}
+    - target: {fileID: 410486459, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.612749
+      objectReference: {fileID: 0}
+    - target: {fileID: 410486459, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9797273
+      objectReference: {fileID: 0}
+    - target: {fileID: 410486459, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.20033565
+>>>>>>> parent of 13f63ca (Ga)
       objectReference: {fileID: 0}
     - target: {fileID: 1530560540315612637, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_IsActive
@@ -7653,7 +7676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4364596045591572743, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
