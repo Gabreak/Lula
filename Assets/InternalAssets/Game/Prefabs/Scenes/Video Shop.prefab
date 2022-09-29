@@ -5005,6 +5005,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7546914150082686154, guid: 14f0485ceec7ae74c88fa525b5af5231, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6182578800110989069, guid: 14f0485ceec7ae74c88fa525b5af5231, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -965127141393086443, guid: 14f0485ceec7ae74c88fa525b5af5231, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -362711887691686440, guid: 14f0485ceec7ae74c88fa525b5af5231, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 159740312105920466, guid: 14f0485ceec7ae74c88fa525b5af5231, type: 3}
       propertyPath: m_Bounds.m_Center.x
       value: -0.0012999177
@@ -5139,6 +5155,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 14f0485ceec7ae74c88fa525b5af5231, type: 3}
+--- !u!1 &2585869881501338093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -965127141393086443, guid: 14f0485ceec7ae74c88fa525b5af5231, type: 3}
+  m_PrefabInstance: {fileID: 5870995231379915256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3138609246967094304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -362711887691686440, guid: 14f0485ceec7ae74c88fa525b5af5231, type: 3}
+  m_PrefabInstance: {fileID: 5870995231379915256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5060373204306645710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7546914150082686154, guid: 14f0485ceec7ae74c88fa525b5af5231, type: 3}
+  m_PrefabInstance: {fileID: 5870995231379915256}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5068274738199820326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 14f0485ceec7ae74c88fa525b5af5231, type: 3}
@@ -5239,13 +5270,13 @@ MonoBehaviour:
   _prefabUpgrade: {fileID: 7719784513135462899, guid: 9edf1ec231694864484d8f962f958d00, type: 3}
   _name: Wiener
   Objects:
-  - Object: {fileID: 0}
+  - Object: {fileID: 3138609246967094304}
     Price: 340
-  - Object: {fileID: 0}
+  - Object: {fileID: 8884166481041920267}
     Price: 680
-  - Object: {fileID: 0}
+  - Object: {fileID: 2585869881501338093}
     Price: 900
-  - Object: {fileID: 0}
+  - Object: {fileID: 5060373204306645710}
     Price: 1610
 --- !u!114 &4068937270621786382
 MonoBehaviour:
@@ -5366,3 +5397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a27cbdf4a5c5c054888875e926529cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8884166481041920267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6182578800110989069, guid: 14f0485ceec7ae74c88fa525b5af5231, type: 3}
+  m_PrefabInstance: {fileID: 5870995231379915256}
+  m_PrefabAsset: {fileID: 0}
