@@ -4170,7 +4170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3270366045f3e94185c6cd64cbed557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startMoney: 100000
+  _startMoney: 50000
   _textMoney: {fileID: 259768708}
   _messageNoMoneyGirl:
     m_TableReference:
@@ -4217,7 +4217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd28e14ca59cd74db46fbd73cd4377b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lightTime: 8
+  _lightTime: 1
   _nightTime: 19
   Speed: 10
   _textTime: {fileID: 1707935401}
@@ -6172,7 +6172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1571561434
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7453,10 +7453,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hub
       objectReference: {fileID: 0}
-    - target: {fileID: 5903455601416127310, guid: 3671bdd1046ec1d46afecd3e39b3a2d1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3671bdd1046ec1d46afecd3e39b3a2d1, type: 3}
 --- !u!1 &2118814166
@@ -7563,7 +7559,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 14
   m_TargetDisplay: 0
@@ -7589,19 +7585,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 410486459, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.7431245
+      value: -0.1886239
       objectReference: {fileID: 0}
     - target: {fileID: 410486459, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.612749
+      value: 4.2917814
       objectReference: {fileID: 0}
     - target: {fileID: 410486459, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9797273
+      value: 0.98799145
       objectReference: {fileID: 0}
     - target: {fileID: 410486459, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.20033565
+      value: -0.1545087
       objectReference: {fileID: 0}
     - target: {fileID: 1530560540315612637, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_IsActive
@@ -7657,7 +7653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4364596045591572743, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfdc0e24904007649b71f906f1390b3d, type: 3}
