@@ -14,10 +14,6 @@ public class RoomGirls : MonoBehaviour
     [SerializeField] private TypeProducts _toys;
     private static RoomGirls _instance;
     private int _idBinary = 0;
-
-    public GameBed[] _gameBed;
-
-
     public int IdBinary
     {
         get => _idBinary;
@@ -32,15 +28,6 @@ public class RoomGirls : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-    }
-
-    private void OnEnable()
-    {
-        for (int i = 0; i < _gameBed.Length; i++)
-        {
-            _gameBed[i].Check = PlayerPrefs.GetInt("GirlBed" + i, 0);
-            _gameBed[i].Girl.SetActive(Convert.ToBoolean(_gameBed[i].Check));
-        }
     }
 
     private void Start()
@@ -63,12 +50,6 @@ public class RoomGirls : MonoBehaviour
                 girl.IdBinary = _data.Girls[i].Id;
             }
         }
-    }
-
-    public void UpdateBed(int index)
-    {
-        PlayerPrefs.SetInt("GirlBed" + index, _gameBed[index].Check);
-        _gameBed[index].Girl.SetActive(Convert.ToBoolean(_gameBed[index].Check));
     }
 
     public static int GetCount(int index) => Convert.ToString(index, 2).Count(ch => ch == '1');
@@ -123,11 +104,4 @@ public class RoomGirls : MonoBehaviour
         }
         return null;
     }
-}
-
-[Serializable]
-public struct GameBed
-{
-    public GameObject Girl;
-    public int Check;
 }
