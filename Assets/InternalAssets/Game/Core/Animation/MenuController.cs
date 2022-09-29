@@ -14,4 +14,9 @@ public class MenuController : MonoBehaviour
         _animator2.SetBool(_NameBoolOne, false);
     }
 
+    public void InvertionIsBoolTwo()
+    {
+        _animator.SetBool(_NameBoolOne, false);
+        _animator2.SetBool(_NameBoolOne, false);
+    }
 }
