@@ -31,6 +31,7 @@ public class ColorManager : MonoBehaviour
 
     public IEnumerator Disable()
     {
+
         _color.enabled = true;
         float a = 0;
         float r = 0;

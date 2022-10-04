@@ -12,6 +12,7 @@ public class PrefabTransition : MonoBehaviour
 
     private void OnMouseDown()
     {
+
         OpenPrefab();
     }
 

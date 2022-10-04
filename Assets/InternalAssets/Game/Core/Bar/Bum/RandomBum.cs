@@ -7,6 +7,8 @@ public class RandomBum : MonoBehaviour
 {
     [Range(1, 100)]
     [SerializeField] private int _chance = 30;
+
+    [SerializeField] private GameObject _dialogNoBum;
     private void Start()
     {
         bool isBum = false;
@@ -15,5 +17,6 @@ public class RandomBum : MonoBehaviour
             isBum = true;
 
         gameObject.SetActive(isBum);
+        _dialogNoBum.SetActive(!isBum);
     }
 }
