@@ -884,7 +884,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6447226398535681663}
-  - component: {fileID: 1236762911489085727}
+  - component: {fileID: 292139985383114619}
   - component: {fileID: 2919880345693647026}
   - component: {fileID: 4374807591676130930}
   - component: {fileID: 7751648801690188802}
@@ -919,31 +919,20 @@ Transform:
   m_Father: {fileID: 3003773723671722370}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1236762911489085727
+--- !u!114 &292139985383114619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5310095344623083036}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac2ad304f2aea834fa3a6e22f3fd3203, type: 3}
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabUpgrade: {fileID: 7719784513135462899, guid: 9edf1ec231694864484d8f962f958d00, type: 3}
-  _name: Banni
-  Objects:
-  - Object: {fileID: 81415606244355803}
-    Price: 200
-  - Object: {fileID: 1084246223214754402}
-    Price: 600
-  - Object: {fileID: 4592012806027797709}
-    Price: 1400
-  - Object: {fileID: 3828759681336092026}
-    Price: 3000
-  - Object: {fileID: 6419047684062817431}
-    Price: 6000
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!114 &2919880345693647026
 MonoBehaviour:
   m_ObjectHideFlags: 0
