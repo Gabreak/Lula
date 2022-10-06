@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 10
 --- !u!222 &274511963
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7233,6 +7233,51 @@ MonoBehaviour:
   _videoData: {fileID: 11400000, guid: d4af1c59bdac6a84cbd46c0c0f7a9c39, type: 2}
   _videoPlayer: {fileID: 187936973}
   _slider: {fileID: 1226807067}
+--- !u!1 &2027653926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2027653927}
+  - component: {fileID: 2027653928}
+  m_Layer: 0
+  m_Name: ControllerResetGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2027653927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027653926}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2027653928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027653926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f923ef0256708ed478b9a3a4480970e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _videoGirls: {fileID: 11400000, guid: 95421b87c3d245c429c76f7ee81cd58e, type: 2}
 --- !u!1 &2055162724
 GameObject:
   m_ObjectHideFlags: 0

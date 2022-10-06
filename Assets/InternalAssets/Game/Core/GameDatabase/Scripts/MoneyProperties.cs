@@ -40,7 +40,7 @@ public class MoneyProperties : MonoBehaviour
     public static void InfoMoneyBasket(Text info, int price)
     {
         if (Money >= price)
-            info.color = Color.white;
+            info.color = new Color32(104,32,9,255);
         else
             info.color = Color.red;
 
