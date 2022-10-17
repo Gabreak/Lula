@@ -36,7 +36,7 @@ public class RoomSensor : MonoBehaviour
 
     [Space(20), Header("Price")]
     [SerializeField] private int _priceGirl = 200;
-    [SerializeField] private int _incomeGirl = 250;
+    [SerializeField] private int _incomeGirl = 350;
 
     [SerializeField] private Slider _sliderChoice;
     private int _sliderValue = 0;
@@ -199,7 +199,7 @@ public class RoomSensor : MonoBehaviour
         if (PhotoCameraMessage(isGoodPhoto)) return;
         if (UsbMessage(isGoodUsb)) return;
 
-        int price = _sensorLight.Good.Value.Price + _sensorPhoto.Good.Value.Price + UnityEngine.Random.Range(-100, 0);
+        int price = _sensorLight.Good.Value.Price + _sensorPhoto.Good.Value.Price + UnityEngine.Random.Range(0, 050);
         int indexVideo = _sensorPhoto.Good.Value.Level;
 
         PlayDefault(0, indexVideo, price);
@@ -214,7 +214,7 @@ public class RoomSensor : MonoBehaviour
         if (VideoCameraMessage(isGoodVideo)) return;
         if (UsbMessage(isGoodUsb)) return;
 
-        int price = _sensorLight.Good.Value.Price + _sensorVideo.Good.Value.Price + UnityEngine.Random.Range(-1000, 0);
+        int price = _sensorLight.Good.Value.Price + _sensorVideo.Good.Value.Price + UnityEngine.Random.Range(0, 100);
         if (RoomGirls.VideoIndex == 0)
         {
             int indexVideo = _sensorVideo.Good.Value.Level;

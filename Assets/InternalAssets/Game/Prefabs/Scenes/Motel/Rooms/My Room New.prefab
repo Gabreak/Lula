@@ -3249,7 +3249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2182840812123316642
 Transform:
   m_ObjectHideFlags: 0
@@ -5167,6 +5167,7 @@ GameObject:
   - component: {fileID: 8653853698855975941}
   - component: {fileID: 448394385372913932}
   - component: {fileID: 3415499205479939600}
+  - component: {fileID: 3590595281127152504}
   m_Layer: 0
   m_Name: Transition Rooms 2
   m_TagString: Untagged
@@ -5364,6 +5365,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isBoxCollsion: 0
   _isObject: 1
+--- !u!114 &3590595281127152504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631766874682744782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9b92782d6f576469d75b5241b817a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Outline: {fileID: 2100000, guid: 4752806bb3da71745839621295eebc42, type: 2}
 --- !u!1 &1679923098970095268
 GameObject:
   m_ObjectHideFlags: 0
@@ -8227,6 +8241,7 @@ GameObject:
   - component: {fileID: 3003773722691502295}
   - component: {fileID: 7248678800598992101}
   - component: {fileID: 5962569818591399235}
+  - component: {fileID: 959837522162617267}
   m_Layer: 0
   m_Name: Transition Rooms
   m_TagString: Untagged
@@ -8399,6 +8414,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isBoxCollsion: 0
   _isObject: 1
+--- !u!114 &959837522162617267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773722691502303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9b92782d6f576469d75b5241b817a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Outline: {fileID: 2100000, guid: 4752806bb3da71745839621295eebc42, type: 2}
 --- !u!1 &3003773723216957820
 GameObject:
   m_ObjectHideFlags: 0
@@ -8485,6 +8513,7 @@ GameObject:
   - component: {fileID: 813505769709333642}
   - component: {fileID: 2034352606}
   - component: {fileID: 3099323485040380223}
+  - component: {fileID: 5627206188776826281}
   m_Layer: 0
   m_Name: My Room New
   m_TagString: Untagged
@@ -8670,6 +8699,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isOpen: 0
+--- !u!114 &5627206188776826281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773723671722369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 3da3393b38b6e8044995971b8cf276ad, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &3139136524304745280
 GameObject:
   m_ObjectHideFlags: 0
@@ -13309,7 +13355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7315241160291455722
 Transform:
   m_ObjectHideFlags: 0

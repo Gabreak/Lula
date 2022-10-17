@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5938129c3a7c9114baf2565ae61b370f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 1996920537}
   - component: {fileID: 931965490073565740}
   - component: {fileID: 1677115300}
+  - component: {fileID: 6483400252954672498}
   m_Layer: 0
   m_Name: Transition Exit Reception
   m_TagString: Untagged
@@ -143,7 +144,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5938129c3a7c9114baf2565ae61b370f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -274,6 +275,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isBoxCollsion: 0
   _isObject: 1
+--- !u!114 &6483400252954672498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996920535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9b92782d6f576469d75b5241b817a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Outline: {fileID: 2100000, guid: 4752806bb3da71745839621295eebc42, type: 2}
 --- !u!1 &2065534185
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +449,7 @@ GameObject:
   - component: {fileID: 961027508800230368}
   - component: {fileID: 1413970307671191674}
   - component: {fileID: 1656351468}
+  - component: {fileID: 1543442937611179893}
   m_Layer: 0
   m_Name: Transition Room 04
   m_TagString: Untagged
@@ -478,7 +493,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5938129c3a7c9114baf2565ae61b370f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -594,7 +609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _room: {fileID: 3003773723671722369, guid: bf96b9dbd7ad0e94cb574449d474646f, type: 3}
   _roomNumber: 4
-  _price: 600
+  _price: 20000
   _canvasInfo:
     Parent: {fileID: 8644034223030279946}
     Panel: {fileID: 1109946105278358696, guid: c8daabb572cd206448dba05d7127c7d5, type: 3}
@@ -639,6 +654,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isBoxCollsion: 0
   _isObject: 1
+--- !u!114 &1543442937611179893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218843391913623764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9b92782d6f576469d75b5241b817a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Outline: {fileID: 2100000, guid: 4752806bb3da71745839621295eebc42, type: 2}
 --- !u!1 &3003773722691502303
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,6 +683,7 @@ GameObject:
   - component: {fileID: 3003773722691502295}
   - component: {fileID: 8372515069782452678}
   - component: {fileID: 2132562349}
+  - component: {fileID: 8859743075848774637}
   m_Layer: 0
   m_Name: Transition Girl Room
   m_TagString: Untagged
@@ -698,7 +727,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5938129c3a7c9114baf2565ae61b370f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -839,6 +868,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isBoxCollsion: 0
   _isObject: 1
+--- !u!114 &8859743075848774637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773722691502303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9b92782d6f576469d75b5241b817a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Outline: {fileID: 2100000, guid: 4752806bb3da71745839621295eebc42, type: 2}
 --- !u!1 &3003773723216957820
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,6 +1009,7 @@ GameObject:
   - component: {fileID: 7835868852948196248}
   - component: {fileID: 4174429711745390689}
   - component: {fileID: 1370516555}
+  - component: {fileID: 7495234974253664162}
   m_Layer: 0
   m_Name: Transition Room 03
   m_TagString: Untagged
@@ -1010,7 +1053,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5938129c3a7c9114baf2565ae61b370f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1126,7 +1169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _room: {fileID: 3003773723671722369, guid: 830d272220243dd41aafee48c069948e, type: 3}
   _roomNumber: 3
-  _price: 320
+  _price: 10000
   _canvasInfo:
     Parent: {fileID: 8644034223030279946}
     Panel: {fileID: 1109946105278358696, guid: c8daabb572cd206448dba05d7127c7d5, type: 3}
@@ -1171,6 +1214,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isBoxCollsion: 0
   _isObject: 1
+--- !u!114 &7495234974253664162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3553777844868608972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9b92782d6f576469d75b5241b817a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Outline: {fileID: 2100000, guid: 4752806bb3da71745839621295eebc42, type: 2}
 --- !u!1 &3928166651775377663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1460,7 @@ GameObject:
   - component: {fileID: 3914950716562154276}
   - component: {fileID: 2222476544163437450}
   - component: {fileID: 2115512981}
+  - component: {fileID: 2300708018821396443}
   m_Layer: 0
   m_Name: Transition Room 02
   m_TagString: Untagged
@@ -1447,7 +1504,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5938129c3a7c9114baf2565ae61b370f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1563,7 +1620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _room: {fileID: 3003773723671722369, guid: 66a93e31d9e57c445be1cbc76567dc61, type: 3}
   _roomNumber: 2
-  _price: 190
+  _price: 5000
   _canvasInfo:
     Parent: {fileID: 8644034223030279946}
     Panel: {fileID: 1109946105278358696, guid: c8daabb572cd206448dba05d7127c7d5, type: 3}
@@ -1608,6 +1665,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isBoxCollsion: 0
   _isObject: 1
+--- !u!114 &2300708018821396443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6692291659285279434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9b92782d6f576469d75b5241b817a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Outline: {fileID: 2100000, guid: 4752806bb3da71745839621295eebc42, type: 2}
 --- !u!1 &6755545835754634371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,6 +1795,7 @@ GameObject:
   - component: {fileID: 7441853048547263721}
   - component: {fileID: 2086489481998882881}
   - component: {fileID: 1247377128}
+  - component: {fileID: 6993271792811448090}
   m_Layer: 0
   m_Name: Transition Room 01
   m_TagString: Untagged
@@ -1768,7 +1839,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5938129c3a7c9114baf2565ae61b370f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1884,7 +1955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _room: {fileID: 3003773723671722369, guid: f49694eb69c01264f9b09b47782cd606, type: 3}
   _roomNumber: 1
-  _price: 100
+  _price: 3000
   _canvasInfo:
     Parent: {fileID: 8644034223030279946}
     Panel: {fileID: 1109946105278358696, guid: c8daabb572cd206448dba05d7127c7d5, type: 3}
@@ -1929,3 +2000,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isBoxCollsion: 0
   _isObject: 1
+--- !u!114 &6993271792811448090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8537530780489077158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9b92782d6f576469d75b5241b817a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Outline: {fileID: 2100000, guid: 4752806bb3da71745839621295eebc42, type: 2}
