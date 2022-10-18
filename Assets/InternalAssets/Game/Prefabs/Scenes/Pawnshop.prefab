@@ -2154,6 +2154,7 @@ GameObject:
   - component: {fileID: 3003773722691502295}
   - component: {fileID: 3551533670197614549}
   - component: {fileID: 6826045777487292152}
+  - component: {fileID: 1944217378127549984}
   m_Layer: 0
   m_Name: Transition Hub
   m_TagString: Untagged
@@ -2326,6 +2327,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isBoxCollsion: 0
   _isObject: 1
+--- !u!114 &1944217378127549984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773722691502303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9b92782d6f576469d75b5241b817a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Outline: {fileID: 2100000, guid: 4752806bb3da71745839621295eebc42, type: 2}
 --- !u!1 &3003773723216957820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,6 +2425,7 @@ GameObject:
   - component: {fileID: 3821235733398720549}
   - component: {fileID: 3721802483953446671}
   - component: {fileID: 6283850847165862549}
+  - component: {fileID: 5406955524667719431}
   m_Layer: 0
   m_Name: Pawnshop
   m_TagString: Untagged
@@ -2493,6 +2508,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isOpen: 0
+--- !u!114 &5406955524667719431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773723671722369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 3da3393b38b6e8044995971b8cf276ad, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &3254832776778642902
 GameObject:
   m_ObjectHideFlags: 0
