@@ -27,6 +27,7 @@ public class ResetGame : MonoBehaviour
             else
                 _videoGirls.Girls[i].IsActive = false;
         }
+
         Debug.Log("Ready Girls");
     }
 

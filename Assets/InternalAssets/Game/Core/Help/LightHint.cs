@@ -1,3 +1,5 @@
+using Sirenix.OdinInspector;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,13 +12,14 @@ using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 
 public class LightHint : MonoBehaviour
-{
+{ 
     private Light _light;
     [SerializeField] private GameObject _background;
     [SerializeField] private Text _text;
 
     public Material[] MaterialsLight;
     //[SerializeField] private PostProcessVolume _post;
+    [ListDrawerSettings(ShowIndexLabels =true,NumberOfItemsPerPage =20)]
     [SerializeField] private ObjectHelp[] _objects;
     private int _indexOld;
 
