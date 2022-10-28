@@ -15,7 +15,15 @@ public class OutLineSprites : MonoBehaviour
         m_MaterialDefault = m_Sprite.material;
     }
 
-    private void OnMouseEnter() => m_Sprite.material = m_Outline;
+    private void OnMouseEnter()
+    {
+        if (enabled)
+            m_Sprite.material = m_Outline;
+    }
 
-    private void OnMouseExit() => m_Sprite.material = m_MaterialDefault;
+    private void OnMouseExit()
+    {
+        if (enabled)
+            m_Sprite.material = m_MaterialDefault;
+    }
 }

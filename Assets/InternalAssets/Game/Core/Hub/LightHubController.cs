@@ -8,13 +8,14 @@ public class LightHubController : MonoBehaviour
 {
     public static LightHubController Instance;
     public SceneData SceneDataHub;
+    public Light PostLight;
     [SerializeField] private GameObject _hubLight;
     [SerializeField] private GameObject _hubNight;
 
     private void OnEnable() => TimeManager.OnTick += UpdateScene;
     private void OnDisable() => TimeManager.OnTick -= UpdateScene;
 
-    private void Start()
+    private void Awake()
     {
         Instance = this;
         SceneDataHub.PrefabObject = _hubNight;

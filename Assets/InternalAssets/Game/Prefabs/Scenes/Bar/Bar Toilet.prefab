@@ -10,13 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1599033118}
   - component: {fileID: 1599033119}
-  - component: {fileID: 1599033121}
   - component: {fileID: 1599033120}
   - component: {fileID: 468584181}
   - component: {fileID: 8651440258207237650}
   - component: {fileID: 2009573580}
-  - component: {fileID: 1168122336}
-  - component: {fileID: 1168122335}
+  - component: {fileID: 4871395635384766734}
   m_Layer: 0
   m_Name: Bum
   m_TagString: Untagged
@@ -32,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599033117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.049999952, y: -0.26, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.049999952, y: -1, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7581832071883475205}
@@ -80,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a6af435ed153064cadb59e5be986d59, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f33b5c4532e4614b8c9e6155cf417b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,26 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1599033121
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1599033117}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e85f134aefeb4074c9d7bb3e67579157, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!60 &1599033120
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -128,7 +106,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.599999, y: 5.3999996}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -194,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98dcbba283bc554abd2ae93249991c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chance: 20
+  _chance: 89
   _dialogNoBum: {fileID: 1604094666116780403}
 --- !u!114 &2009573580
 MonoBehaviour:
@@ -208,37 +186,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da1947f3bf97e64a8615ac49ea02bff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!111 &1168122336
-Animation:
+--- !u!328 &4871395635384766734
+VideoPlayer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599033117}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!114 &1168122335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1599033117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2e30eba99bceda458a1d41e01b6d75d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animationEnter: {fileID: 7400000, guid: e9c02fca12acd6e49abccacd34632000, type: 2}
-  _animationExit: {fileID: 7400000, guid: 69fdccefd07892040912aa585a5a10b6, type: 2}
-  _animationDown: {fileID: 7400000, guid: 562c373f3258fe447ae131dd39b9a786, type: 2}
-  _animationUp: {fileID: 7400000, guid: 0a646c339b6e8d34699ed757610f405b, type: 2}
+  m_VideoClip: {fileID: 32900000, guid: a9b63c44fe3ee464191e7f21f4ee96c4, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 0
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &1821070986
 GameObject:
   m_ObjectHideFlags: 0

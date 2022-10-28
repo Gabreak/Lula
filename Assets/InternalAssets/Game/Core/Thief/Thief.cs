@@ -30,7 +30,10 @@ public class Thief : MonoBehaviour
             MoneyProperties.Money -= price;
             _police.ToJail = 0;
             _police.WasInJail = 0;
+            _police.CountViolation = 0;
+            _police.UpdateBar();
             _pricePilice.text = 0 + "$";
+
         }
     }
 }

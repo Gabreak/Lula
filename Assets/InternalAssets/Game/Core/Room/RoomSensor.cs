@@ -47,7 +47,7 @@ public class RoomSensor : MonoBehaviour
 
     private void OnEnable()
     {
-       // _onEnableHandle.Invoke();
+        // _onEnableHandle.Invoke();
     }
 
     private void Start()
@@ -227,6 +227,7 @@ public class RoomSensor : MonoBehaviour
 
     public void PlayDefault(int indexList, int indexVideo, int price)
     {
+        PoliceManager.Instance.LoadJail(transform.gameObject, 5);
         VideoClip clip = VideoController.Instance.GetVideo(indexList, indexVideo);
         UsbRecord(price, clip);
         VideoController.Instance.VideoPlay(transform.gameObject, indexList, indexVideo);

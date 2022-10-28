@@ -13,9 +13,9 @@ public class ToiletBum : MonoBehaviour
     {
         IndexItem = Random.Range(0, _drop.Goods.Length);
         Instantiate(_drop.Goods[IndexItem].Product, transform);
-        _bum.BumAnimator.SetBool("Hit", true);
+        //_bum.BumAnimator.SetBool("Hit", true);
         _bum.ComponentDisable();
 
-        PoliceManager.Instance.LoadJail(transform.root.gameObject);
+        PoliceManager.Instance.LoadJail(transform.root.gameObject,10);
     }
 }

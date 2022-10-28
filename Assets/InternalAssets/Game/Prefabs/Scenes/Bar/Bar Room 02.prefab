@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 2024865496005244790}
   - component: {fileID: 2009233129864024606}
   - component: {fileID: 3608984352571296982}
+  - component: {fileID: 3380645390274634477}
   m_Layer: 0
   m_Name: Transition Room 3
   m_TagString: Untagged
@@ -168,7 +169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675746814500260218}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 5.85, y: -1.14, z: -1}
+  m_LocalPosition: {x: 5.85, y: -4.39, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -311,6 +312,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 3003773723671722369, guid: d9d256667c323894a8fe83a225a01e04, type: 3}
   _prefabScene: {fileID: 0}
+--- !u!114 &3380645390274634477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675746814500260218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &776002799995590029
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +801,7 @@ GameObject:
   - component: {fileID: 3003773722691502292}
   - component: {fileID: 3003773722691502295}
   - component: {fileID: 4757274943753084030}
+  - component: {fileID: 4648028633399979249}
   m_Layer: 0
   m_Name: Transition
   m_TagString: Untagged
@@ -944,6 +960,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 3003773723671722369, guid: 549f132b8a2cb964ab82ea22f612140a, type: 3}
   _prefabScene: {fileID: 0}
+--- !u!114 &4648028633399979249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773722691502303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &3003773723216957820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,6 +1069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3003773723671722370}
   - component: {fileID: 788857262}
+  - component: {fileID: 5954744274581891813}
   m_Layer: 0
   m_Name: Bar Room 02
   m_TagString: Untagged
@@ -1079,6 +1110,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 3003773723671722369, guid: 654b21087d5b5dc4ba1dba8a4bc51125, type: 3}
   _prefabScene: {fileID: 0}
+--- !u!114 &5954744274581891813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773723671722369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ad7d16ef7f9c54c895a4fa0f08c4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isOpen: 0
 --- !u!1 &3509360752689911798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,7 +1417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6235351397217643582
 Transform:
   m_ObjectHideFlags: 0
@@ -1764,6 +1808,7 @@ Transform:
   m_Children:
   - {fileID: 3746052671540649679}
   - {fileID: 6235351397217643582}
+  - {fileID: 3115004886500159500}
   m_Father: {fileID: 3003773723671722370}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1981,6 +2026,148 @@ MonoBehaviour:
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
+--- !u!1 &7075617990557517930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3115004886500159500}
+  - component: {fileID: 6522490468434661799}
+  - component: {fileID: 246729664695811555}
+  - component: {fileID: 7150741203883542391}
+  - component: {fileID: 2469015843223774715}
+  m_Layer: 0
+  m_Name: GirlsCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3115004886500159500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7075617990557517930}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -2, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6539437063450708925}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &6522490468434661799
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7075617990557517930}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 4.21}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.12, y: 11.05}
+  m_EdgeRadius: 0
+--- !u!114 &246729664695811555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7075617990557517930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fdd8e916e13094f8d38c5b9bcc4663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onMouseDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7987787686808123823}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 5954744274581891813}
+        m_TargetAssemblyTypeName: ControlMonoSystem, Assembly-CSharp
+        m_MethodName: Disable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &7150741203883542391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7075617990557517930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
+--- !u!114 &2469015843223774715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7075617990557517930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bccd765446a618f42bac748c4df7066e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabUpgrade: {fileID: 7719784513135462899, guid: 9edf1ec231694864484d8f962f958d00, type: 3}
+  _prefabVideo: {fileID: 2526477539328653823, guid: a9cb864b3ffe99f488613efe10917b70, type: 3}
+  _name: Gambler
+  Objects:
+  - Video: {fileID: 32900000, guid: 617aad829062d4c418b65fe20c83d99f, type: 3}
+    Price: 140
+  - Video: {fileID: 32900000, guid: 7f5b9906bd658314db3e5b61af45e932, type: 3}
+    Price: 190
+  - Video: {fileID: 32900000, guid: c0f178283ca4cdd409737565ddc72d8e, type: 3}
+    Price: 260
+  - Video: {fileID: 32900000, guid: 1c5501a83a14c4d459f6ff4d6cedd836, type: 3}
+    Price: 380
+  - Video: {fileID: 32900000, guid: 4117296ac99ee63449323efc127a7e48, type: 3}
+    Price: 600
+  - Video: {fileID: 32900000, guid: 8530dc950e2543745b63809c9ba34352, type: 3}
+    Price: 0
 --- !u!1 &7420888738384428821
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,6 +2623,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5954744274581891813}
+        m_TargetAssemblyTypeName: ControlMonoSystem, Assembly-CSharp
+        m_MethodName: Enable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7987787686154033142
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,10 +2869,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 5954744274581891813}
+        m_TargetAssemblyTypeName: ControlMonoSystem, Assembly-CSharp
+        m_MethodName: Enable
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

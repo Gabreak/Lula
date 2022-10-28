@@ -96,6 +96,7 @@ public class SaveManager : MonoBehaviour
 
         PoliceManager.Instance.ToJail = 0;
         PoliceManager.Instance.WasInJail = 0;
+        PoliceManager.Instance.CountViolation = 0;
 
         DataCharacter[] character = GameDataBase.Instance.GirlsData.Character;
         for (int i = 0; i < character.Length; i++)

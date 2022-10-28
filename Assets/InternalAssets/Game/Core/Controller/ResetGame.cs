@@ -30,5 +30,8 @@ public class ResetGame : MonoBehaviour
         Debug.Log("Ready Girls");
     }
 
-    //private
+    private void BuildNormal()
+    {
+
+    }
 }

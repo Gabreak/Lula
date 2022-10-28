@@ -8,23 +8,38 @@ using UnityEngine.Video;
 
 public class CharacterUpgradeVideo : MonoBehaviour
 {
-    [SerializeField] private VideoPlayer _videoPlayer;
+    //[SerializeField] private VideoPlayer[] _videoPlayer;
     [SerializeField] private GirlInfoRedirector _prefabUpgrade;
+    [SerializeField] private CharacterVideoRedirector _prefabVideo;
     [SerializeField] private string _name = "name";
     public ObjectUpgradeVideo[] Objects;
     private GirlInfoRedirector _prefab;
-    private int CurrentLevel;
-    private SpriteRenderer _spriteRenderer;
+    public int CurrentLevel { get; set; }
+    //public SpriteRenderer RendererSprite { get; set; }
+    public CharacterVideoRedirector[] Rediretors { get; set; }
+
 
     private void OnEnable()
     {
         CurrentLevel = PlayerPrefs.GetInt(transform.root.name + _name, 0);
-        if (CurrentLevel > 0)
-            StarGame();
+        GenerateCharacterVideo();
     }
+
+    public void GenerateCharacterVideo()
+    {
+        Rediretors = new CharacterVideoRedirector[Objects.Length];
+
+        for (int i = CurrentLevel; i < Objects.Length; i++)
+        {
+            Rediretors[i] = Instantiate(_prefabVideo, Vector3.zero, Quaternion.identity, transform);
+            Rediretors[i].transform.localPosition = Vector3.down * 100;
+            Rediretors[i].Video.clip = Objects[i].Video;
+        }
+        Rediretors[CurrentLevel].transform.localPosition = Vector3.zero;
+    }
+
     private void Start()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
         CreateUIUpgrade();
     }
 
@@ -42,13 +57,13 @@ public class CharacterUpgradeVideo : MonoBehaviour
         if (!(MoneyProperties.Money >= Objects[CurrentLevel].Price)) return;
 
         MoneyProperties.Money -= Objects[CurrentLevel].Price;
-        StartCoroutine(GirlUpdateVideo(CurrentLevel));
-        //_videoPlayer.clip = Objects[CurrentLevel].Video;
         CurrentLevel++;
-        if (CurrentLevel < Objects.Length)
+
+        StartCoroutine(GirlUpdateVideo(CurrentLevel));
+
+        if (CurrentLevel < Objects.Length - 1)
         {
             _prefab.Price.text = Objects[CurrentLevel].Price + "$";
-
         }
         else
             Destroy(_prefab?.gameObject);
@@ -56,20 +71,16 @@ public class CharacterUpgradeVideo : MonoBehaviour
 
     private IEnumerator GirlUpdateVideo(int index)
     {
-        _spriteRenderer.enabled = false;
-        _videoPlayer.clip = Objects[index].Video;
-        yield return new WaitForSeconds(0.05f);
-        _spriteRenderer.enabled = true;
+        Rediretors[index - 1].transform.localPosition = Vector3.down * 100;
+        Rediretors[index].transform.localPosition = Vector3.zero;
+        yield return null;
     }
 
-    public void StarGame()
-    {
-        _videoPlayer.clip = Objects[CurrentLevel - 1].Video;
-    }
+
 
     private void CreateUIUpgrade()
     {
-        if (CurrentLevel < Objects.Length)
+        if (CurrentLevel < Objects.Length - 1)
         {
             _prefab = Instantiate(_prefabUpgrade, GirlGroupManager.Instance.transform);
             _prefab.Name.text = _name;
@@ -78,7 +89,6 @@ public class CharacterUpgradeVideo : MonoBehaviour
         }
     }
 }
-
 
 
 [Serializable]
