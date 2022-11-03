@@ -16,7 +16,7 @@ public class TimeManager : MonoBehaviour
 
     public float Speed = 1;
     public int Hour { get; set; }
-    public int Minute { get; set; }
+    public int Minute { get; set; } 
 
 
     private int _hour = 0;
