@@ -591,6 +591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _background: {fileID: 1553050665116193532}
+  _buttonNext: {fileID: 8512972405172157819}
   _text: {fileID: 3806581249977245699}
   MaterialsLight:
   - {fileID: 2100000, guid: 403bca4d9b0244e4fb8ec24b0a9f3741, type: 2}
@@ -610,6 +611,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    EventEnd:
+      m_PersistentCalls:
+        m_Calls: []
     Sprite: {fileID: 0}
     Text:
       m_TableReference:
@@ -621,6 +625,8 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     IndexMaterail: 0
+    IndexMaterailDefault: 0
+    IsNextButton: 0
     NextIndex: 1
   - EventStart:
       m_PersistentCalls:
@@ -649,6 +655,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+    EventEnd:
+      m_PersistentCalls:
+        m_Calls: []
     Sprite: {fileID: 0}
     Text:
       m_TableReference:
@@ -660,7 +669,10 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     IndexMaterail: 0
+    IndexMaterailDefault: 0
+    IsNextButton: 0
     NextIndex: -1
+  IndexOld: 0
   references:
     version: 2
     RefIds: []

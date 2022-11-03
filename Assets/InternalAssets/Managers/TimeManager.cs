@@ -24,6 +24,11 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private Text _textTime;
     [SerializeField] private Light _lightComponent;
 
+    public void TakeSpeed(int speed)
+    {
+        Speed = speed;
+    }
+
     private void Awake()
     {
         Instance = this;

@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 669624164}
   - component: {fileID: 669624162}
   - component: {fileID: 669624163}
+  - component: {fileID: 3334716274501049332}
   m_Layer: 0
   m_Name: Transition Couter
   m_TagString: Untagged
@@ -322,6 +323,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 3003773723671722369, guid: 1be7b6b5203e1c54090ee0d9c663811e, type: 3}
   _prefabScene: {fileID: 0}
+--- !u!114 &3334716274501049332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669624160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d8b3ff5fc09f84bbdb54a5ee18c3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hint: {fileID: 2918257055336837894}
+  _currentIndex: 1
+  _nextIndex: 2
 --- !u!1 &1247583563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,6 +1210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _background: {fileID: 7197729014889058264}
+  _buttonNext: {fileID: 21062734861721695}
   _text: {fileID: 4809072837197118759}
   MaterialsLight:
   - {fileID: 2100000, guid: 5938129c3a7c9114baf2565ae61b370f, type: 2}
@@ -1217,6 +1234,7 @@ MonoBehaviour:
       m_LocalVariables: []
     IndexMaterail: 0
     IndexMaterailDefault: 0
+    IsNextButton: 1
     NextIndex: 1
   - EventStart:
       m_PersistentCalls:
@@ -1236,7 +1254,29 @@ MonoBehaviour:
       m_LocalVariables: []
     IndexMaterail: 1
     IndexMaterailDefault: 0
+    IsNextButton: 0
     NextIndex: -1
+  - EventStart:
+      m_PersistentCalls:
+        m_Calls: []
+    EventEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    Sprite: {fileID: 3003773722691502298}
+    Text:
+      m_TableReference:
+        m_TableCollectionName: GUID:761e7fc6afd67b54b84af3b3db4c374e
+      m_TableEntryReference:
+        m_KeyId: 12364678341173248
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    IndexMaterail: 1
+    IndexMaterailDefault: 0
+    IsNextButton: 0
+    NextIndex: -1
+  IndexOld: 0
   references:
     version: 2
     RefIds: []
@@ -1258,7 +1298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3928099653414523954
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1400,6 +1440,7 @@ GameObject:
   - component: {fileID: 3003773722691502292}
   - component: {fileID: 3003773722691502295}
   - component: {fileID: 4757274943753084030}
+  - component: {fileID: 4994111731729837966}
   m_Layer: 0
   m_Name: Transition Hub
   m_TagString: Untagged
@@ -1415,7 +1456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3003773722691502303}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.69, y: -4.5, z: 0}
+  m_LocalPosition: {x: -5.04, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1558,6 +1599,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 0}
   _prefabScene: {fileID: 11400000, guid: aa764058fe4b361489c137b8946871ad, type: 2}
+--- !u!114 &4994111731729837966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773722691502303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d8b3ff5fc09f84bbdb54a5ee18c3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hint: {fileID: 2918257055336837894}
+  _currentIndex: 2
+  _nextIndex: -1
 --- !u!1 &3003773723216957820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,7 +2171,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Further
+  m_Text: Next
 --- !u!1 &7197729014889058264
 GameObject:
   m_ObjectHideFlags: 0

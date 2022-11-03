@@ -858,6 +858,7 @@ GameObject:
   - component: {fileID: 8372515069782452678}
   - component: {fileID: 2132562349}
   - component: {fileID: 8859743075848774637}
+  - component: {fileID: 5059193343051525936}
   m_Layer: 0
   m_Name: Transition Girl Room
   m_TagString: Untagged
@@ -1055,6 +1056,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Outline: {fileID: 2100000, guid: 4752806bb3da71745839621295eebc42, type: 2}
+--- !u!114 &5059193343051525936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003773722691502303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d8b3ff5fc09f84bbdb54a5ee18c3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hint: {fileID: 4840995086963333378}
+  _currentIndex: 0
+  _nextIndex: -1
 --- !u!1 &3003773723216957820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,7 +2459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6760600011524210230
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2616,6 +2632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _background: {fileID: 626677999261017564}
+  _buttonNext: {fileID: 7717978185217018459}
   _text: {fileID: 3020880102312400675}
   MaterialsLight:
   - {fileID: 2100000, guid: 5938129c3a7c9114baf2565ae61b370f, type: 2}
@@ -2623,7 +2640,19 @@ MonoBehaviour:
   _objects:
   - EventStart:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 8859743075848774637}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     EventEnd:
       m_PersistentCalls:
         m_Calls: []
@@ -2639,7 +2668,9 @@ MonoBehaviour:
       m_LocalVariables: []
     IndexMaterail: 1
     IndexMaterailDefault: 0
+    IsNextButton: 0
     NextIndex: -1
+  IndexOld: 0
   references:
     version: 2
     RefIds: []

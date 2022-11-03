@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.Localization;
 
 public class ReseptionDialogue : MonoBehaviour
 {
     [SerializeField] private GameObject[] _dialogue;
+    [SerializeField] private LocalizedString _good;
     private void OnEnable()
     {
         int index = Convert.ToInt32(DoorManager.Instance.isDoor);
@@ -30,6 +32,7 @@ public class ReseptionDialogue : MonoBehaviour
             door.HourMax = 0;
 
             MoneyProperties.Money -= door.Price;
+            WindowMessage.Message(_good.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
         }
         else
             MoneyProperties.NoMoneyMessage();
