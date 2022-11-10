@@ -10,24 +10,24 @@ public class ObjectAnimator : MonoBehaviour
 
     private void Awake() => Init();
 
-    private void OnEnable() => Play(false, false);
+    private void OnEnable() => Play(false);
 
-    private void OnMouseEnter() => Play(true, false);
+    private void OnMouseEnter() => Play(true);
 
-    private void OnMouseExit() => Play(false, false);
+    private void OnMouseExit() => Play(false);
 
-    private void OnMouseDown() => Play(true, true);
+    //private void OnMouseDown() => Play(true, true);
 
-    private void OnMouseUp() => Play(true, false);
+    //private void OnMouseUp() => Play(true, false);
 
 
     private void Init() => _animator = GetComponent<Animator>();
 
     //private void Play(bool isActive) => _animator.SetBool("Enter", isActive);
-    private void Play(bool isEnter, bool isDown)
+    private void Play(bool isEnter)
     {
         _animator.SetBool("Enter", isEnter);
-        _animator.SetBool("Down", isDown);
+        //_animator.SetBool("Exit", isEnter);
 
     }
 }

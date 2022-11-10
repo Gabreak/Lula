@@ -527,8 +527,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationMax: 6
-  _transitionLock:
-  - {fileID: 3003773722691502303}
 --- !u!1 &2132993104
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,10 +838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e30eba99bceda458a1d41e01b6d75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animationEnter: {fileID: 7400000, guid: 5e56d26954850bd4493a06003091b48c, type: 2}
-  _animationExit: {fileID: 7400000, guid: df2fb13308a968b42abfeb7d7a47958f, type: 2}
-  _animationDown: {fileID: 7400000, guid: 562c373f3258fe447ae131dd39b9a786, type: 2}
-  _animationUp: {fileID: 7400000, guid: 0a646c339b6e8d34699ed757610f405b, type: 2}
+  m_Button: {fileID: 11400000, guid: 013ef08810b4e3d49a0431f9921a733d, type: 2}
 --- !u!114 &3003773722691502295
 MonoBehaviour:
   m_ObjectHideFlags: 0

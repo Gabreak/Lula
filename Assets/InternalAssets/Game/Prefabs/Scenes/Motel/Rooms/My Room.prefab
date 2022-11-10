@@ -3660,10 +3660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e30eba99bceda458a1d41e01b6d75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animationEnter: {fileID: 7400000, guid: 314e0d9472156d74e8802f253f4ce1df, type: 2}
-  _animationExit: {fileID: 7400000, guid: 59be8c29d52cbc94db71cc9833c66ccc, type: 2}
-  _animationDown: {fileID: 7400000, guid: 562c373f3258fe447ae131dd39b9a786, type: 2}
-  _animationUp: {fileID: 7400000, guid: 0a646c339b6e8d34699ed757610f405b, type: 2}
+  m_Button: {fileID: 11400000, guid: dfcf56d15e7aa484fb66ae4c11b3c859, type: 2}
 --- !u!114 &2314888476482396461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4494,10 +4491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e30eba99bceda458a1d41e01b6d75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animationEnter: {fileID: 7400000, guid: 314e0d9472156d74e8802f253f4ce1df, type: 2}
-  _animationExit: {fileID: 7400000, guid: 59be8c29d52cbc94db71cc9833c66ccc, type: 2}
-  _animationDown: {fileID: 7400000, guid: 562c373f3258fe447ae131dd39b9a786, type: 2}
-  _animationUp: {fileID: 7400000, guid: 0a646c339b6e8d34699ed757610f405b, type: 2}
+  m_Button: {fileID: 11400000, guid: dfcf56d15e7aa484fb66ae4c11b3c859, type: 2}
 --- !u!114 &8653853698855975941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5514,6 +5508,7 @@ MonoBehaviour:
   _prefab: {fileID: 5934746828973100760, guid: be9b2bb51926c784a92d9c937f9a23b7, type: 3}
   _parent: {fileID: 2182840812123316642}
   Sensor: {fileID: 11400000, guid: 943e4ebd0f5e56046ac2f55bf32d408e, type: 2}
+  _isSelectGood: 0
 --- !u!1 &2242421910711869683
 GameObject:
   m_ObjectHideFlags: 0
@@ -6422,10 +6417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e30eba99bceda458a1d41e01b6d75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animationEnter: {fileID: 7400000, guid: 314e0d9472156d74e8802f253f4ce1df, type: 2}
-  _animationExit: {fileID: 7400000, guid: 59be8c29d52cbc94db71cc9833c66ccc, type: 2}
-  _animationDown: {fileID: 7400000, guid: 562c373f3258fe447ae131dd39b9a786, type: 2}
-  _animationUp: {fileID: 7400000, guid: 0a646c339b6e8d34699ed757610f405b, type: 2}
+  m_Button: {fileID: 11400000, guid: dfcf56d15e7aa484fb66ae4c11b3c859, type: 2}
 --- !u!114 &3003773722691502295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6596,51 +6588,21 @@ MonoBehaviour:
   _sensorPhoto: {fileID: 11400000, guid: 3dff8179d9cdc294491794bafbe738fb, type: 2}
   _sensorVideo: {fileID: 11400000, guid: cf61a47b91d63c64cb33b7eef6335cb6, type: 2}
   _sensorUsb: {fileID: 11400000, guid: 943e4ebd0f5e56046ac2f55bf32d408e, type: 2}
-  _onEnableHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1168498184}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 3003773722691502293}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2140144095}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
   _usbName: {fileID: 3349995946839664912}
   _usbErrorText:
     m_TableReference:
       m_TableCollectionName: GUID:bab79b81f509a4e4a88e5d04ac224470
     m_TableEntryReference:
       m_KeyId: 2890718805336064
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _usbErrorNo:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -6672,8 +6634,18 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  _cameraError:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _priceGirl: 200
   _incomeGirl: 250
+  _sliderChoice: {fileID: 0}
   references:
     version: 2
     RefIds: []
@@ -6733,6 +6705,7 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: 95421b87c3d245c429c76f7ee81cd58e, type: 2}
   _parentGirls: {fileID: 5685564295565073886}
   _toys: {fileID: 11400000, guid: 3eb12694983100e43ae8fc1798549c42, type: 2}
+  _gameBed: []
 --- !u!114 &3099323485040380223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8652,6 +8625,7 @@ MonoBehaviour:
   _prefab: {fileID: 5934746828973100760, guid: be9b2bb51926c784a92d9c937f9a23b7, type: 3}
   _parent: {fileID: 2182840812123316642}
   Sensor: {fileID: 11400000, guid: 758a21d84949d5043a1dd58957d1ec1a, type: 2}
+  _isSelectGood: 0
 --- !u!1 &6411265408880970492
 GameObject:
   m_ObjectHideFlags: 0
@@ -9139,6 +9113,7 @@ MonoBehaviour:
   _prefab: {fileID: 5934746828973100760, guid: be9b2bb51926c784a92d9c937f9a23b7, type: 3}
   _parent: {fileID: 2182840812123316642}
   Sensor: {fileID: 11400000, guid: cf61a47b91d63c64cb33b7eef6335cb6, type: 2}
+  _isSelectGood: 0
 --- !u!1 &6854425219284385012
 GameObject:
   m_ObjectHideFlags: 0
@@ -9880,6 +9855,7 @@ MonoBehaviour:
   _prefab: {fileID: 5934746828973100760, guid: be9b2bb51926c784a92d9c937f9a23b7, type: 3}
   _parent: {fileID: 2182840812123316642}
   Sensor: {fileID: 11400000, guid: 3dff8179d9cdc294491794bafbe738fb, type: 2}
+  _isSelectGood: 0
 --- !u!1 &7904382585259326756
 GameObject:
   m_ObjectHideFlags: 0

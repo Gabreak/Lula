@@ -11,7 +11,9 @@ public class Cart : MonoBehaviour
 
     [SerializeField] private Text _textPrice;
     [SerializeField] private Button _buttonBuy;
-    //BaseProduct _baseProduct;
+
+    [SerializeField] private TaskVideoShop _taskVideoShop;
+
     private int _price;
 
     private void OnEnable()
@@ -73,7 +75,7 @@ public class Cart : MonoBehaviour
             DataProduct data = GoodsProperties.ProductsBasket[i];
             GoodsProperties.Buy(data);
         }
-
+        _taskVideoShop.TestBuyProduct();
         GoodsProperties.ProductsBasket.Clear();
         StartCoroutine(BuyAll());
 

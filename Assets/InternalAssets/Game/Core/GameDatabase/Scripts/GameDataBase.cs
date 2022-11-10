@@ -1,3 +1,5 @@
+using Sirenix.OdinInspector;
+
 using System.Collections;
 using System.Collections.Generic;
 
@@ -19,6 +21,9 @@ public class GameDataBase : MonoBehaviour
     public CharacterData GirlsData;
     [Space(10)]
     public VideoData GirlsVideo;
+
+    [ListDrawerSettings(ShowIndexLabels = true)]
+    public TaskData[] TaskBase;
 
     public static GameDataBase Instance;
 

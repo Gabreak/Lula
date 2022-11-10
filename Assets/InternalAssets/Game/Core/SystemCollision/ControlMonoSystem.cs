@@ -12,13 +12,7 @@ public class ControlMonoSystem : MonoBehaviour
             ControlSystemProperties.DisableInvoke();
     }
 
-    public void Enable()
-    {
-        ControlSystemProperties.EnableInvoke();
-    }
+    public void Enable() => ControlSystemProperties.EnableInvoke();
 
-    public void Disable()
-    {
-        ControlSystemProperties.DisableInvoke();
-    }
+    public void Disable() => ControlSystemProperties.DisableInvoke();
 }

@@ -1,3 +1,5 @@
+using Sirenix.OdinInspector;
+
 using System.Collections;
 using System.Collections.Generic;
 
@@ -7,49 +9,53 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class ObjectAnimation : MonoBehaviour
 {
-    private Animation _animation;
+    [Required]
+    [SerializeField] private ButtonData m_Button;
+    private Animation m_Animation;
 
-    [SerializeField] private AnimationClip _animationEnter;
-    [SerializeField] private AnimationClip _animationExit;
-    [SerializeField] private AnimationClip _animationDown;
-    [SerializeField] private AnimationClip _animationUp;
+
+    //[SerializeField] private AnimationClip _animationEnter;
+    //[SerializeField] private AnimationClip _animationExit;
+    //[SerializeField] private AnimationClip _animationDown;
+    //[SerializeField] private AnimationClip _animationUp;
 
 
     private void Awake() => Init();
 
-    private void OnEnable() => Play(_animationExit);
+    private void OnEnable() => Play(m_Button.AnimationExit);
 
-    private void OnMouseEnter() => Play(_animationEnter);
+    private void OnMouseEnter() => Play(m_Button.AnimationEnter);
 
-    private void OnMouseExit() => Play(_animationExit);
+    private void OnMouseExit() => Play(m_Button.AnimationExit);
 
-    private void OnMouseDown() => Play(_animationDown);
+    private void OnMouseDown() => Play(m_Button.AnimationDown);
 
-    private void OnMouseUp() => Play(_animationUp);
+    private void OnMouseUp() => Play(m_Button.AnimationUp);
 
 
     private void Init()
     {
-        _animation = GetComponent<Animation>();
+        m_Animation = GetComponent<Animation>();
 
-        AddClip(_animationEnter);
-        AddClip(_animationExit);
-        AddClip(_animationDown);
-        AddClip(_animationUp);
+        AddClip(m_Button.AnimationDown);
+        AddClip(m_Button.AnimationUp);
+        AddClip(m_Button.AnimationEnter);
+        AddClip(m_Button.AnimationExit);
+
     }
 
     private void AddClip(AnimationClip clip)
     {
         if (clip != null)
-            _animation.AddClip(clip, clip.name);
+            m_Animation.AddClip(clip, clip.name);
     }
 
     private void Play(AnimationClip clip)
     {
         if (clip != null)
         {
-            _animation.clip = clip;
-            _animation.Play();
+            m_Animation.clip = clip;
+            m_Animation.Play();
         }
     }
 }

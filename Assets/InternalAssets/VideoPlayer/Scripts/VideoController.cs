@@ -8,10 +8,11 @@ using UnityEngine.Video;
 public class VideoController : MonoBehaviour
 {
     [SerializeField] private VideoData _videoData;
-    public static VideoController Instance { get; set; }
 
     [SerializeField] private VideoPlayer _videoPlayer;
     [SerializeField] private Slider _slider;
+    [SerializeField] private GameObject _ui;
+    public static VideoController Instance { get; set; }
     private GameObject _oldScene;
 
     private const int SpeedTime = 4;
@@ -26,8 +27,9 @@ public class VideoController : MonoBehaviour
         _videoPlayer.clip = _videoData.Video[indexType].Clip[indexVideo];
         TimeManager.Instance.Speed *= SpeedTime;
         _videoPlayer.Play();
-        
-        MusicPlayer.Instance.AudioStop();
+
+        _ui.SetActive(false);
+        //MusicPlayer.Instance.AudioStop();
     }
 
     public void VideoPlay(GameObject rootScene, VideoClip clip)
@@ -38,11 +40,12 @@ public class VideoController : MonoBehaviour
         _videoPlayer.clip = clip;
         TimeManager.Instance.Speed *= SpeedTime;
         _videoPlayer.Play();
-        MusicPlayer.Instance.AudioStop();
+
+        _ui.SetActive(false);
+        //MusicPlayer.Instance.AudioStop();
 
     }
 
-    public void VideoReset() => _videoPlayer.Play();
 
     public void CloseVideo()
     {
@@ -51,9 +54,11 @@ public class VideoController : MonoBehaviour
         _oldScene.SetActive(true);
         _videoPlayer.gameObject.SetActive(false);
 
+        _ui.SetActive(true);
         MusicPlayer.Instance.AudioPlay();
     }
 
+    public void VideoReset() => _videoPlayer.Play();
     public void VideoSpeed() => _videoPlayer.playbackSpeed = _slider.value;
 
     public VideoClip GetVideo(int indexType, int indexVideo) => _videoData.Video[indexType].Clip[indexVideo];

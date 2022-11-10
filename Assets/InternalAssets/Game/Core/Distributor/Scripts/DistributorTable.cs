@@ -10,6 +10,7 @@ public class DistributorTable : MonoBehaviour
     [SerializeField] private BaseRecord _video;
     [SerializeField] private VideoRedirector _redirecotorVideo;
     [SerializeField] private Text _priceSumText;
+    [SerializeField] private TaskClick _task;
     private int _priceSum = 0;
     private void OnEnable()
     {
@@ -42,11 +43,16 @@ public class DistributorTable : MonoBehaviour
     private IEnumerator Delay()
     {
         int count = _video.Records.Count;
-        _video.Records.Clear();
-        for (int i = count - 1; i >= 0; i--)
+        if (count > 0)
         {
-            Destroy(transform.GetChild(i).gameObject);
-            yield return new WaitForSeconds(0.06f);
+
+            _video.Records.Clear();
+            for (int i = count - 1; i >= 0; i--)
+            {
+                Destroy(transform.GetChild(i).gameObject);
+                yield return new WaitForSeconds(0.06f);
+            }
+            _task.Action(0);
         }
     }
 }

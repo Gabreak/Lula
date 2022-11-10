@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 using UnityEngine;
 using UnityEngine.Localization;
@@ -9,11 +10,14 @@ public class ReseptionDialogue : MonoBehaviour
 {
     [SerializeField] private GameObject[] _dialogue;
     [SerializeField] private LocalizedString _good;
+    [SerializeField] private TaskClick _task;
+    
     private void OnEnable()
     {
         int index = Convert.ToInt32(DoorManager.Instance.isDoor);
         _dialogue[index].SetActive(true);
     }
+
     private void OnDisable()
     {
         for (int i = 0; i < _dialogue.Length; i++)
@@ -30,14 +34,12 @@ public class ReseptionDialogue : MonoBehaviour
             door.isDoor = true;
             door.Hour = door.HourMax;
             door.HourMax = 0;
-
+            _task?.Action(0);
             MoneyProperties.Money -= door.Price;
-            WindowMessage.Message(_good.GetLocalizedString(), WindowIcon.Warning, Color.yellow);
+            WindowMessage.Message(_good.GetLocalizedString(), WindowIcon.Information);
         }
         else
             MoneyProperties.NoMoneyMessage();
-
-
     }
 
     public void DoorClose()

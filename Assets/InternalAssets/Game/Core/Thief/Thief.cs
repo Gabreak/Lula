@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Thief : MonoBehaviour
 {
     [SerializeField] private Text _pricePilice;
+    [SerializeField] private TaskClick _task;
     private PoliceManager _police;
 
     private void Start()
@@ -33,7 +34,7 @@ public class Thief : MonoBehaviour
             _police.CountViolation = 0;
             _police.UpdateBar();
             _pricePilice.text = 0 + "$";
-
+            _task.Action(0);
         }
     }
 }

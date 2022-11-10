@@ -22,6 +22,11 @@ public class ToggleWorking : MonoBehaviour
 
     private void ToggleApply(bool active)
     {
+        if (_index >= 0)
+        {
+            TaskClick task = transform.parent.GetComponent<TaskClick>();
+            task?.Action(0);
+        }
         BarManager.Instance.CharacterData.IsWorking = _isWorking;
         BarManager.Instance.CharacterData.IndexTime = _index;
     }

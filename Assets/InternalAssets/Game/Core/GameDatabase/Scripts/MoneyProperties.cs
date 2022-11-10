@@ -10,6 +10,7 @@ public class MoneyProperties : MonoBehaviour
     [SerializeField] private int _startMoney = 500;
 
     [SerializeField] private Text _textMoney;
+    [SerializeField] private TaskClick _task;
 
     [SerializeField] private LocalizedString _messageNoMoneyGirl;
     [SerializeField] private LocalizedString _messageNoMoney;
@@ -27,20 +28,35 @@ public class MoneyProperties : MonoBehaviour
         {
             s_Money = value;
             s_TextMoney.text = s_Money + "$";
+            _instance._task.Action(s_Money);
         }
     }
     private void Awake()
     {
         _instance = this;
         s_TextMoney = _textMoney;
-        Money = _startMoney;
     }
 
+    private void Start()
+    {
+        Money = _startMoney;
+
+    }
+
+
+    //[SerializeField] private int _money = 1000;
+    //private void OnGUI()
+    //{
+    //    if(GUI.Button(new Rect(10, 10, 64, 64), "Money"))
+    //    {
+    //        Money += _money;
+    //    }
+    //}
 
     public static void InfoMoneyBasket(Text info, int price)
     {
         if (Money >= price)
-            info.color = new Color32(104,32,9,255);
+            info.color = new Color32(104, 32, 9, 255);
         else
             info.color = Color.red;
 
@@ -59,8 +75,8 @@ public class MoneyProperties : MonoBehaviour
     }
     public static void NoMoneyMessage()
     {
-            string text = _instance._messageNoMoney.GetLocalizedString();
-            WindowMessage.Message(text, WindowIcon.Warning, Color.yellow);
+        string text = _instance._messageNoMoney.GetLocalizedString();
+        WindowMessage.Message(text, WindowIcon.Warning, Color.yellow);
 
     }
 

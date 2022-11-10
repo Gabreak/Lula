@@ -7,14 +7,14 @@ public class ControlSystem : MonoBehaviour
 {
     [SerializeField] private bool _isBoxCollsion = false;
     [SerializeField] private bool _isObject = true;
-    private BoxCollider2D _collision;
+    private Collider2D _collision;
 
     private bool _isDefaultCollision;
     private bool _isDefaultObject;
 
     private void Start()
     {
-        _collision = GetComponent<BoxCollider2D>();
+        _collision = GetComponent<Collider2D>();
 
         if (_collision != null)
             _isDefaultCollision = _collision.enabled;

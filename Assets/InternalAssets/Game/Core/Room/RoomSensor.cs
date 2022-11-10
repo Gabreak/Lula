@@ -38,9 +38,12 @@ public class RoomSensor : MonoBehaviour
     [SerializeField] private int _priceGirl = 200;
     [SerializeField] private int _incomeGirl = 350;
 
+    [SerializeField] private TaskClick _task;
+
     [SerializeField] private Slider _sliderChoice;
     private int _sliderValue = 0;
     private Coroutine _sliderCoroutine;
+
 
 
 
@@ -201,7 +204,7 @@ public class RoomSensor : MonoBehaviour
 
         int price = _sensorLight.Good.Value.Price + _sensorPhoto.Good.Value.Price + UnityEngine.Random.Range(0, 050);
         int indexVideo = _sensorPhoto.Good.Value.Level;
-
+        _task.Action(0);
         PlayDefault(0, indexVideo, price);
     }
 
