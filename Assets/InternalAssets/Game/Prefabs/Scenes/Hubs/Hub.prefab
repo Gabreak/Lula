@@ -4929,6 +4929,7 @@ GameObject:
   - component: {fileID: 6161399829208589762}
   - component: {fileID: 5903455600280746520}
   - component: {fileID: 231281973}
+  - component: {fileID: 447564594}
   m_Layer: 0
   m_Name: Bar
   m_TagString: Untagged
@@ -5100,6 +5101,20 @@ MonoBehaviour:
   - Task: {fileID: 11400000, guid: 2ae47ed9d7821c048ad7ebe284632b74, type: 2}
     Index: 0
     Prograss: 0
+--- !u!114 &447564594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5903455600280746512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &5903455600806194099
 GameObject:
   m_ObjectHideFlags: 0
@@ -5309,6 +5324,7 @@ GameObject:
   - component: {fileID: 6981165800806726099}
   - component: {fileID: 8665706190450908189}
   - component: {fileID: 1028061037}
+  - component: {fileID: 1193589399}
   m_Layer: 0
   m_Name: Motel
   m_TagString: Untagged
@@ -5480,6 +5496,20 @@ MonoBehaviour:
   - Task: {fileID: 11400000, guid: d5cc6100625180c478038fc219d2e568, type: 2}
     Index: 0
     Prograss: 0
+--- !u!114 &1193589399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8665706190450908179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &8665706190701314890
 GameObject:
   m_ObjectHideFlags: 0
@@ -5535,6 +5565,7 @@ GameObject:
   - component: {fileID: 4730800142376605980}
   - component: {fileID: 8665706190780399967}
   - component: {fileID: 2059395624}
+  - component: {fileID: 1976841915}
   m_Layer: 0
   m_Name: Video Shop
   m_TagString: Untagged
@@ -5706,6 +5737,20 @@ MonoBehaviour:
   - Task: {fileID: 11400000, guid: b5af2a977e4dc054aa722d8c049f3e7e, type: 2}
     Index: 0
     Prograss: 0
+--- !u!114 &1976841915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8665706190780399965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &8665706190832945044
 GameObject:
   m_ObjectHideFlags: 0
@@ -5721,6 +5766,7 @@ GameObject:
   - component: {fileID: 8665706190832945043}
   - component: {fileID: 8665706190832945046}
   - component: {fileID: 1466755648197986632}
+  - component: {fileID: 1450213903}
   m_Layer: 0
   m_Name: Police
   m_TagString: Untagged
@@ -5877,6 +5923,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 3003773723671722369, guid: 3233826d50072a94883dbbf09d3466f9, type: 3}
   _prefabScene: {fileID: 0}
+--- !u!114 &1450213903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8665706190832945044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &8665706190916540321
 GameObject:
   m_ObjectHideFlags: 0
@@ -5891,6 +5951,7 @@ GameObject:
   - component: {fileID: 8665706190916540323}
   - component: {fileID: 8665706190916540329}
   - component: {fileID: 4780134600382419434}
+  - component: {fileID: 1304954440}
   m_Layer: 0
   m_Name: Biker
   m_TagString: Untagged
@@ -6042,6 +6103,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 3003773723671722369, guid: cc65f5ee65da88b4d988fc6f4ddc3c89, type: 3}
   _prefabScene: {fileID: 0}
+--- !u!114 &1304954440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8665706190916540321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &8665706190989854038
 GameObject:
   m_ObjectHideFlags: 0
@@ -6213,6 +6288,7 @@ GameObject:
   - component: {fileID: 8665706191393597625}
   - component: {fileID: 8328232620807411046}
   - component: {fileID: 8665706191393597628}
+  - component: {fileID: 659981448}
   m_Layer: 0
   m_Name: Sex Shop
   m_TagString: Untagged
@@ -6368,6 +6444,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a27cbdf4a5c5c054888875e926529cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &659981448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8665706191393597618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &8665706191442776305
 GameObject:
   m_ObjectHideFlags: 0
@@ -6455,6 +6545,7 @@ GameObject:
   - component: {fileID: 8665706191457586879}
   - component: {fileID: 8665706191457586853}
   - component: {fileID: 5861833613133801028}
+  - component: {fileID: 1536130749}
   m_Layer: 0
   m_Name: Pawnshop
   m_TagString: Untagged
@@ -6619,6 +6710,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 3003773723671722369, guid: 4a4a9e37561aa24488175f1bd6310174, type: 3}
   _prefabScene: {fileID: 0}
+--- !u!114 &1536130749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8665706191457586877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &8665706191598424518
 GameObject:
   m_ObjectHideFlags: 0
@@ -6935,6 +7040,7 @@ GameObject:
   - component: {fileID: 5176372419216760087}
   - component: {fileID: 8665706192121967386}
   - component: {fileID: 1156219629}
+  - component: {fileID: 446985365}
   m_Layer: 0
   m_Name: Distributor
   m_TagString: Untagged
@@ -7117,6 +7223,20 @@ MonoBehaviour:
   - Task: {fileID: 11400000, guid: a3e59bfd700f89f4b9c756cf8d7d3560, type: 2}
     Index: 0
     Prograss: 0
+--- !u!114 &446985365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8665706192121967384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d182c657fb24b114a8d5b0ba56dca665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isBoxCollsion: 0
+  _isObject: 1
 --- !u!1 &8665706192208787614
 GameObject:
   m_ObjectHideFlags: 0

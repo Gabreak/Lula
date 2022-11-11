@@ -4,15 +4,20 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.WSA;
 
 public class ResetGame : MonoBehaviour
 {
     [Required]
-    public VideoGirlsData _videoGirls;
+    [SerializeField] private VideoGirlsData _videoGirls;
+    [Required]
+    [SerializeField] private GameDataBase _dataBase;
     [Button("NewGame")]
-    private void NewGame()
+    public void NewGame()
     {
         DefaultGirls();
+        TaskDefault();
+
     }
 
     private void DefaultGirls()
@@ -20,19 +25,16 @@ public class ResetGame : MonoBehaviour
         for (int i = 0; i < _videoGirls.Girls.Length; i++)
         {
             GirlBase girl = _videoGirls.Girls[i];
-            if (girl.Id == 1)
-            {
-                _videoGirls.Girls[i].IsActive = true;
-            }
-            else
-                _videoGirls.Girls[i].IsActive = false;
+            _videoGirls.Girls[i].IsActive = (girl.Id == 1);
         }
 
         Debug.Log("Ready Girls");
     }
 
-    private void BuildNormal()
+    private void TaskDefault()
     {
-
+        foreach (var taskType in _dataBase.TaskBase)
+            for (int i = 0; i < taskType.Tasks.Length; i++)
+                taskType.Tasks[i].CurrentProgress = 0;
     }
 }

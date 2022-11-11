@@ -1,7 +1,7 @@
 using System;
-using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
-using System.Reflection;
+
 
 using UnityEditor;
 
@@ -14,28 +14,50 @@ public class TaskManager : MonoBehaviour
     [SerializeField] private TaskRedirector _prefab;
     [SerializeField] private Transform _parent;
     [SerializeField] private LocalizedString[] _difficulty;
-    [SerializeField] private List<Tasks> _taskPrograss;
+    [SerializeField] private List<Tasks> m_taskProgress;
+    [SerializeField] private List<Tasks> _taskProgressDefault;
 
-    [SerializeField] private List<TaskRedirector> _redirectors;
+    private List<TaskRedirector> _redirectors;
 
     private void Awake()
     {
         Instance = this;
         _redirectors = new List<TaskRedirector>();
+        m_taskProgress = new List<Tasks>();
         Loading();
     }
 
-    private void Start()
+    private void OnDisable()
     {
-
+        OnSave();
     }
+
 
     public void Loading()
     {
-        for (int i = 0; i < _taskPrograss.Count; i++)
+        int count = PlayerPrefs.GetInt("CountTask", 0);
+        Debug.Log(count);
+        if (count > 0)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                Tasks task = new Tasks();
+                int index = PlayerPrefs.GetInt("TaskType" + i, 0);
+                task.Task = GameDataBase.Instance.TaskBase[index];
+                task.Index = PlayerPrefs.GetInt("TaskIndex" + i, 0);
+                task.Task.Tasks[task.Index].CurrentProgress = PlayerPrefs.GetInt("TaskProgress" + i, 0);
+                m_taskProgress.Add(task);
+            }
+        }
+        else
+        {
+            m_taskProgress.AddRange(_taskProgressDefault);
+        }
+
+        for (int i = 0; i < m_taskProgress.Count; i++)
         {
             _redirectors.Add(Instantiate(_prefab, _parent));
-            Tasks taskList = _taskPrograss[i];
+            Tasks taskList = m_taskProgress[i];
             _redirectors[i].Header.text = OnDifficulty(taskList);
             _redirectors[i].Text.text = taskList.Task.Tasks[taskList.Index].Text.GetLocalizedString();
             _redirectors[i].Reward.text = taskList.Task.Tasks[taskList.Index].RewardMoney + "$";
@@ -43,20 +65,33 @@ public class TaskManager : MonoBehaviour
         }
     }
 
-    public static void OnSave()
+    public void OnSave()
     {
-
+        PlayerPrefs.SetInt("CountTask", m_taskProgress.Count);
+        for (int i = 0; i < m_taskProgress.Count; i++)
+        {
+            for (int j = 0; j < GameDataBase.Instance.TaskBase.Length; j++)
+            {
+                if (m_taskProgress[i].Task == GameDataBase.Instance.TaskBase[j])
+                {
+                    PlayerPrefs.SetInt("TaskType" + i, j);
+                    break;
+                }
+            }
+            PlayerPrefs.SetInt("TaskIndex" + i, m_taskProgress[i].Index);
+            PlayerPrefs.SetInt("TaskProgress" + i, m_taskProgress[i].Task.Tasks[m_taskProgress[i].Index].CurrentProgress);
+        }
     }
 
     public void OnNext(TasksPrograss tasks, int indexTask)
     {
-        Tasks task = _taskPrograss[indexTask];
+        Tasks task = m_taskProgress[indexTask];
         task.Index++;
-        _taskPrograss[indexTask] = task;
+        m_taskProgress[indexTask] = task;
 
         MoneyProperties.Money += tasks.Task.Tasks[tasks.Index].RewardMoney;
         Debug.Log(indexTask);
-        if (_taskPrograss[indexTask].Index < tasks.Task.Tasks.Length)
+        if (m_taskProgress[indexTask].Index < tasks.Task.Tasks.Length)
         {
             _redirectors[indexTask].Header.text = OnDifficulty(task);
             _redirectors[indexTask].Text.text = task.Task.Tasks[task.Index].Text.GetLocalizedString();
@@ -64,7 +99,7 @@ public class TaskManager : MonoBehaviour
             _redirectors[indexTask].Prograss.fillAmount = (float)task.Task.Tasks[task.Index].CurrentProgress / task.Task.Tasks[task.Index].MaxProgress;
             return;
         }
-        _taskPrograss.RemoveAt(indexTask);
+        m_taskProgress.RemoveAt(indexTask);
         Destroy(_redirectors[indexTask].gameObject);
         _redirectors.RemoveAt(indexTask);
 
@@ -73,7 +108,7 @@ public class TaskManager : MonoBehaviour
             Tasks newTesk = new Tasks();
             newTesk.Task = task.Task.TaskNext[i];
             newTesk.Index = 0;
-            _taskPrograss.Add(newTesk);
+            m_taskProgress.Add(newTesk);
             TaskRedirector redirector = Instantiate(_prefab, _parent);
             redirector.Header.text = OnDifficulty(newTesk);
             redirector.Text.text = newTesk.Task.Tasks[0].Text.GetLocalizedString();
@@ -88,7 +123,7 @@ public class TaskManager : MonoBehaviour
     public bool OnProgress(TasksPrograss[] task)
     {
         Action<int, int> action;
-        action = (i, j) => _taskPrograss[i].Task.Tasks[_taskPrograss[i].Index].CurrentProgress += task[j].Prograss;
+        action = (i, j) => m_taskProgress[i].Task.Tasks[m_taskProgress[i].Index].CurrentProgress += task[j].Prograss;
 
         return TakeProgress(task, action);
     }
@@ -96,27 +131,27 @@ public class TaskManager : MonoBehaviour
     public bool OnProgress(TasksPrograss[] task, int prograss)
     {
         Action<int, int> action;
-        action = (i, j) => _taskPrograss[i].Task.Tasks[_taskPrograss[i].Index].CurrentProgress = prograss;
+        action = (i, j) => m_taskProgress[i].Task.Tasks[m_taskProgress[i].Index].CurrentProgress = prograss;
 
         return TakeProgress(task, action);
     }
 
     public bool TakeProgress(TasksPrograss[] task, Action<int, int> action)
     {
-        for (int i = 0; i < _taskPrograss.Count; i++)
+        for (int i = 0; i < m_taskProgress.Count; i++)
         {
             for (int j = 0; j < task.Length; j++)
             {
-                bool isTask = _taskPrograss[i].Task == task[j].Task;
+                bool isTask = m_taskProgress[i].Task == task[j].Task;
                 if (isTask)
                 {
 
 
-                    if (_taskPrograss[i].Index == task[j].Index)
+                    if (m_taskProgress[i].Index == task[j].Index)
                     {
 
 
-                        bool isPrograss = _taskPrograss[i].Task.Tasks[task[j].Index].IsShowProgress;
+                        bool isPrograss = m_taskProgress[i].Task.Tasks[task[j].Index].IsShowProgress;
 
                         if (!isPrograss)
                         {
@@ -127,8 +162,8 @@ public class TaskManager : MonoBehaviour
                         action.Invoke(i, j);
 
 
-                        int max = _taskPrograss[i].Task.Tasks[_taskPrograss[i].Index].MaxProgress;
-                        int current = _taskPrograss[i].Task.Tasks[_taskPrograss[i].Index].CurrentProgress;
+                        int max = m_taskProgress[i].Task.Tasks[m_taskProgress[i].Index].MaxProgress;
+                        int current = m_taskProgress[i].Task.Tasks[m_taskProgress[i].Index].CurrentProgress;
 
                         _redirectors[i].Prograss.fillAmount = (float)current / max;
 
