@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.Localization;
@@ -47,7 +45,7 @@ public class MoneyProperties : MonoBehaviour
     //[SerializeField] private int _money = 1000;
     //private void OnGUI()
     //{
-    //    if(GUI.Button(new Rect(10, 10, 64, 64), "Money"))
+    //    if (GUI.Button(new Rect(512, 10, 64, 64), "Money"))
     //    {
     //        Money += _money;
     //    }

@@ -13,7 +13,6 @@ public class ObjectRandomChild : MonoBehaviour
         {
             if (!_data.Girls[i].IsActive)
             {
-                 
                 transform.GetChild(i - 1).gameObject.SetActive(true);
                 break;
             }

@@ -1,6 +1,6 @@
+using Sirenix.OdinInspector;
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.Localization;
@@ -9,6 +9,7 @@ using UnityEngine.Localization;
 public class BaseProduct : ScriptableObject
 {
     public TypeProducts Type;
+    [ListDrawerSettings(ShowIndexLabels = true)]
     public GameGoods[] Goods;
 }
 

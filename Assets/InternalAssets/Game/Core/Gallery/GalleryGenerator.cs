@@ -19,7 +19,8 @@ public class GalleryGenerator : MonoBehaviour
         {
             GalleryRedirector redirector = Instantiate(_prefab, transform);
             redirector.Img.sprite = _data.Bases[i].Image;
-            //redirector.Txt.text = _data.Bases[i].Text.GetLocalizedString();
+            if(!_data.Bases[i].Text.IsEmpty)
+                redirector.Txt.text = _data.Bases[i].Text.GetLocalizedString();
         }
     }
 }

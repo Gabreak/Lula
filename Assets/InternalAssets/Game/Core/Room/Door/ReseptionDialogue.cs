@@ -11,7 +11,7 @@ public class ReseptionDialogue : MonoBehaviour
     [SerializeField] private GameObject[] _dialogue;
     [SerializeField] private LocalizedString _good;
     [SerializeField] private TaskClick _task;
-    
+
     private void OnEnable()
     {
         int index = Convert.ToInt32(DoorManager.Instance.isDoor);
@@ -36,10 +36,14 @@ public class ReseptionDialogue : MonoBehaviour
             door.HourMax = 0;
             _task?.Action(0);
             MoneyProperties.Money -= door.Price;
-            WindowMessage.Message(_good.GetLocalizedString(), WindowIcon.Information);
+            //WindowMessage.Message(_good.GetLocalizedString(), WindowIcon.Information);
+        }
+        else if (door.HourMax == 0)
+        {
         }
         else
             MoneyProperties.NoMoneyMessage();
+
     }
 
     public void DoorClose()

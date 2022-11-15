@@ -12,7 +12,7 @@ using UnityEngine.Video;
 public class VideoGirlsData : ScriptableObject
 {
     public int IndexVideo;
-    [ListDrawerSettings(ShowIndexLabels =true)]
+    [ListDrawerSettings(ShowIndexLabels = true)]
     public VideoGirl[] Videos;
     public GirlBase[] Girls;
 }
@@ -31,7 +31,9 @@ public struct VideoGirl
 {
     public int IndexToy;
     public VideoClip[] Clip;
+    [Required]
     public LocalizedString Warning;
+    [Required]
     public LocalizedString WarningToy;
 }
 

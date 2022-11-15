@@ -3,7 +3,6 @@ using System.Linq;
 using System.Collections.Generic;
 
 
-using UnityEditor;
 
 using UnityEngine;
 using UnityEngine.Localization;
@@ -90,7 +89,6 @@ public class TaskManager : MonoBehaviour
         m_taskProgress[indexTask] = task;
 
         MoneyProperties.Money += tasks.Task.Tasks[tasks.Index].RewardMoney;
-        Debug.Log(indexTask);
         if (m_taskProgress[indexTask].Index < tasks.Task.Tasks.Length)
         {
             _redirectors[indexTask].Header.text = OnDifficulty(task);
@@ -117,7 +115,6 @@ public class TaskManager : MonoBehaviour
             _redirectors.Add(redirector);
         }
 
-        Debug.Log("Good");
     }
 
     public bool OnProgress(TasksPrograss[] task)

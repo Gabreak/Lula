@@ -75,7 +75,7 @@ public class Cart : MonoBehaviour
             DataProduct data = GoodsProperties.ProductsBasket[i];
             GoodsProperties.Buy(data);
         }
-        _taskVideoShop.TestBuyProduct();
+        _taskVideoShop?.TestBuyProduct();
         GoodsProperties.ProductsBasket.Clear();
         StartCoroutine(BuyAll());
 

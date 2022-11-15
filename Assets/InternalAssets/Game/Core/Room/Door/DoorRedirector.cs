@@ -31,6 +31,8 @@ public class DoorRedirector : MonoBehaviour
 
             RoomOpen();
         }
+        else
+            MoneyProperties.NoMoneyMessage();
     }
 
 
