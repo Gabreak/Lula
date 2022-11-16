@@ -12,6 +12,7 @@ public class TaskManager : MonoBehaviour
     public static TaskManager Instance;
     [SerializeField] private TaskRedirector _prefab;
     [SerializeField] private Transform _parent;
+    public ParticleSystem Effect;
     [SerializeField] private LocalizedString[] _difficulty;
     [SerializeField] private List<Tasks> m_taskProgress;
     [SerializeField] private List<Tasks> _taskProgressDefault;
@@ -35,7 +36,6 @@ public class TaskManager : MonoBehaviour
     public void Loading()
     {
         int count = PlayerPrefs.GetInt("CountTask", 0);
-        Debug.Log(count);
         if (count > 0)
         {
             for (int i = 0; i < count; i++)
@@ -147,7 +147,8 @@ public class TaskManager : MonoBehaviour
                     if (m_taskProgress[i].Index == task[j].Index)
                     {
 
-
+                        Effect.Play();
+                        Debug.Log("Sss");
                         bool isPrograss = m_taskProgress[i].Task.Tasks[task[j].Index].IsShowProgress;
 
                         if (!isPrograss)
@@ -166,7 +167,6 @@ public class TaskManager : MonoBehaviour
 
                         if (current >= max)
                         {
-
                             OnNext(task[j], i);
                             return true;
                         }

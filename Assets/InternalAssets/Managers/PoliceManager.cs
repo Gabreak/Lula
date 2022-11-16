@@ -50,7 +50,7 @@ public class PoliceManager : MonoBehaviour
 
 
 
-    public void LoadJail(GameObject currentScene, int fine)
+    public bool LoadJail(GameObject currentScene, int fine)
     {
         ToJail += fine;
         CountViolation += fine;
@@ -68,7 +68,9 @@ public class PoliceManager : MonoBehaviour
                 Instantiate(JailPrefab);
                 Destroy(currentScene);
             }
+                return false;
         }
+        return true;
     }
 
     public void UpdateBar()

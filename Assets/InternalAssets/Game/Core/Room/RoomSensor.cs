@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.Localization;
-using UnityEngine.Events;
 //using TMPro;
 using UnityEngine.Video;
 using UnityEngine.UI;
@@ -204,7 +203,7 @@ public class RoomSensor : MonoBehaviour
 
         int price = _sensorLight.Good.Value.Price + _sensorPhoto.Good.Value.Price + UnityEngine.Random.Range(0, 050);
         int indexVideo = _sensorPhoto.Good.Value.Level;
-        _task.Action(0);
+        _task?.Action(0);
         PlayDefault(0, indexVideo, price);
     }
 
@@ -218,7 +217,7 @@ public class RoomSensor : MonoBehaviour
         if (UsbMessage(isGoodUsb)) return;
 
         int price = _sensorLight.Good.Value.Price + _sensorVideo.Good.Value.Price + UnityEngine.Random.Range(0, 100);
-        if (RoomGirls.VideoIndex == 0)
+        if (RoomGirls.GetIndexVideo() == 0)
         {
             int indexVideo = _sensorVideo.Good.Value.Level;
 
@@ -230,17 +229,19 @@ public class RoomSensor : MonoBehaviour
 
     public void PlayDefault(int indexList, int indexVideo, int price)
     {
-        PoliceManager.Instance.LoadJail(transform.gameObject, 5);
-        VideoClip clip = VideoController.Instance.GetVideo(indexList, indexVideo);
-        UsbRecord(price, clip);
-        VideoController.Instance.VideoPlay(transform.gameObject, indexList, indexVideo);
+        if (PoliceManager.Instance.LoadJail(transform.gameObject, 5))
+        {
+            VideoClip clip = VideoController.Instance.GetVideo(indexList, indexVideo);
+            UsbRecord(price, clip);
+            VideoController.Instance.VideoPlay(transform.gameObject, indexList, indexVideo);
+        }
     }
 
 
     private void PlayOtherGirls(int price)
     {
-        int girl = RoomGirls.GetCount(RoomGirls.VideoIndex);
-        bool isShantal = RoomGirls.FindShantal(RoomGirls.GetBinary(RoomGirls.VideoIndex));
+        int girl = RoomGirls.GetCount(RoomGirls.GetIndexVideo());
+        bool isShantal = RoomGirls.FindShantal(RoomGirls.GetBinary(RoomGirls.GetIndexVideo()));
 
         if (isShantal) girl--;
 
@@ -254,8 +255,8 @@ public class RoomSensor : MonoBehaviour
         MoneyProperties.Money -= girl * _priceGirl;
 
         UsbRecord(sumPrice, clip);
-
-        VideoController.Instance.VideoPlay(transform.gameObject, clip);
+        if (PoliceManager.Instance.LoadJail(transform.gameObject, 5))
+            VideoController.Instance.VideoPlay(transform.gameObject, clip);
     }
 
 

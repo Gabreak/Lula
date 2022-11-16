@@ -12,21 +12,21 @@ public class RoomGirls : MonoBehaviour
     [Space(20), Header("Toys")]
     [SerializeField] private TypeProducts _toys;
     private static RoomGirls _instance;
-    private int _idBinary = 0;
+    //private string _idBinary = "0000";
 
-    public GameBed[] _gameBed;
+    public GameBed[] GameBeds;
 
 
-    public int IdBinary
-    {
-        get => _idBinary;
-        set
-        {
-            _idBinary = value;
-            _data.IndexVideo = (Convert.ToInt32(IdBinary.ToString(), 2));
-        }
-    }
-    public static int VideoIndex { get => _instance._data.IndexVideo; }
+    public char[] IdBinary = new char[4] { '0', '0', '0', '0' };
+    //{
+    //    get => _idBinary;
+    //    set
+    //    {
+    //        _idBinary = value;
+    //        _data.IndexVideo = (Convert.ToInt32(IdBinary, 2));
+    //    }
+    //}
+    //public static int VideoIndex { get => _instance._data.IndexVideo; }
 
     private void Awake()
     {
@@ -35,39 +35,49 @@ public class RoomGirls : MonoBehaviour
 
     private void OnEnable()
     {
-        for (int i = 0; i < _gameBed.Length; i++)
+        for (int i = 0; i < GameBeds.Length; i++)
         {
-            _gameBed[i].Check = PlayerPrefs.GetInt("GirlBed" + i, 0);
-            _gameBed[i].Girl.SetActive(Convert.ToBoolean(_gameBed[i].Check));
+            GameBeds[i].Check = PlayerPrefs.GetInt("GirlBed" + i, GameBeds[i].Check);
+            IdBinary[i] = GameBeds[i].Check.ToString()[0];
+            GameBeds[i].Girl.SetActive(Convert.ToBoolean(GameBeds[i].Check));
         }
     }
 
     private void Start()
     {
         int length = _data.Girls.Length;
-
+        //Debug.Log(GetIndexVideo());
         CreateGirls(length, _parentGirls);
     }
 
 
     private void CreateGirls(int length, Transform parent)
     {
-
         for (int i = 0; i < length; i++)
         {
             if (_data.Girls[i].IsActive)
             {
-
-                RoomGirlController girl = Instantiate(_data.Girls[i].Object, parent);
-                girl.IdBinary = _data.Girls[i].Id;
+                Instantiate(_data.Girls[i].Object, parent);
             }
         }
     }
 
+    public static int GetIndexVideo()
+    {
+        string s = "";
+        for (int i = _instance.IdBinary.Length-1; i >= 0; i--)
+        {
+            s += _instance.IdBinary[i];
+        }
+        _instance._data.IndexVideo = Convert.ToInt32(s, 2); 
+        return _instance._data.IndexVideo;
+
+    }
+
     public void UpdateBed(int index)
     {
-        PlayerPrefs.SetInt("GirlBed" + index, _gameBed[index].Check);
-        _gameBed[index].Girl.SetActive(Convert.ToBoolean(_gameBed[index].Check));
+        PlayerPrefs.SetInt("GirlBed" + index, GameBeds[index].Check);
+        GameBeds[index].Girl.SetActive(Convert.ToBoolean(GameBeds[index].Check));
     }
 
     public static int GetCount(int index) => Convert.ToString(index, 2).Count(ch => ch == '1');

@@ -33,11 +33,11 @@ public class MoneyProperties : MonoBehaviour
     {
         _instance = this;
         s_TextMoney = _textMoney;
+        Money = _startMoney;
     }
 
     private void Start()
     {
-        Money = _startMoney;
 
     }
 

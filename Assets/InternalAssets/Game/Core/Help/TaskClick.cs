@@ -26,7 +26,7 @@ public class TaskClick : MonoBehaviour
         TaskManager.Instance.OnProgress(_tasks);
     }
 
-    private void Play(int prograss)
+    public void Play(int prograss)
     {
         TaskManager.Instance.OnProgress(_tasks,prograss);
     }

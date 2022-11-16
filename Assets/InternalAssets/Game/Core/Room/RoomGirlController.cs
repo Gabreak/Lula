@@ -1,8 +1,6 @@
-using JetBrains.Annotations;
 
 using System;
-using System.Collections;
-using System.Collections.Generic;
+
 
 using UnityEngine;
 
@@ -17,19 +15,27 @@ public class RoomGirlController : MonoBehaviour
     private void Start()
     {
         _roomGirls = transform.root.GetComponent<RoomGirls>();
+        _isActive = (Convert.ToBoolean(_roomGirls.GameBeds[_indexGirl].Check));
         _check.SetActive(false);
+        if (_isActive)
+            OnCheck();
     }
 
     private void OnMouseDown()
     {
         _isActive = !_isActive;
+        OnCheck();
 
+    }
+
+    private void OnCheck()
+    {
         if (_isActive)
-            _roomGirls.IdBinary += IdBinary;
+            _roomGirls.IdBinary[_indexGirl] = '1';
         else
-            _roomGirls.IdBinary -= IdBinary;
+            _roomGirls.IdBinary[_indexGirl] = '0';
 
-        _roomGirls._gameBed[_indexGirl].Check = Convert.ToInt32(_isActive);
+        _roomGirls.GameBeds[_indexGirl].Check = Convert.ToInt32(_isActive);
         _roomGirls.UpdateBed(_indexGirl);
 
         _check.SetActive(_isActive);

@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,6 +19,7 @@ public class ScenesManager : MonoBehaviour
 
     public void NewGame(int index)
     {
+        PlayerPrefs.DeleteAll();
         OpenScene(index, 0);
     }
 
